@@ -1,47 +1,33 @@
 # 6G-SANDBOX TOOLS DOCS
 
-## Clone repository
+## Getting Started Locally
+
+Clone repository
 
 ```bash
 git clone --recurse-submodules https://github.com/6G-SANDBOX/docs.git
 ```
 
-<!-- This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Install [bun](https://bun.sh/)
 
-### Installation
-
-```
-$ yarn
+```bash
+curl -fsSL https://bun.sh/install | bash
 ```
 
-### Local Development
+Access to docs repository
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+```bash
+cd <docsPath>
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Install libraries
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+bun install
 ```
 
-Not using SSH:
+Start server
 
+```bash
+bun start
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch. -->
