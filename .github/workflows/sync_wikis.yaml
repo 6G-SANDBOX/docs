@@ -1,23 +1,25 @@
-name: Sync Submodules
+name: Sync wikis
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * *'
-
   workflow_dispatch:
 
 jobs:
   sync-wikis:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository with submodules
+      - name: Clone repository with wikis
         uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Sync wikis
         run: |
           git submodule foreach '
-            echo "Updating submodule: $name"
+            echo "Updating wiki: $name"
             if git fetch origin && git reset --hard origin/master || git reset --hard origin/main; then
               echo "Successfully updated $name"
             else
@@ -36,3 +38,8 @@ jobs:
             git commit -m "Sync wikis to latest commits"
             git push
           fi
+      - name: Deploy github pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
