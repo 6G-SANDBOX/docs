@@ -1,3 +1,6 @@
 [submodule "docs/TOOLKIT-INSTALLER"]
 	path = docs/TOOLKIT-INSTALLER
 	url = https://github.com/6G-SANDBOX/toolkit-installer.wiki.git
+[submodule "docs/TNLCM"]
+	path = docs/TNLCM
+	url = https://github.com/6G-SANDBOX/TNLCM.wiki.git
