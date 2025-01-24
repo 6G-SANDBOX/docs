@@ -4,3 +4,6 @@
 [submodule "docs/TNLCM"]
 	path = docs/TNLCM
 	url = https://github.com/6G-SANDBOX/TNLCM.wiki.git
+[submodule "docs/6G-LIBRARY"]
+	path = docs/6G-LIBRARY
+	url = https://github.com/6G-SANDBOX/6G-Library.wiki.git
