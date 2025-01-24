@@ -30,7 +30,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if git diff-index --quiet HEAD; then
-            echo "No hay cambios que subir."
+            echo "No changes detected"
           else
             git add .
             git commit -m "Sync wikis to latest commits"
