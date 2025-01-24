@@ -43,6 +43,7 @@ jobs:
             git add .
             git commit -m "Sync wikis to latest commits"
             git push
+          fi
 
   build:
     name: Build Docusaurus
