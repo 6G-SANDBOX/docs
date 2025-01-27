@@ -1,0 +1,14 @@
+{
+    "position": 2.5,
+    "label": "TNLCM",
+    "collapsible": true,
+    "collapsed": false,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "TNLCM overview"
+    },
+    "customProps": {
+      "description": ""
+    }
+}
