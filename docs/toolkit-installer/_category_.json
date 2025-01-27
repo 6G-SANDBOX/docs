@@ -1,0 +1,14 @@
+{
+    "position": 2.5,
+    "label": "TOOLKIT-INSTALLER",
+    "collapsible": true,
+    "collapsed": false,
+    "className": "red",
+    "link": {
+      "type": "generated-index",
+      "title": "TOOLKIT-INSTALLER overview"
+    },
+    "customProps": {
+      "description": ""
+    }
+}
