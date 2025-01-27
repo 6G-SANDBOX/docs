@@ -8,6 +8,9 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     name: Build docusaurus
