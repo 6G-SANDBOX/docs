@@ -5,7 +5,7 @@
 Clone repository
 
 ```bash
-git clone --recurse-submodules https://github.com/6G-SANDBOX/docs.git
+git clone https://github.com/6G-SANDBOX/docs.git
 ```
 
 Install [bun](https://bun.sh/)
