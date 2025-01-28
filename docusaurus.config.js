@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '6G-SANDBOX TOOLS',
+  title: '6G-SANDBOX TOOLS DOCS',
   tagline: 'European project',
   favicon: 'img/favicon.ico',
 
@@ -18,7 +18,7 @@ const config = {
   url: 'https://6G-SANDBOX.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: '/docs',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -44,7 +44,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js'
+          sidebarPath: './sidebars.js',
+          routeBasePath: '/', // Serve the docs at the site's root
         },
         // blog: {
         //   showReadingTime: true,
@@ -71,16 +72,16 @@ const config = {
       image: 'img/logo.png',
       navbar: {
         title: '6G-SANDBOX',
-        logo: {
-          alt: '6G-SANDBOX Logo',
-          src: 'img/logo.png',
-        },
+        // logo: {
+        //   alt: 'logo',
+        //   src: 'img/logo.png',
+        // },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'documentationSidebar',
             position: 'left',
-            label: 'DOCUMENTATION',
+            label: 'DOCS',
           },
           // {to: '/blog', label: 'BLOG', position: 'left'},
           {
@@ -89,6 +90,7 @@ const config = {
             position: 'right',
           },
         ],
+        hideOnScroll: true,
       },
       footer: {
         style: 'dark',
@@ -98,7 +100,7 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                to: '/docs/intro',
+                to: '/docs/introduction',
               },
             ],
           },
@@ -139,6 +141,13 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      docs: {
+        versionPersistence: 'localStorage',
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      }
     }),
 };
 
