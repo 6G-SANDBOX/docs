@@ -85,7 +85,7 @@ To add a new section to the documentation, follow these steps:
 
     3.5. If the documentation requires images, create a directory named `<section_name>` inside the [`img`](./static/img/) directory.
 
-4. You can test the rendering of your documentation locally or by using [tools](https://docusaurus.io/docs/playground) provided by Docusaurus. Refer to the [README](README.md) file for more information.
+4. You can test the rendering of your documentation locally or by using [tools](https://docusaurus.io/docs/playground) provided by Docusaurus. Refer to the [README](https://github.com/6G-SANDBOX/docs/blob/main/README.md) file for more information.
 
 5. Commit the changes to your branch.
 
@@ -127,7 +127,7 @@ To update a documentation section, follow these steps:
 
 2. Update the directory created inside the [`docs`](./docs/) directory.
 
-3. You can test the rendering of your documentation locally or by using [tools](https://docusaurus.io/docs/playground) provided by Docusaurus. Refer to the [README](README.md) file for more information.
+3. You can test the rendering of your documentation locally or by using [tools](https://docusaurus.io/docs/playground) provided by Docusaurus. Refer to the [README](https://github.com/6G-SANDBOX/docs/blob/main/README.md) file for more information.
 
 4. Commit the changes to your branch.
 
