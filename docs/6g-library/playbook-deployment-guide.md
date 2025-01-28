@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "Playbook deployment guide"
-sidebar_label: "Playbook deployment guide"
+title: "Playbook Deployment Guide"
+sidebar_label: "Playbook Deployment Guide"
 draft: false
 ---
 
