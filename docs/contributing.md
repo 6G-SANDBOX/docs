@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 10
 title: "Contributing"
 sidebar_label: "Contributing"
 draft: false
@@ -53,14 +53,14 @@ To add a new section to the documentation, follow these steps:
 
     ```json
     {
-        "position": 2.5,
+        "position": <next_position>,
         "label": "<section_name>",
         "collapsible": true,
-        "collapsed": false,
+        "collapsed": true,
         "className": "red",
         "link": {
             "type": "generated-index",
-            "title": "<section_name> overview"
+            "title": "<section_name> Overview"
         },
         "customProps": {
             "description": ""
@@ -73,8 +73,8 @@ To add a new section to the documentation, follow these steps:
     ```markdown
     ---
     sidebar_position: 1
-    title: "Home"
-    sidebar_label: "Home"
+    title: "<title>"
+    sidebar_label: "<sidebar_label>"
     draft: false
     ---
     ```

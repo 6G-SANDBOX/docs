@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: "Introduction"
-sidebar_label: "Introduction"
+title: "Home"
+sidebar_label: "Home"
 draft: false
 ---
 
@@ -11,4 +11,6 @@ From a technical perspective, the testbed should be supported by a physical infr
 
 The reference architecture of this micro data center is a fundamental piece and one of the enablers of the 6G-SANDBOX project.
 
-![sites](../../static/img/6g-sandbox-sites/sites.png)
+<p align="center">
+    ![sites](../../static/img/6g-sandbox-sites/sites.png)
+</p>
