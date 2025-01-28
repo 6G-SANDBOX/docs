@@ -13,13 +13,17 @@ The main goal of the 6G-SANDBOX project is to develop a comprehensive and modula
 
 The cloud computing stack used in 6G-SANDBOX is:
 
-![stack](../../static/img/6g-sandbox-sites/stack.png)
+<p align="center">
+  ![stack](../../static/img/6g-sandbox-sites/stack.png)
+</p>
 
 ### Datacenter
 
 A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern computing infrastructure that integrates computer, storage, and networking components into a single system to streamline deployment and management. Unlike traditional data centers, HCI leverages software-defined technology to create a more scalable, flexible, and manageable environment. It consolidates these resources into a unified system that can be easily controlled through a centralized software platform, enabling enhanced efficiency, reduced complexity, and improved performance. HCI data centers are designed to support cloud-like capabilities, such as elasticity and resilience, making them ideal for a wide range of enterprise applications and workloads.
 
-![datacenter](../../static/img/6g-sandbox-sites/datacenter.png)
+<p align="center">
+  ![datacenter](../../static/img/6g-sandbox-sites/datacenter.png)
+</p>
 
 ### Networking
 
@@ -39,28 +43,35 @@ A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern comput
   - VXLAN, creating an overlay network
   - Be careful with MTU on both cases
 
-![networkingVlan](../../static/img/6g-sandbox-sites/networkingVlan.png)
+<p align="center">
+  ![networkingVlan](../../static/img/6g-sandbox-sites/networkingVlan.png)
+</p>
 
 - Multiple virtual interfaces, one per VLAN
 - Multiple bridges bound to one virtual interface VLAN
 - Multiple virtual nets inside OpenNebula, each associated to a bridge
 - When a virtual machine is created, OpenNebula add a new virtual interface to the appropriate bridge
 
-![networkingComputeHost](../../static/img/6g-sandbox-sites/networkingComputeHost.png)
+<p align="center">
+  ![networkingComputeHost](../../static/img/6g-sandbox-sites/networkingComputeHost.png)
+</p>
 
-![networkingNetplan](../../static/img/6g-sandbox-sites/networkingNetplan.png)
+<p align="center">
+  ![networkingNetplan](../../static/img/6g-sandbox-sites/networkingNetplan.png)
+</p>
 
 ### Storage
 
 SDS: Software define Storage
-
 - [Ceph](https://github.com/OpenNebula/one-deploy/wiki/arch_single_ceph) for a shared pool of block storage between all hosts of the Data Center
 - Each host dedicates 0, 1 or more drives to the storage pool. One Daemon “OSD” per drive for its management
 - Data has x3 replication. Writes and reads are made directly to the OSD with the desired information
 - Efficient resource utilization, and almost infinite flexibility
 - De Facto Standard for shared storage in many platforms like Proxmox, OpenStack and OpenNebula
 
-![storage](../../static/img/6g-sandbox-sites/storage.png)
+<p align="center">
+  ![storage](../../static/img/6g-sandbox-sites/storage.png)
+</p>
 
 ### Compute hosts
 
@@ -71,32 +82,36 @@ SDS: Software define Storage
   - Host the OpenNebula Front-end VMs
   - Have spare memory and CPUs to deploy and virtualize new instances 
 
-![computeHosts](../../static/img/6g-sandbox-sites/computeHosts.png)
+<p align="center">
+  ![computeHosts](../../static/img/6g-sandbox-sites/computeHosts.png)
+</p>
 
 ### Virtualization and cloud
 
 [OpenNebula](https://github.com/OpenNebula/) is an open-source solution for building and managing private clouds.
 
 Advantages:
-
 - VMs, Containers, and K8s clusters
 - Hybrid: private, public or edge nodes
 - Unify the management of all your resources
 - Supports any base hardware
 - Multitenant and federation
 
-![virtualizationCloud](../../static/img/6g-sandbox-sites/virtualizationCloud.png)
+<p align="center">
+  ![virtualizationCloud](../../static/img/6g-sandbox-sites/virtualizationCloud.png)
+</p>
 
 ### Application, SaaS
 
 The SaaS is a platform that is being developed within 6G Sandbox Project.
 
-![overview](../../static/img/tnlcm/overview.png)
+<p align="center">
+  ![overview](../../static/img/tnlcm/overview.png)
+</p>
 
 ## Summary
 
 The recommendations are:
-
 - At least 3 hosts with enough resources according to the size of the testbed
 - At least 3 networks
   - Service network should be extended between hosts to allow 6G-Sandbox Trial Networks deployment
@@ -106,4 +121,6 @@ The recommendations are:
 - Use of VLANs and bridges for the testbed networking configuration, and VXLAN for overlay networks that will be used in the trial networks
 - This architecture can be extended with many hosts up to a medium size datacenter
 
-![summary](../../static/img/6g-sandbox-sites/summary.png)
+<p align="center">
+  ![summary](../../static/img/6g-sandbox-sites/summary.png)
+</p>
