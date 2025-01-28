@@ -1,12 +1,12 @@
 {
-  "position": 2.5,
-  "label": "6G-SANDBOX-SITES",
+  "position": 2,
+  "label": "6G-Sandbox-Sites",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "6G-SANDBOX-SITES overview"
+    "title": "6G-Sandbox-Sites Overview"
   },
   "customProps": {
     "description": ""
