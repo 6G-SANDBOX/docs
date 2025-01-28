@@ -67,4 +67,4 @@ TNLCM database, created with MongoDB, consists of several collections that store
 
 ## Model
 
-![TNLCM_DATABASE_MODEL](https://github.com/user-attachments/assets/8e17cedd-4a4f-4bcd-941d-9cfa076cbb07)
+![model](../../static/img/tnlcm/model.png)
