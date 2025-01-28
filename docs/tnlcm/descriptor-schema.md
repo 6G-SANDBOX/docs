@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: "Descriptor Schema"
 sidebar_label: "Descriptor Schema"
 draft: false

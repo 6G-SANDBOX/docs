@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 title: "Database Schema"
 sidebar_label: "Database Schema"
 draft: false

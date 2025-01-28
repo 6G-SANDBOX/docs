@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: "Mongo Express"
 sidebar_label: "Mongo Express"
 draft: false
