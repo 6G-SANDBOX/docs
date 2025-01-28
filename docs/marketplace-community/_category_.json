@@ -1,12 +1,12 @@
 {
   "position": 2.5,
-  "label": "TNLCM",
+  "label": "MARKETPLACE-COMMUNITY",
   "collapsible": true,
   "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "TNLCM overview"
+    "title": "MARKETPLACE-COMMUNITY overview"
   },
   "customProps": {
     "description": ""

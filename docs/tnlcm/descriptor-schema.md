@@ -5,6 +5,10 @@ sidebar_label: "Descriptor Schema"
 draft: false
 ---
 
+:::warning
+The format of Trial Network Descriptors has not been finalized and is expected to change in the future.
+:::
+
 Trial Network Descriptors are yaml files with a set of expected fields and with the following structure:
 
 ```yaml

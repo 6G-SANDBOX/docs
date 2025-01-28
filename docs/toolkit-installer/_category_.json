@@ -1,12 +1,12 @@
 {
   "position": 2.5,
-  "label": "TNLCM",
+  "label": "TOOLKIT-INSTALLER",
   "collapsible": true,
   "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "TNLCM overview"
+    "title": "TOOLKIT-INSTALLER overview"
   },
   "customProps": {
     "description": ""

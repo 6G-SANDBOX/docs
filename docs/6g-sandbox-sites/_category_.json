@@ -1,12 +1,12 @@
 {
   "position": 2.5,
-  "label": "TNLCM",
+  "label": "6G-SANDBOX-SITES",
   "collapsible": true,
   "collapsed": false,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "TNLCM overview"
+    "title": "6G-SANDBOX-SITES overview"
   },
   "customProps": {
     "description": ""
