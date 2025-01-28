@@ -46,17 +46,17 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js'
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -82,7 +82,7 @@ const config = {
             position: 'left',
             label: 'DOCUMENTATION',
           },
-          {to: '/blog', label: 'BLOG', position: 'left'},
+          // {to: '/blog', label: 'BLOG', position: 'left'},
           {
             href: 'https://github.com/6G-SANDBOX',
             label: 'GitHub',
@@ -122,10 +122,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/6G-SANDBOX',
