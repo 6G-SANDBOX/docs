@@ -17,13 +17,6 @@
 
 </div>
 
-<details>
-<summary>Table of Contents</summary>
-
-- [:rocket: Getting Started Locally](#rocket-getting-started-locally)
-
-</details>
-
 ## :rocket: Getting Started Locally
 
 Clone repository
@@ -55,6 +48,14 @@ Start server
 ```bash
 bun dev
 ```
+
+## :rocket: Getting Started Web
+
+Docusaurus provides a [workspace](https://docusaurus.io/docs/playground) online without the need to install any tools.
+
+You can choose between CodeSandbox or StackBlitz. **CodeSandbox** is recommended.
+
+Select JavaScript in CodeSandbox and log in with GitHub.
 
 <p align="right"><a href="#readme-top">Back to top&#x1F53C;</a></p>
 
