@@ -110,6 +110,16 @@ Once you're happy with your changes, commit them with a clear and descriptive me
 
 Push your branch with the changes to your fork on GitHub using `git push origin your-branch-name`.
 
-### Create a Pull Request (PR)
+### Create a pull request (PR)
 
-On GitHub, go to your fork of the toolkit installer and click "Pull request" to start one. Make sure to clearly describe the changes you've made and why they are necessary or useful for the project.
+On GitHub, go to your fork of the toolkit installer and click "Pull request" to start one. Make sure to clearly describe the changes you've made and why they are necessary or useful for the project. 
+
+The pull request should be from your branch to the `main` branch of the original repository.
+
+  - Include **@CarlosAndreo** or **@alvarocurt** as a reviewer.
+  - The pull request must include:
+    - The **new branch**.
+    - The **directory** with the **core.yaml** file.
+    - The branch and the directory must have the same name.
+
+Once the pull request has been reviewed, the changes will be merged into the `main` branch of the original repository.
