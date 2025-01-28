@@ -1,0 +1,14 @@
+{
+  "position": 2.5,
+  "label": "MARKETPLACE-COMMUNITY",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "MARKETPLACE-COMMUNITY overview"
+  },
+  "customProps": {
+    "description": ""
+  }
+}
