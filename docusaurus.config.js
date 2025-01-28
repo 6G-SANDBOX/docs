@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '6G-SANDBOX TOOLS DOCS',
-  tagline: 'European project',
+  title: '6G-SANDBOX TOOLS',
+  tagline: 'A Horizon-JU Funded Research Project',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -72,10 +72,10 @@ const config = {
       image: 'img/logo.png',
       navbar: {
         title: '6G-SANDBOX',
-        // logo: {
-        //   alt: 'logo',
-        //   src: 'img/logo.png',
-        // },
+        logo: {
+          alt: 'logo',
+          src: 'img/logo.png',
+        },
         items: [
           {
             type: 'docSidebar',
