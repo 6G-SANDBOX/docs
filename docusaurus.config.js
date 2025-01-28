@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '6G-SANDBOX TOOLS DOCS',
+  title: '6G-SANDBOX TOOLS',
   tagline: 'European project',
   favicon: 'img/favicon.ico',
 
