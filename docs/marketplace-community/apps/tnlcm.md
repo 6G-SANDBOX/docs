@@ -36,7 +36,7 @@ The latest version of TNLCM appliance can be downloaded from the OpenNebula publ
 * Minimum vCPU: 2
 * Minimum storage: 7GiB
 
-## Features and Usage
+## Features and usage
 
 This appliance comes with TNLCM backend and frontend installed, following [TNLCM backend official install guide](https://github.com/6G-SANDBOX/TNLCM?tab=readme-ov-file#rocket-getting-started-locally) and [TNLCM frontend official install guide](https://github.com/6G-SANDBOX/TNLCM_FRONTEND?tab=readme-ov-file#rocket-getting-started-locally) including the following features:
 

@@ -42,7 +42,7 @@ The latest version of the UERANSIM appliance can be downloaded from the 6G-SANDB
 * Minimum vCPU: 2
 * Minimum storage: 10GiB
 
-## Features and Usage
+## Features and usage
 
 The appliance comes with the necessary [UERANSIM](https://github.com/aligungr/UERANSIM) files and software, which includes:
 

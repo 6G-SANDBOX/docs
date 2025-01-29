@@ -35,7 +35,7 @@ If the access token expires, it can be refreshed by using the refresh token. The
 
 When the request is made, it will return another access token that will need to be put back into the green **Authorize** box.
 
-## Create Trial Network
+## Create trial network
 
 Once logged into TNLCM, execute the POST request of the `trial-network` namespace:
 
@@ -51,7 +51,7 @@ Fill in the following fields:
 - `sites_reference_value`: value corresponding to the type specified in the `sites_reference_type` field.
 - `descriptor`: descriptor file containing the definition of the trial network. To create a descriptor file, refer to the [Trial Network Descriptor Guide](https://github.com/6G-SANDBOX/TNLCM/wiki/Trial-Network-Descriptor-Guide) section.
 
-## Deploy Trial Network
+## Deploy trial network
 
 Once logged into TNLCM and the trial network has been created, execute the PUT request of the `trial-network` namespace:
 
