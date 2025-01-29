@@ -1,12 +1,12 @@
 {
   "position": 5,
-  "label": "Tnlcm",
+  "label": "TNLCM",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "Tnlcm Overview"
+    "title": "TNLCM Overview"
   },
   "customProps": {
     "description": ""
