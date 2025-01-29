@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch:
+  # workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.2.0
+          bun-version: 1.2.1
       - name: Install dependencies
         run: bun install
       - name: Build site
