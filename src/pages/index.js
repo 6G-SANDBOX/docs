@@ -23,7 +23,7 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <a className="button button--secondary button--lg" href="/docs/introduction">
-            Get Started with Docs
+            Get Started
           </a>
         </div>
       </div>
