@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
-title: "Contributing"
-sidebar_label: "Contributing"
+title: "Contributing to documentation"
+sidebar_label: "Contributing to documentation"
 draft: false
 ---
 
