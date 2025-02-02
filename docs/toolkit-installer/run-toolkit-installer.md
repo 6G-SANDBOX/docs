@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "Instantiate Toolkit Installer"
-sidebar_label: "Instantiate Toolkit Installer"
+title: "Run Toolkit Installer"
+sidebar_label: "Run Toolkit Installer"
 draft: false
 ---
 

@@ -42,14 +42,8 @@ Save the changes.
 
 ## Submit your changes
 
-### Commit your changes
-
 Once you're happy with your changes, commit them with a clear and descriptive message using `git commit -m "Your message here"`.
 
-### Push to the repository
-
 Push your changes to the repository using `git push`.
-
-### Data validation
 
 The branch must include the **directory** with the same branch name and with the **core.yaml** file.
