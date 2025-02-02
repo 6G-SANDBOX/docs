@@ -11,8 +11,6 @@
 
 <a href="https://github.com/6G-SANDBOX/docs"><img src="./static/img/logo.png" width="300" title="docs"></a>
 
-[![docs][docs-badge]][docs-url]
-
 [Report error](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=bug_report.md) · [Feature request](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=feature_request.md)
 
 </div>
@@ -65,8 +63,6 @@ Select JavaScript in CodeSandbox and log in with GitHub.
 
 <p align="right"><a href="#readme-top">Back to top&#x1F53C;</a></p>
 
-[docs-badge]: https://img.shields.io/badge/docs-v0.0.0-blue
-[docs-url]: https://github.com/6G-SANDBOX/docs/releases/tag/v0.0.0
 [contributors-shield]: https://img.shields.io/github/contributors/6G-SANDBOX/docs.svg?style=for-the-badge
 [contributors-url]: https://github.com/6G-SANDBOX/docs/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/6G-SANDBOX/docs.svg?style=for-the-badge
