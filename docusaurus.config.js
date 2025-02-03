@@ -30,6 +30,15 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  plugins: [
+    [
+      'docusaurus-lunr-search',
+      {
+        languages: ['en', 'de'], // Idiomas para la búsqueda
+      },
+    ],
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -147,7 +156,7 @@ const config = {
           hideable: true,
           autoCollapseCategories: true,
         },
-      }
+      },
     }),
 };
 
