@@ -44,11 +44,9 @@ Once logged into TNLCM, execute the POST request of the `trial-network` namespac
 Fill in the following fields:
 
 - `tn_id`: must start with a character and be at least 4 characters long. This field can be left blank, in which case a random value will be generated.
-- `deployment_site`: must be one of the sites available in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository.
 - `library_reference_type`: you can specify a branch, tag, or commit of the 6G-Library repository.
 - `library_reference_value`: value corresponding to the type specified in the `library_reference_type` field.
-- `sites_reference_type`: you can specify a branch, tag, or commit of the 6G-Sandbox-Sites repository.
-- `sites_reference_value`: value corresponding to the type specified in the `sites_reference_type` field.
+- `deployment_site`: must be one of the branches available in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository.
 - `descriptor`: descriptor file containing the definition of the trial network. To create a descriptor file, refer to the [Trial Network Descriptor Guide](https://github.com/6G-SANDBOX/TNLCM/wiki/Trial-Network-Descriptor-Guide) section.
 
 ## Deploy trial network
