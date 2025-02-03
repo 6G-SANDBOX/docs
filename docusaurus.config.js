@@ -34,7 +34,7 @@ const config = {
     [
       'docusaurus-lunr-search',
       {
-        languages: ['en', 'de'], // Idiomas para la búsqueda
+        languages: ['en'],
       },
     ],
   ],
