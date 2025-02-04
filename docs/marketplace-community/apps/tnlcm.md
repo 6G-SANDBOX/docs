@@ -17,7 +17,7 @@ draft: false
 
 The latest version of TNLCM appliance can be downloaded from the OpenNebula public Marketplace. The appliance includes the [backend](https://github.com/6G-SANDBOX/TNLCM) and the [frontend](https://github.com/6G-SANDBOX/TNLCM_FRONTEND) of the TNLCM.
 
-- Backend [v0.4.4](https://marketplace.mobilesandbox.cloud:9443/appliance/service_TNLCM)
+- Backend [v0.4.5](https://marketplace.mobilesandbox.cloud:9443/appliance/service_TNLCM)
 - Frontend [v0.0.0](https://marketplace.mobilesandbox.cloud:9443/appliance/service_TNLCM)
 
 ## Components
@@ -25,7 +25,7 @@ The latest version of TNLCM appliance can be downloaded from the OpenNebula publ
 | Name                      | Version    |
 | ------------------------- | ---------- |
 | Ubuntu                    | 22.04 LTS  |
-| TNLCM backend             | v0.4.4     |
+| TNLCM backend             | v0.4.5     |
 | TNLCM frontend            | v0.0.0     |
 | Contextualization package | 6.10.0     |
 

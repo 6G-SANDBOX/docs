@@ -20,9 +20,11 @@ Additionally TNLCM depends on:
 
 | Repository       | Release                                                                | Branch                                                     |
 | ---------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 6G-Library       | [v0.3.1](https://github.com/6G-SANDBOX/6G-Library/tree/release/v0.3.1) | -                                                          |
+| 6G-Library       | [v0.4.0](https://github.com/6G-SANDBOX/6G-Library/tree/release/v0.4.0) | -                                                          |
 | 6G-Sandbox-Sites | -                                                                      | [platform](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) |
 :::
+
+You can install the full stack MinIO, Jenkins and TNLCM in OpenNebula by following the toolkit installer guide [here](../toolkit-installer/run-toolkit-installer.md).
 
 ## :inbox_tray: Download the installation script
 

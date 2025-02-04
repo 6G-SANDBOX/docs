@@ -9,12 +9,9 @@ draft: false
 
 Toolkit installer requires the **prior** installation of:
 
-| Repository       | Release                                                                |
-| ---------------- | ---------------------------------------------------------------------- |
-| OpenNebula       | [v6.10](https://github.com/OpenNebula/one/releases/tag/release-6.10.0) |
-| 6G-Library       | [v0.3.1](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.3.1) |
-| 6G-Sandbox-Sites | [main](https://github.com/6G-SANDBOX/6G-Sandbox-Sites)                 |
-| TNLCM            | [v0.4.4](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.4.4)      |
+- **OpenNebula**: [v6.10](https://github.com/OpenNebula/one/releases/tag/release-6.10.0)
+
+Once you have OpenNebula installed, you can proceed with the following steps.
 
 ## Create site token
 
@@ -26,11 +23,11 @@ The administrators will review the request and add you to the group if approved.
 
 Once you have the necessary permissions, you can generate a token by navigating to:
 
-- **Settings**
-- **Developer settings**
-- **Personal access tokens**
-- **Fine-grained tokens**
-- **Generate new token**
+1. **Settings**
+2. **Developer settings**
+3. **Personal access tokens**
+4. **Fine-grained tokens**
+5. **Generate new token**
 
 The configuration should look like this:
 
