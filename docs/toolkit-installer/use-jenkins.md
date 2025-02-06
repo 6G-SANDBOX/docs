@@ -45,15 +45,29 @@ Once the pipeline has been cloned, you can proceed to deploy components by follo
 
 ## Example
 
-In this example I am going to show how to deploy the [ELCM](https://github.com/6G-SANDBOX/6G-Library/tree/main/elcm) component of the 6G-Library:
+In this example we are going to show how to deploy the [ELCM](https://github.com/6G-SANDBOX/6G-Library/tree/main/elcm) component of the 6G-Library.
 
-As mentioned above, the first thing needed for elcm is to deploy the tn_init component:
+As mentioned above, the first thing needed for elcm is to deploy the tn_init component.
+
+In this case, the tn_init [input](https://github.com/6G-SANDBOX/6G-Library/blob/main/tn_init/.tnlcm/public.yaml) fields are not required since the required_when is set to false in all fields. This indicates that it takes the values specified by default in the file [private.yaml](https://github.com/6G-SANDBOX/6G-Library/blob/main/tn_init/variables/one/private.yaml). However, you can modify the values by passing the yaml file to it. Let's set these values:
+
+```yaml
+one_vxlan_netmask: 24
+one_vxlan_first_ip: "192.168.214.1"
+one_vxlan_address_size: 254
+one_bastion_vpn_clients: 3
+one_bastion_vpn_allowedips: "0.0.0.0/0"
+```
+
+The name of the file can be `tn_init.yaml`.
+
+The pipeline should look as follows:
 
 ![tnInit](../../static/img/toolkit-installer/tnInit.png)
 
 Once the deployment time has elapsed, the elcm component is deployed:
 
-In this case, the component [input](https://github.com/6G-SANDBOX/6G-Library/blob/main/elcm/.tnlcm/public.yaml) fields are not required since the required_when is set to false in all fields. This indicates that it takes the values specified by default in the file [private.yaml](https://github.com/6G-SANDBOX/6G-Library/blob/main/elcm/variables/one/private.yaml). However, you can modify the values by passing the yaml file to it. Let's set these values:
+In this case, the elcm [input](https://github.com/6G-SANDBOX/6G-Library/blob/main/elcm/.tnlcm/public.yaml) fields are not required since the required_when is set to false in all fields. This indicates that it takes the values specified by default in the file [private.yaml](https://github.com/6G-SANDBOX/6G-Library/blob/main/elcm/variables/one/private.yaml). However, you can modify the values by passing the yaml file to it. Let's set these values:
 
 ```yaml
 one_elcm_influxdb_user: "elcm"
@@ -61,5 +75,9 @@ one_elcm_influxdb_password: "elcm"
 one_elcm_influxdb_database: "db"
 one_elcm_grafana_password: "elcm"
 ```
+
+The name of the file can be `elcm.yaml`.
+
+The pipeline should look as follows:
 
 ![elcm](../../static/img/toolkit-installer/elcm.png)
