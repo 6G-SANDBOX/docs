@@ -7,7 +7,7 @@ draft: false
 
 # :rocket: **Release Day is Here!** :rocket:
 
-:calendar: **Date: 2025-02-05**
+:calendar: **Date: 2025-02-06**
 
 :tada: **Today, we are releasing new versions of 6G-Library and TNLCM!** These updates bring key improvements and optimizations to enhance the **6G-SANDBOX** ecosystem.
 
