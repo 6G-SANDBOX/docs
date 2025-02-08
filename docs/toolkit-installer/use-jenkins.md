@@ -29,7 +29,7 @@ Create your own pipeline to test your components. It is achieved by cloning the 
 
 Once the pipeline has been cloned, you can proceed to deploy components by following these steps:
 
-1. Access the pipeline and on the left side go to the `Build with Parameters` section.
+1. Access the pipeline and on the left sidebar go to the `Build with Parameters` section.
 2. Fill in the fields as described in the table below:
 
 | Field               | Description |
