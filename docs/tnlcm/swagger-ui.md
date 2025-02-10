@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: "Swagger UI"
 sidebar_label: "Swagger UI"
 draft: false

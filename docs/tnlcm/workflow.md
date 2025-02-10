@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: "Workflow"
 sidebar_label: "Workflow"
 draft: false
