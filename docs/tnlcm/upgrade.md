@@ -15,11 +15,15 @@ Access via SSH to the TNLCM virtual machine that is running in OpenNebula fronte
 
 ## :inbox_tray: Download the upgrade script
 
-Download the upgrade script which is [`upgrade.sh`](https://github.com/6G-SANDBOX/TNLCM/blob/main/scripts/upgrade.sh).
+Download the upgrade script using one of the following command.
+
+- Using `curl`:
 
 ```bash
 curl -O https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/upgrade.sh
 ```
+
+- Using `wget`:
 
 ```bash
 wget https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/upgrade.sh
