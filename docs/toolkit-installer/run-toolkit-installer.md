@@ -39,7 +39,7 @@ The required permission to enable is:
 
 ## :inbox_tray: Download the installation script
 
-Download the installation script which is [`installer.sh`](https://github.com/6G-SANDBOX/toolkit-installer/blob/main/scripts/installer.sh).
+Download the installation script which is [`install.sh`](https://github.com/6G-SANDBOX/toolkit-installer/blob/main/scripts/install.sh).
 
 ## :desktop_computer: Execute installation script
 
@@ -50,13 +50,13 @@ The script execution must be performed in the OpenNebula frontend using **root**
 Give execution permissions to the script:
 
 ```bash
-chmod +x installer.sh
+chmod +x install.sh
 ```
 
 Run the script and follow the instructions:
 
 ```bash
-./installer.sh
+./install.sh
 ```
 
 <!-- TODO: add video/demo how to deploy service toolkit using toolkit-installer repository -->
