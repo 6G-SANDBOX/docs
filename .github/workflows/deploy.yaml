@@ -5,15 +5,15 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'docs/**'
-      - 'README'
+      - '.gitignore'
+      - 'README.md'
       - 'LICENSE'
   pull_request:
     branches:
       - main
     paths-ignore:
-      - 'docs/**'
-      - 'README'
+      - '.gitignore'
+      - 'README.md'
       - 'LICENSE'
   # workflow_dispatch:
 
