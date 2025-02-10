@@ -9,22 +9,15 @@ draft: false
 
 TNLCM requires the **prior** installation of:
 
-| Repository       | Release                                                                                |
+| Tool             | Release                                                                                |
 | ---------------- | -------------------------------------------------------------------------------------- |
 | OpenNebula       | [v6.10](https://github.com/OpenNebula/one/releases/tag/release-6.10.0)                 |
 | MinIO            | [2024-07-04](https://github.com/minio/minio/releases/tag/RELEASE.2024-07-04T14-25-45Z) |
 | Jenkins          | [v2.462.3](https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.462.3)          |
 
 :::tip
-Additionally TNLCM depends on:
-
-| Repository       | Release                                                                | Branch                                                     |
-| ---------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 6G-Library       | [v0.4.0](https://github.com/6G-SANDBOX/6G-Library/tree/release/v0.4.0) | -                                                          |
-| 6G-Sandbox-Sites | -                                                                      | [platform](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) |
-:::
-
 You can install the full stack MinIO, Jenkins and TNLCM in OpenNebula by following the toolkit installer guide [here](../toolkit-installer/run-toolkit-installer.md).
+:::
 
 ## :inbox_tray: Download the installation script
 
