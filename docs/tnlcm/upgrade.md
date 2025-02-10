@@ -6,7 +6,7 @@ draft: false
 ---
 
 :::important
-The upgrade script starts to take effect from version 0.4.5. That is, you can use it to upgrade to version 0.4.5 or higher.
+The upgrade script starts to take effect from version 0.4.4. That is, you can use it if your current TNLCM version is 0.4.4 or higher.
 :::
 
 ## :inbox_tray: Download the upgrade script
