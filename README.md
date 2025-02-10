@@ -9,7 +9,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-<a href="https://github.com/6G-SANDBOX/docs"><img src="./static/img/logo.png" width="300" title="docs"></a>
+<a href="https://github.com/6G-SANDBOX/docs"><img src="./static/img/logo.svg" width="300" title="docs"></a>
 
 [Report error](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=bug_report.md) · [Feature request](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=feature_request.md)
 
