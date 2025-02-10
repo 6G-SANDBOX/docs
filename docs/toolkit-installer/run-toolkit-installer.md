@@ -37,9 +37,21 @@ The required permission to enable is:
 
 - **Contents**: read and write
 
+## Access to OpenNebula frontend
+
+Access via SSH to the OpenNebula frontend.
+
 ## :inbox_tray: Download the installation script
 
 Download the installation script which is [`install.sh`](https://github.com/6G-SANDBOX/toolkit-installer/blob/main/scripts/install.sh).
+
+```bash
+curl -O https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scripts/install.sh
+```
+
+```bash
+wget https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scripts/install.sh
+```
 
 ## :desktop_computer: Execute installation script
 

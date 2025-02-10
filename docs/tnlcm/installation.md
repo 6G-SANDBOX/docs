@@ -23,6 +23,14 @@ You can install the full stack MinIO, Jenkins and TNLCM in OpenNebula by followi
 
 Download the installation script which is [`install.sh`](https://github.com/6G-SANDBOX/TNLCM/blob/main/scripts/install.sh).
 
+```bash
+curl -O https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/install.sh
+```
+
+```bash
+wget https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/install.sh
+```
+
 ## :desktop_computer: Execute installation script
 
 Give execution permissions to the script:
