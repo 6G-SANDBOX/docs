@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "Getting Started Locally"
-sidebar_label: "Getting Started Locally"
+title: "Installation"
+sidebar_label: "Installation"
 draft: false
 ---
 
@@ -28,20 +28,20 @@ You can install the full stack MinIO, Jenkins and TNLCM in OpenNebula by followi
 
 ## :inbox_tray: Download the installation script
 
-Download the installation script which is [`installer.sh`](https://github.com/6G-SANDBOX/TNLCM/blob/main/scripts/installer.sh).
+Download the installation script which is [`install.sh`](https://github.com/6G-SANDBOX/TNLCM/blob/main/scripts/install.sh).
 
 ## :desktop_computer: Execute installation script
 
 Give execution permissions to the script:
 
 ```bash
-chmod +x installer.sh
+chmod +x install.sh
 ```
 
 Run the script and follow the instructions:
 
 ```bash
-./installer.sh
+./install.sh
 ```
 
 A [Swagger UI](swagger-ui.md) will be available at the url http://tnlcm-backend-ip:5000 where the API with the endpoints are exposed.
