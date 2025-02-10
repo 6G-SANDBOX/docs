@@ -78,12 +78,15 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/logo.png',
+      image: 'img/logo.svg',
       navbar: {
         title: '6G-SANDBOX',
         logo: {
           alt: 'logo',
-          src: 'img/logo.png',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo_dark.svg',
+          href: 'https://6g-sandbox.github.io/docs/',
+          target: '_self'
         },
         items: [
           {
@@ -157,6 +160,14 @@ const config = {
           autoCollapseCategories: true,
         },
       },
+      // announcementBar: {
+      //   id: 'support_us',
+      // content:
+      //   'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+      // backgroundColor: '#fafbfc',
+      // textColor: '#091E42',
+      // isCloseable: false,
+      // },
     }),
 };
 
