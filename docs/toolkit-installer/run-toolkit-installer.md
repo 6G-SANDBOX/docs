@@ -5,7 +5,7 @@ sidebar_label: "Run Toolkit Installer"
 draft: false
 ---
 
-## :white_check_mark: Requirements
+## Requirements
 
 Toolkit installer requires the **prior** installation of:
 

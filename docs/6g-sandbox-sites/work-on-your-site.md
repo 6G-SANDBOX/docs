@@ -5,7 +5,7 @@ sidebar_label: "Work On Your Site"
 draft: false
 ---
 
-## :white_check_mark: Requirements
+## Requirements
 
 :::note
 If you don't have access to the repository, you can request it by creating an [**issue**](https://github.com/6G-SANDBOX/6G-Sandbox-Sites/issues/new?q=is%3Aissue&template=access_request.md) in the repository 6G-Sandbox-Sites requesting to join to the [**6G-SANDBOX sites contributors**](https://github.com/orgs/6G-SANDBOX/teams/6gsandbox-sites-contributors) group.

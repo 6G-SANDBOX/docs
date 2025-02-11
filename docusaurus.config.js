@@ -57,6 +57,7 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
         },
         // blog: {
+        //   routeBasePath: '/',
         //   showReadingTime: true,
         //   feedOptions: {
         //     type: ['rss', 'atom'],

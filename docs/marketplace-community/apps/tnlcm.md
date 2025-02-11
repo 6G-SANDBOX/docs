@@ -40,7 +40,7 @@ The latest version of TNLCM appliance can be downloaded from the OpenNebula publ
 
 This appliance comes with TNLCM backend and frontend installed, following [TNLCM backend official install guide](https://github.com/6G-SANDBOX/TNLCM?tab=readme-ov-file#rocket-getting-started-locally) and [TNLCM frontend official install guide](https://github.com/6G-SANDBOX/TNLCM_FRONTEND?tab=readme-ov-file#rocket-getting-started-locally) including the following features:
 
-- Backend configuration file in `/opt/TNLCM/.env`
+- Backend configuration file in `/opt/TNLCM_BACKEND/.env`
 - Frontend configuration file in `/opt/TNLCM_FRONTEND/.env`
 
 ## Contextualization
