@@ -5,11 +5,11 @@ sidebar_label: "Introduction"
 draft: false
 ---
 
-<!-- ## :calendar: **Date: 2025-XX-XX** -->
+<!-- ## :calendar: **2025-XX-XX** -->
 
-## :calendar: **Date: 2025-02-06**
+## :calendar: **2025-02-06**
 
-:tada: **Today, we are releasing new versions of 6G-Library and TNLCM!** These updates bring key improvements and optimizations to enhance the **6G-SANDBOX** ecosystem.
+**New versions of 6G-Library and TNLCM are here!** These updates bring key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
 
 ### :fire: **What's New?**
 
