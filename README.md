@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 6G-SANDBOX TOOLS DOCS <!-- omit in toc -->
+# TOOLS DOCUMENTATION <!-- omit in toc -->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -11,9 +11,11 @@
 
 <a href="https://github.com/6G-SANDBOX/docs"><img src="static/img/logo.png" width="300" title="docs"></a>
 
-[Docs](https://6g-sandbox.github.io/docs/) · [Report error](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=bug_report.md) · [Feature request](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=feature_request.md)
+[Report Error](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=bug_report.md) • [Feature Request](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=feature_request.md)
 
 </div>
+
+## [Read the docs →](https://6g-sandbox.github.io/docs/)
 
 ## :rocket: Getting Started Locally
 
