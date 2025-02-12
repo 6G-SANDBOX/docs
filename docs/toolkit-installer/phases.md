@@ -27,11 +27,11 @@ draft: false
 - Refresh the list of available appliances in the marketplace.
 - Download required appliances from the OpenNebula Public marketplace:
   - Ubuntu 22.04
-  - Service oneKE 1.29
 - Download required appliances from the 6G-SANDBOX marketplace:
   - Service 6G-Sandbox Toolkit
-  - NTP
+  - Service oneKE 1.31
   - UERANSIM
+  - Bastion
 
 ### Fourth phase
 
