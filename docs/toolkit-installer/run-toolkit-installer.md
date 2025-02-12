@@ -75,4 +75,41 @@ Run the script and follow the instructions:
 ./install.sh
 ```
 
+## Known issues
+
+TNLCM uses MongoDB as a database to store trial networks. MongoDB is not compatible with all CPUs. By default, TNLCM is installed on a virtual machine hosted on an OpenNebula host with the CPU model set to `host-passthrough`. This model type is not recommended unless **there is no OpenNebula host available** that meets the following requirements:
+
+- **x86_64 (amd64) architecture**: MongoDB only supports 64-bit systems.
+- **SSE4.2 and AVX instruction sets**: recent versions of MongoDB require these instructions to function properly.
+
+Therefore, it is recommended to move the TNLCM virtual machine to an OpenNebula host that is compatible with MongoDB.
+
+To check the CPU models of the hosts, you can access the Infrastructure tab from the left sidebar of OpenNebula's Sunstone, go to Host, and select the host. Once a host is selected, in the Info section, scroll down to the Attributes section, where the **KVM_CPU_MODEL** field shows the host's CPU model.
+
+![host](../../static/img/toolkit-installer/host.png)
+
+Some of the CPU models compatible with MongoDB based on our tests are:
+
+- Cascadelake-Server-noTSX
+- Broadwell-IBRS
+- Broadwell-noTSX
+
+To move the TNLCM virtual machine to a MongoDB-compatible host with the correct CPU model, follow these steps:
+
+1. Access OpenNebula's Sunstone.
+2. Perform an Undeploy of the TNLCM virtual machine.
+3. Go to the Conf section of the virtual machine.
+4. Select Update Configuration.
+5. In the OS & CPU section, under CPU Model, select the CPU model of the new host where the TNLCM virtual machine will be moved.
+
+<p align="center">
+    ![cpuModel](../../static/img/toolkit-installer/cpuModel.png)
+</p>
+
+6. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host.
+
+:::note
+In general, these steps will be necessary in all cases where a virtual machine is deployed in OpenNebula that has MongoDB.
+:::
+
 <!-- TODO: add video/demo how to deploy service toolkit using toolkit-installer repository -->
