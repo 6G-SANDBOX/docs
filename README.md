@@ -2,14 +2,14 @@
 
 <div align="center">
 
-# TOOLS DOCUMENTATION <!-- omit in toc -->
+# SOFTWARE DOCUMENTATION <!-- omit in toc -->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-<a href="https://github.com/6G-SANDBOX/docs"><img src="static/img/logo.png" width="300" title="docs"></a>
+<a href="https://github.com/6G-SANDBOX/docs"><img src="./static/img/logo.png" width="300" title="docs"></a>
 
 [Report Error](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=bug_report.md) • [Feature Request](https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=feature_request.md)
 
