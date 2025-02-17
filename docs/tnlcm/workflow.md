@@ -7,7 +7,7 @@ draft: false
 
 ## Overview of TNLCM and 6G-Library implementation
 
-![overview](../../static/img/tnlcm/overview.png)
+![overview](./images/overview.png)
 
 ## State Machine
 
@@ -35,4 +35,4 @@ TNLCM is a **state machine** that allows the automation of component deployment.
 - Destroyed &rarr; Activated: trial network deployed and ready for use 
 - Destroyed &rarr; Purge: trial network removed
 
-![stateMachine](../../static/img/tnlcm/stateMachine.png)
+![stateMachine](./images/stateMachine.png)

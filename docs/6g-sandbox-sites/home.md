@@ -12,7 +12,7 @@ From a technical perspective, the testbed should be supported by a physical infr
 The reference architecture of this micro data center is a fundamental piece and one of the enablers of the 6G-SANDBOX project.
 
 <p align="center">
-  ![sites](../../static/img/6g-sandbox-sites/sites.png)
+  ![sites](./images/sites.png)
 </p>
 
 ## Minimal infrastructure requirements
@@ -24,7 +24,7 @@ The main goal of the 6G-SANDBOX project is to develop a comprehensive and modula
 The cloud computing stack used in 6G-SANDBOX is:
 
 <p align="center">
-  ![stack](../../static/img/6g-sandbox-sites/stack.png)
+  ![stack](./images/stack.png)
 </p>
 
 ### Datacenter
@@ -32,7 +32,7 @@ The cloud computing stack used in 6G-SANDBOX is:
 A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern computing infrastructure that integrates computer, storage, and networking components into a single system to streamline deployment and management. Unlike traditional data centers, HCI leverages software-defined technology to create a more scalable, flexible, and manageable environment. It consolidates these resources into a unified system that can be easily controlled through a centralized software platform, enabling enhanced efficiency, reduced complexity, and improved performance. HCI data centers are designed to support cloud-like capabilities, such as elasticity and resilience, making them ideal for a wide range of enterprise applications and workloads.
 
 <p align="center">
-  ![datacenter](../../static/img/6g-sandbox-sites/datacenter.png)
+  ![datacenter](./images/datacenter.png)
 </p>
 
 ### Networking
@@ -54,7 +54,7 @@ A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern comput
   - Be careful with MTU on both cases
 
 <p align="center">
-  ![networkingVlan](../../static/img/6g-sandbox-sites/networkingVlan.png)
+  ![networkingVlan](./images/networkingVlan.png)
 </p>
 
 - Multiple virtual interfaces, one per VLAN
@@ -63,11 +63,11 @@ A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern comput
 - When a virtual machine is created, OpenNebula add a new virtual interface to the appropriate bridge
 
 <p align="center">
-  ![networkingComputeHost](../../static/img/6g-sandbox-sites/networkingComputeHost.png)
+  ![networkingComputeHost](./images/networkingComputeHost.png)
 </p>
 
 <p align="center">
-  ![networkingNetplan](../../static/img/6g-sandbox-sites/networkingNetplan.png)
+  ![networkingNetplan](./images/networkingNetplan.png)
 </p>
 
 ### Storage
@@ -80,7 +80,7 @@ SDS: Software define Storage
 - De Facto Standard for shared storage in many platforms like Proxmox, OpenStack and OpenNebula
 
 <p align="center">
-  ![storage](../../static/img/6g-sandbox-sites/storage.png)
+  ![storage](./images/storage.png)
 </p>
 
 ### Compute hosts
@@ -93,7 +93,7 @@ SDS: Software define Storage
   - Have spare memory and CPUs to deploy and virtualize new instances 
 
 <p align="center">
-  ![computeHosts](../../static/img/6g-sandbox-sites/computeHosts.png)
+  ![computeHosts](./images/computeHosts.png)
 </p>
 
 ### Virtualization and cloud
@@ -108,7 +108,7 @@ Advantages:
 - Multitenant and federation
 
 <p align="center">
-  ![virtualizationCloud](../../static/img/6g-sandbox-sites/virtualizationCloud.png)
+  ![virtualizationCloud](./images/virtualizationCloud.png)
 </p>
 
 ### Application, SaaS
@@ -116,7 +116,7 @@ Advantages:
 The SaaS is a platform that is being developed within 6G Sandbox Project.
 
 <p align="center">
-  ![overview](../../static/img/tnlcm/overview.png)
+  ![overview](../tnlcm/images/overview.png)
 </p>
 
 ## Summary
@@ -132,5 +132,5 @@ The recommendations are:
 - This architecture can be extended with many hosts up to a medium size datacenter
 
 <p align="center">
-  ![summary](../../static/img/6g-sandbox-sites/summary.png)
+  ![summary](./images/summary.png)
 </p>

@@ -47,4 +47,4 @@ Run the script and follow the instructions:
 ./install.sh
 ```
 
-A [Swagger UI](swagger-ui.md) will be available at the url http://tnlcm-backend-ip:5000 where the API with the endpoints are exposed.
+A [Swagger UI](./swagger-ui.md) will be available at the url http://tnlcm-backend-ip:5000 where the API with the endpoints are exposed.
