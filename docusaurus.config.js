@@ -55,6 +55,19 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/', // Serve the docs at the site's root
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '0.4.X',
+              path: '',
+              banner: 'unreleased',
+            },
+            // "0.4.0": {
+            //   label: '0.4.0',
+            //   path: '0.4.0',
+            //   banner: 'none',
+            // },
+          },
         },
         // blog: {
         //   routeBasePath: '/',
@@ -98,9 +111,15 @@ const config = {
           },
           // {to: '/blog', label: 'BLOG', position: 'left'},
           {
-            href: 'https://github.com/6G-SANDBOX',
-            label: 'GitHub',
+            type: 'docsVersionDropdown',
             position: 'right',
+            dropdownActiveClassDisabled: true,
+          },
+          {
+            href: 'https://github.com/6G-SANDBOX',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository'
           },
         ],
         hideOnScroll: true,

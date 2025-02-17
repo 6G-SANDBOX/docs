@@ -31,7 +31,7 @@ Once you have the necessary permissions, you can generate a token by navigating 
 
 The configuration should look like this:
 
-![fineGrainedToken](../../static/img/toolkit-installer/fineGrainedToken.png)
+![fineGrainedToken](./images/fineGrainedToken.png)
 
 The required permission to enable is:
 
@@ -86,7 +86,7 @@ Therefore, it is recommended to move the TNLCM virtual machine to an OpenNebula 
 
 To check the CPU models of the hosts, you can access the Infrastructure tab from the left sidebar of OpenNebula's Sunstone, go to Host, and select the host. Once a host is selected, in the Info section, scroll down to the Attributes section, where the **KVM_CPU_MODEL** field shows the host's CPU model.
 
-![host](../../static/img/toolkit-installer/host.png)
+![host](./images/host.png)
 
 Some of the CPU models compatible with MongoDB based on our tests are:
 
@@ -103,10 +103,10 @@ To move the TNLCM virtual machine to a MongoDB-compatible host with the correct 
 5. In the OS & CPU section, under CPU Model, select the CPU model of the new host where the TNLCM virtual machine will be moved.
 
 <p align="center">
-    ![cpuModel](../../static/img/toolkit-installer/cpuModel.png)
+    ![cpuModel](./images/cpuModel.png)
 </p>
 
-6. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host.
+1. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host.
 
 :::note
 In general, these steps will be necessary in all cases where a virtual machine is deployed in OpenNebula that has MongoDB.

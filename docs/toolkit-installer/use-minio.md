@@ -17,4 +17,4 @@ Once you access the MinIO dashboard, you will see a bucket called trial-networks
 
 An example can be seen in the following screenshot:
 
-![minio](../../static/img/toolkit-installer/minio.png)
+![minio](./images/minio.png)

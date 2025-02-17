@@ -27,12 +27,21 @@ draft: false
 
 ### :arrow_up: **How to Upgrade** 
 
-Upgrade TNLCM following the instructions [here](tnlcm/upgrade.md).
+Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.md).
 
-:::tip
-To use the latest release, we recommend **redeploying the Service Toolkit** in OpenNebula.
+The following appliances from [6G-SANDBOX Marketplace](https://marketplace.mobilesandbox.cloud:9443/appliance) have been updated:
 
-:point_right: **Deploy the latest version here:** [Service Toolkit - OpenNebula Marketplace](https://marketplace.mobilesandbox.cloud:9443/appliance/service_toolkit)
-:::
+- 6G-Sandbox bastion
+- IxChariot endpoint
+- Loadcore Agent Test Tool
+- Loadcore Agent Test Tool + hugepages
+- Open5GS VM
+- route-manger-api
+- Technitium DNS
+- UERANSIM
+
+Please remove the old versions of the appliances and deploy the new ones.
+
+Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id.
 
 :speech_balloon: **We'd love your feedback!** If you encounter any issues or have suggestions, feel free to open an issue in corresponding repositories.

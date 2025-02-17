@@ -18,7 +18,7 @@ Every directory represents an available component in the 6G Sandbox project, exc
 Prior to the development of a component, is crucial to understand how the basic workflow of a Trial Network deployment works:
 
 <p align="center">
-  ![workflow](../../static/img/6g-library/workflow.png)
+  ![workflow](./images/workflow.png)
 </p>
 
 ### TNCLM sends request to Jenkins

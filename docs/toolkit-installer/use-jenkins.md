@@ -66,7 +66,7 @@ The name of the file can be `tn_init.yaml`.
 
 The pipeline should look as follows:
 
-![tnInit](../../static/img/toolkit-installer/tnInit.png)
+![tnInit](./images/tnInit.png)
 
 Once the deployment time has elapsed, the elcm component is deployed:
 
@@ -83,4 +83,4 @@ The name of the file can be `elcm.yaml`.
 
 The pipeline should look as follows:
 
-![elcm](../../static/img/toolkit-installer/elcm.png)
+![elcm](./images/elcm.png)
