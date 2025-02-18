@@ -52,26 +52,26 @@ git switch -c feature/<section_name> main
 
 - Include a `_category_.json` file with the following structure:
 
-```json
+```json title="<section_name>/_category_.json"
 {
-    "position": <next_position>,
-    "label": "<section_name>",
-    "collapsible": true,
-    "collapsed": true,
-    "className": "red",
-    "link": {
-        "type": "generated-index",
-        "title": "<section_name> Overview"
-    },
-    "customProps": {
-        "description": ""
-    }
+  "position": <next_position>,
+  "label": "<section_name>",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "<section_name> Overview"
+  },
+  "customProps": {
+    "description": ""
+  }
 }
 ```
 
 - Add as many markdown files as required for the new documentation section. Each markdown file must begin with the following structure:
 
-```markdown
+```markdown title="<section_name>/<file_name>.md"
 ---
 sidebar_position: 1
 title: "<title>"
