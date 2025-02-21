@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: "Use MinIO"
 sidebar_label: "Use MinIO"
 draft: false
