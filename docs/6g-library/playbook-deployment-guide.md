@@ -39,17 +39,17 @@ The template has to be specified in the sites repository, and point to an existi
 
 Components that use variables inherited from other component outputs require extra complexity. The intended way to import outputs (e.g. the IP in the default network of component `vm_kvm-ubuntu`) is as follows:
 ```yaml
-    - name: Retrieve terraform outputs
-      ansible.builtin.shell:
-      args:
-        chdir: "{{ workspace }}/.terraform/"
-        cmd: "set -o pipefail && terraform output --json | jq 'with_entries(.value |= .value)'"
-        executable: /bin/bash
-      register: terraform_outputs
-      changed_when: false
-    - name: Set Terraform outputs as playbook facts
-      ansible.builtin.set_fact:
-        bastion_ip: "{{ (terraform_outputs.stdout | from_json)['vm_kvm-ubuntu-ip'][site_networks_id.default | string] }}"
+- name: Retrieve terraform outputs
+  ansible.builtin.shell:
+  args:
+    chdir: "{{ workspace }}/.terraform/"
+    cmd: "set -o pipefail && terraform output --json | jq 'with_entries(.value |= .value)'"
+    executable: /bin/bash
+  register: terraform_outputs
+  changed_when: false
+- name: Set Terraform outputs as playbook facts
+  ansible.builtin.set_fact:
+    bastion_ip: "{{ (terraform_outputs.stdout | from_json)['vm_kvm-ubuntu-ip'][site_networks_id.default | string] }}"
 ```
 To have a clean playbook, try to move these segments to custom task files.
 
@@ -75,8 +75,8 @@ You can include in this stage all configuration needed to be done to the deploye
 After successfully configuring the component, perform tasks to publish what has been done. Usual tasks are:
 - Importing task file `.global/cac/custom_tf_outputs.yaml`: It reads the custom outputs from variable `custom_outputs`, and incorporates them into the file `.terraform/tf-custom_outputs.tf` in the terraform workspace.
 - Importing task file `.global/cac/publish_ok_results.yaml`: Publishes the terraform manifest/s to the S3 storage. It also reads the custom outputs from variable `output`, and uses it to:
-    - Complete the markdown template at `{{ component_type }}/result_templates/ok_result.md.j2` with component information, and publish it to the S3 storage.
-    - Complete the JSON template at `.global/json_templates/ok_result.json.j2` with component information and the previous markdown content, and send it in a POST request back to the TNLCM.
+  - Complete the markdown template at `{{ component_type }}/result_templates/ok_result.md.j2` with component information, and publish it to the S3 storage.
+  - Complete the JSON template at `.global/json_templates/ok_result.json.j2` with component information and the previous markdown content, and send it in a POST request back to the TNLCM.
 
 With a few exceptions, facts `custom_outputs` and `output` include the same variables. Just remember `custom_outputs` is the information available in other deployments and `output` the information available to the experimenter in the TNLCM. Variables in `output` need to be the ones described in `{{ component_type }}/.tnlcm/public.yaml`
 
@@ -95,22 +95,22 @@ These stage includes all pre-deployment tasks as well as the actual deployment. 
 - Importing task file `.global/cac/terraform_workdir.yaml`: Prepares directory `.terraform` in the Jenkins workspace, which will serve as the Terraform workspace. Sets the [.tfstate backend as S3](https://developer.hashicorp.com/terraform/language/settings/backends/s3) (MinIO) and downloads the manifests of previous components.
 - Retrieve terraform outputs with:
 ```yaml
-    - name: Retrieve terraform outputs
-      ansible.builtin.shell:
-      args:
-        chdir: "{{ workspace }}/.terraform/"
-        cmd: "set -o pipefail && terraform output --json | jq 'with_entries(.value |= .value)'"
-        executable: /bin/bash
-      register: terraform_outputs
-      changed_when: false
+- name: Retrieve terraform outputs
+  ansible.builtin.shell:
+  args:
+    chdir: "{{ workspace }}/.terraform/"
+    cmd: "set -o pipefail && terraform output --json | jq 'with_entries(.value |= .value)'"
+    executable: /bin/bash
+  register: terraform_outputs
+  changed_when: false
 ```
 
 - Set as playbook facts the bastion IP and the chosen OneKE's VNF IP.
 ```yaml
-    - name: Set Terraform outputs as playbook facts
-      ansible.builtin.set_fact:
-        bastion_ip: "{{ (terraform_outputs.stdout | from_json)['tn_bastion-ips'][site_networks_id.default | string] }}"
-        node_ips: "{{ (terraform_outputs.stdout | from_json)[one_open5gs_oneKE + '-node_ips'] }}"
+- name: Set Terraform outputs as playbook facts
+  ansible.builtin.set_fact:
+    bastion_ip: "{{ (terraform_outputs.stdout | from_json)['tn_bastion-ips'][site_networks_id.default | string] }}"
+    node_ips: "{{ (terraform_outputs.stdout | from_json)[one_open5gs_oneKE + '-node_ips'] }}"
 ```
 - Add the chosen OneKE's master to Ansible Inventory: Inventory is how Ansible calls the available targets for configuration. In order to access the K8s master for configuration, it has to be previously included into the Inventory. OneKE's master needs to be accessed with the 'root' user
 
@@ -125,7 +125,7 @@ Deploy the helm chart into the K8s cluster. Usual steps include:
 After successfully applying the chart, perform tasks to publish what has been done. Usual tasks are:
 - Importing task file `.global/cac/custom_tf_outputs.yaml`: It reads the custom outputs from variable `custom_outputs`, and incorporates them into the file `.terraform/tf-custom_outputs.tf` in the terraform workspace.
 - Importing task file `.global/cac/publish_ok_results.yaml`: Publishes the terraform manifest/s to the S3 storage. It also reads the custom outputs from variable `output`, and uses it to:
-    - Complete the markdown template at `{{ component_type }}/result_templates/ok_result.md.j2` with component information, and publish it to the S3 storage.
-    - Complete the JSON template at `.global/json_templates/ok_result.json.j2` with component information and the previous markdown content, and send it in a POST request back to the TNLCM.
+  - Complete the markdown template at `{{ component_type }}/result_templates/ok_result.md.j2` with component information, and publish it to the S3 storage.
+  - Complete the JSON template at `.global/json_templates/ok_result.json.j2` with component information and the previous markdown content, and send it in a POST request back to the TNLCM.
 
 With a few exceptions, facts `custom_outputs` and `output` include the same variables. Just remember `custom_outputs` is the information available in other deployments and `output` the information available to the experimenter in the TNLCM. Variables in `output` need to be the ones described in `{{ component_type }}/.tnlcm/public.yaml`
