@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: "Marketplace"
-sidebar_label: "Marketplace"
+title: "Home"
+sidebar_label: "Home"
 draft: false
 ---
 
