@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-title: "Run Toolkit Installer"
-sidebar_label: "Run Toolkit Installer"
+title: "Installation"
+sidebar_label: "Installation"
 draft: false
 ---
 
@@ -41,7 +41,7 @@ The required permission to enable is:
 
 Access via SSH to the OpenNebula frontend.
 
-## :inbox_tray: Download the installation script
+## :inbox_tray: Download installation script
 
 Download the installation script using one of the following command.
 
