@@ -5,7 +5,7 @@ sidebar_label: "Project Structure"
 draft: false
 ---
 
-Toolkit installer is a utility developed for the [6G-SANDBOX](https://6g-sandbox.eu/) project, designed to facilitate the creation of new platforms or sites. It streamlines the deployment process by automating the setup of required environments, configurations and dependencies. This tool ensures consistency and reduces the complexity of initializing new 6G-SANDBOX sites, providing an efficient and user-friendly approach to managing site creation within the project's ecosystem.
+Toolkit installer is a script developed for the [6G-SANDBOX](https://6g-sandbox.eu/) project, designed to facilitate the creation of new platforms or sites. It streamlines the deployment process by automating the setup of required environments, configurations and dependencies. This tool ensures consistency and reduces the complexity of initializing new 6G-SANDBOX sites, providing an efficient and user-friendly approach to managing site creation within the project's ecosystem.
 
 ```
 toolkit-installer/           // main directory.

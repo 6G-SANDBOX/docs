@@ -40,8 +40,8 @@ The following appliances from [6G-SANDBOX Marketplace](https://marketplace.mobil
 - Technitium DNS
 - UERANSIM
 
-Please remove the old versions of the appliances and deploy the new ones.
+Please remove the old versions of the appliances and download the new ones.
 
-Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id.
+Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id. Also new variables from sites are required.
 
 :speech_balloon: **We'd love your feedback!** If you encounter any issues or have suggestions, feel free to open an issue in corresponding repositories.
