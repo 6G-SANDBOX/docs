@@ -1,11 +1,13 @@
 ---
 sidebar_position: 1
-title: "Project Structure"
-sidebar_label: "Project Structure"
+title: "Home"
+sidebar_label: "Home"
 draft: false
 ---
 
 Trial Network Lifecycle Manager (TNLCM) is a tool designed to manage the lifecycle of trial networks. Developed in Python, it automates the creation, deployment and management of temporary or test networks, streamlining the process of experimentation and validation in network development projects.
+
+## Project structure
 
 ```
 TNLCM/                       // main directory.
