@@ -180,14 +180,14 @@ const config = {
           autoCollapseCategories: true,
         },
       },
-      // announcementBar: {
-      //   id: 'support_us',
-      // content:
-      //   'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-      // backgroundColor: '#fafbfc',
-      // textColor: '#091E42',
-      // isCloseable: false,
-      // },
+      announcementBar: {
+        id: 'new_release',
+        content:
+          '🚀 New release of toolkit installer is available! Check it out <a target="_blank" rel="noopener noreferrer" href="https://6g-sandbox.github.io/docs/toolkit-installer/installation">here</a>.',
+        backgroundColor: '#fffae6',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
     }),
 };
 

@@ -5,7 +5,21 @@ sidebar_label: "Introduction"
 draft: false
 ---
 
-<!-- ## :calendar: **2025-XX-XX** -->
+## :calendar: **2025-02-22**
+
+New toolkit installer version is available! This update brings key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
+
+### :fire: **What's New?**
+
+#### :wrench: **Toolkit Installer v0.4.0**
+
+:link: **Repository:** [6G-SANDBOX/Toolkit-Installer](https://github.com/6G-SANDBOX/toolkit-installer)
+
+:page_facing_up: **Changelog:** [Toolkit Installer v0.4.0 Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.4.0)
+
+### How to install
+
+To install the new version of the toolkit installer, follow the instructions [here](./toolkit-installer/installation.md).
 
 ## :calendar: **2025-02-06**
 
