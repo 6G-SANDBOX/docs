@@ -5,7 +5,7 @@ sidebar_label: "Home"
 draft: false
 ---
 
-Toolkit installer is a Python script developed for the [6G-SANDBOX](https://6g-sandbox.eu/) project, designed to facilitate the creation of new &G-SANDBOX [sites](../6g-sandbox-sites/home.md). This script automates the installation of the **MinIO, Jenkins, and TNLCM** stack in OpenNebula using the [service toolkit](https://marketplace.mobilesandbox.cloud:9443/appliance/service_toolkit). This tool ensures consistency and reduces the complexity of initializing new 6G-SANDBOX sites, providing an efficient and user-friendly approach to managing site creation within the project's ecosystem.
+Toolkit installer is a Python script developed for the [6G-SANDBOX](https://6g-sandbox.eu/) project, designed to facilitate the creation of new 6G-SANDBOX [sites](../6g-sandbox-sites/home.md). This script automates the installation of the **MinIO, Jenkins, and TNLCM** stack in OpenNebula using the [service toolkit](https://marketplace.mobilesandbox.cloud:9443/appliance/service_toolkit). This tool ensures consistency and reduces the complexity of initializing new 6G-SANDBOX sites, providing an efficient and user-friendly approach to managing site creation within the project's ecosystem.
 
 ## Project structure
 

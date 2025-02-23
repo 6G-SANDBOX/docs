@@ -13,7 +13,7 @@ The upgrade script starts to take effect from version 0.4.4. That is, you can us
 
 Access via SSH to the TNLCM virtual machine that is running in OpenNebula frontend.
 
-## :inbox_tray: Download the upgrade script
+## :inbox_tray: Download upgrade script
 
 Download the upgrade script using one of the following command.
 
