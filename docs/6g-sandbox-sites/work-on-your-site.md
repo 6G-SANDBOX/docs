@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: "Work On Your Site"
 sidebar_label: "Work On Your Site"
 draft: false

@@ -17,7 +17,7 @@ TNLCM requires the **prior** installation of:
 You can install the full stack MinIO, Jenkins and TNLCM in OpenNebula by following the toolkit installer guide [here](../toolkit-installer/run-toolkit-installer.md).
 :::
 
-## :inbox_tray: Download installation script
+## Download installation script
 
 Download the installation script using one of the following command.
 
@@ -33,7 +33,7 @@ curl -O https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/install.
 wget https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/install.sh
 ```
 
-## :desktop_computer: Execute installation script
+## Execute installation script
 
 Give execution permissions to the script:
 

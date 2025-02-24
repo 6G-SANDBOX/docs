@@ -33,15 +33,15 @@ The configuration should look like this:
 
 ![fineGrainedToken](./images/fineGrainedToken.png)
 
-The required permission to enable is:
+The repository required permission to enable is:
 
 - **Contents**: read and write
 
 ## Access to OpenNebula frontend
 
-Access via SSH to the OpenNebula frontend.
+Access via SSH to OpenNebula frontend.
 
-## :inbox_tray: Download installation script
+## Download installation script
 
 Download the installation script using one of the following command.
 
@@ -57,7 +57,7 @@ curl -O https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scri
 wget https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scripts/install.sh
 ```
 
-## :desktop_computer: Execute installation script
+## Execute installation script
 
 :::important
 The script execution must be performed in the OpenNebula frontend using **root** user.
@@ -84,7 +84,7 @@ TNLCM uses MongoDB as a database to store trial networks. MongoDB is not compati
 
 Therefore, it is recommended to move the TNLCM virtual machine to an OpenNebula host that is compatible with MongoDB.
 
-To check the CPU models of the hosts, you can access the Infrastructure tab from the left sidebar of OpenNebula's Sunstone, go to Host, and select the host. Once a host is selected, in the Info section, scroll down to the Attributes section, where the **KVM_CPU_MODEL** field shows the host's CPU model.
+To check the CPU models of the hosts, you can access the Infrastructure tab from the left sidebar of OpenNebula's Sunstone, go to Host and select the host. Once a host is selected, in the Info section, scroll down to the Attributes section, where the **KVM_CPU_MODEL** field shows the host's CPU model.
 
 ![host](./images/host.png)
 
@@ -106,7 +106,7 @@ To move the TNLCM virtual machine to a MongoDB-compatible host with the correct 
     ![cpuModel](./images/cpuModel.png)
 </p>
 
-1. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host.
+6. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host. Choose the same host where you updated the CPU model.
 
 :::note
 In general, these steps will be necessary in all cases where a virtual machine is deployed in OpenNebula that has MongoDB.

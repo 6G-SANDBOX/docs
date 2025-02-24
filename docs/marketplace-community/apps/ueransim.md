@@ -47,12 +47,12 @@ The latest version of the UERANSIM appliance can be downloaded from the 6G-SANDB
 The appliance comes with the necessary [UERANSIM](https://github.com/aligungr/UERANSIM) files and software, which includes:
 
 - UERANSIM v3.2.6 binaries at `/usr/local/bin/`, which include:
-    - **nr-gnb**: Main executable for 5G gNB (RAN)
-    - **nr-ue**: Main executable for 5G UE
-    - **nr-cli**: CLI tool for 5G gNB and UE
-    - **nr-binder**: A tool for utilizing UE's internet connectivity.
+  - **nr-gnb**: Main executable for 5G gNB (RAN)
+  - **nr-ue**: Main executable for 5G UE
+  - **nr-cli**: CLI tool for 5G gNB and UE
+  - **nr-binder**: A tool for utilizing UE's internet connectivity.
 - UERANSIM v3.2.6 libraries at `/usr/local/lib/`, which include:
-    - **libdevbnd.so**: A dynamic library for nr-binder
+  - **libdevbnd.so**: A dynamic library for nr-binder
 - Sample configuration files for gNB and UE to connect to 5G core implemented with Open5GS at `/etc/ueransim/open5gs-gnb-bak.yaml` and `/etc/ueransim/open5gs-ue-bak.yaml`
 - Configuration files for gNB and UE with values taken from the contextualization variables at `/etc/ueransim/open5gs-gnb.yaml` and `/etc/ueransim/open5gs-ue.yaml`
 - Systemd services (`ueransim-gnb.service` and `ueransim-ue.service`) to boot binaries `nr-gnb` and `nr-ue` with the configuration files with the contextualization variables.

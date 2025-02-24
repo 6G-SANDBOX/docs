@@ -5,7 +5,7 @@ sidebar_label: "Use Jenkins"
 draft: false
 ---
 
-Jenkins is an open-source automation server used to build, test, and deploy software projects, enabling continuous integration and delivery (CI/CD). It supports a wide range of plugins to integrate with various tools and streamline development workflows.
+Jenkins is an open-source automation server used to build, test and deploy software projects, enabling continuous integration and delivery (CI/CD). It supports a wide range of plugins to integrate with various tools and streamline development workflows.
 
 ## How to login
 

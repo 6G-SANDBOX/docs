@@ -11,9 +11,15 @@ The upgrade script starts to take effect from version 0.4.4. That is, you can us
 
 ## Access to TNLCM virtual machine
 
-Access via SSH to the TNLCM virtual machine that is running in OpenNebula frontend.
+Access via SSH to OpenNebula frontend.
 
-## :inbox_tray: Download upgrade script
+Access via SSH to the TNLCM virtual machine that is running in OpenNebula frontend. You can use the following command:
+
+```bash
+onevm ssh <VM_ID-OR-VM_NAME>
+```
+
+## Download upgrade script
 
 Download the upgrade script using one of the following command.
 
@@ -29,7 +35,7 @@ curl -O https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/upgrade.
 wget https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/upgrade.sh
 ```
 
-## :desktop_computer: Execute upgrade script
+## Execute upgrade script
 
 Give execution permissions to the script:
 

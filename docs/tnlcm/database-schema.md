@@ -5,7 +5,7 @@ sidebar_label: "Database Schema"
 draft: false
 ---
 
-TNLCM database, created with MongoDB, consists of several collections that store important information about `resource manager`, `trial network`, `user`, and `verification token`. Below is a description of each collection, along with a graphical representation using SQL syntax created with [dbdiagram.io](https://dbdiagram.io/).
+TNLCM database, created with MongoDB, consists of several collections that store important information about `resource manager`, `trial network`, `user` and `verification token`. Below is a description of each collection, along with a graphical representation using SQL syntax created with [dbdiagram.io](https://dbdiagram.io/).
 
 ## Collections
 

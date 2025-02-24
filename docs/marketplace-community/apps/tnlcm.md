@@ -47,14 +47,14 @@ This appliance comes with TNLCM backend and frontend installed, following [TNLCM
 
 The contextualization parameters ([CONTEXT section](https://docs.opennebula.io/stable/management_and_operations)) in the VM template controls the configuration of the service, see the table below:
 
-| Parameter                            | Default        | Description                                                                          |
-| ------------------------------------ | -------------- | ------------------------------------------------------------------------------------ |
-| ``ONEAPP_TNLCM_JENKINS_HOST``        | ``127.0.0.1``  | IP address of the Jenkins server used to deploy the Trial Networks                   |
-| ``ONEAPP_TNLCM_JENKINS_PASSWORD``    | ``tnlcm``      | Password used to login into the Jenkins server to access and retrieve pipeline info. |
-| ``ONEAPP_TNLCM_JENKINS_TOKEN``       |                | Token to authenticate while sending POST requests to the Jenkins Server API          |
-| ``ONEAPP_TNLCM_JENKINS_USERNAME``    | ``tnlcm``      | Username used to login into the Jenkins server to access and retrieve pipeline info. |
-| ``ONEAPP_TNLCM_SITES_TOKEN``         |                | Password used to decrypt the contents of the 6G-Sandbox-Sites repository file        |
-| ``ONEAPP_TNLCM_ADMIN_USER``          | ``tnlcm``      | Name of the administrator user that is created by default                            |
-| ``ONEAPP_TNLCM_ADMIN_PASSWORD``      | ``tnlcm``      | Administrator user password created by default                                       |
+| Parameter                            | Description                                                                          | Default        |
+| ------------------------------------ | ------------------------------------------------------------------------------------ | -------------- |
+| ``ONEAPP_TNLCM_JENKINS_HOST``        | IP address of the Jenkins server used to deploy the Trial Networks                   | ``127.0.0.1``  |
+| ``ONEAPP_TNLCM_JENKINS_PASSWORD``    | Password used to login into the Jenkins server to access and retrieve pipeline info  | ``tnlcm``      |
+| ``ONEAPP_TNLCM_JENKINS_TOKEN``       | Token to authenticate while sending POST requests to the Jenkins Server API          | \<undefined\>  |
+| ``ONEAPP_TNLCM_JENKINS_USERNAME``    | Username used to login into the Jenkins server to access and retrieve pipeline info  | ``tnlcm``      |
+| ``ONEAPP_TNLCM_SITES_TOKEN``         | Password used to decrypt the contents of the 6G-Sandbox-Sites repository file        | \<undefined\>  |
+| ``ONEAPP_TNLCM_ADMIN_USER``          | Name of the administrator user that is created by default                            | ``tnlcm``      |
+| ``ONEAPP_TNLCM_ADMIN_PASSWORD``      | Administrator user password                                                          | \<undefined\>  |
 
 TNLCM backend use the parameter ``ONEAPP_TNLCM_JENKINS_HOST``, ``ONEAPP_TNLCM_JENKINS_PASSWORD``, ``ONEAPP_TNLCM_JENKINS_TOKEN``, ``ONEAPP_TNLCM_JENKINS_USERNAME``, ``ONEAPP_TNLCM_ANSIBLE_VAULT``, ``ONEAPP_TNLCM_ADMIN_USER`` and ``ONEAPP_TNLCM_ADMIN_PASSWORD``. All parameters are mandatory. If any of them are missing, TNLCM will throw an error.
