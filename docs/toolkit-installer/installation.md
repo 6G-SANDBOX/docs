@@ -15,7 +15,7 @@ Once you have OpenNebula installed, you can proceed with the following steps.
 
 ## Create site token
 
-Create an [**issue**](https://github.com/6G-SANDBOX/6G-Sandbox-Sites/issues/new?q=is%3Aissue&template=access_request.md) in the repository 6G-Sandbox-Sites requesting to join to the [**6G-SANDBOX sites contributors**](https://github.com/orgs/6G-SANDBOX/teams/6gsandbox-sites-contributors) group.
+If you don't have a token to access the 6G-SANDBOX sites repository, you need to request access. Create an [**issue**](https://github.com/6G-SANDBOX/6G-Sandbox-Sites/issues/new?q=is%3Aissue&template=access_request.md) in the repository 6G-Sandbox-Sites requesting to join to the [**6G-SANDBOX sites contributors**](https://github.com/orgs/6G-SANDBOX/teams/6gsandbox-sites-contributors) group.
 
 Assign the issue to **@CarlosAndreo** or **@alvarocurt**. Additionally, add the `access-request` label.
 

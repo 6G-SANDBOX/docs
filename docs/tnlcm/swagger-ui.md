@@ -87,7 +87,7 @@ Hoppscotch is a free API request builder that allows you to make requests to the
 
 - Go to the official website [Hoppscotch](https://hoppscotch.io/)
 - Install the [extension](https://chromewebstore.google.com/detail/hoppscotch-browser-extens/amknoiejhlmhancpahfcfcfhllgkpbld) in your browser and enable it
-- Once installed, access the TNLCM API URL and open the extension. Add a new origin, which is the TNLCM API URL, as shown in the image:
+- Once enabled, access the TNLCM API URL and open the extension. Add a new origin, which is the TNLCM API URL, as shown in the image:
 
 <p align="center">
     ![hoppscotchOrigin](./images/hoppscotchOrigin.png)
