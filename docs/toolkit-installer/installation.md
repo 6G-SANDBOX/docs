@@ -39,7 +39,7 @@ The repository required permission to enable is:
 
 ## Access to OpenNebula frontend
 
-Access via SSH to OpenNebula frontend.
+Access via SSH to OpenNebula frontend with root user.
 
 ## Download installation script
 
@@ -58,10 +58,6 @@ wget https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scripts
 ```
 
 ## Execute installation script
-
-:::important
-The script execution must be performed in the OpenNebula frontend using **root** user.
-:::
 
 Give execution permissions to the script:
 
