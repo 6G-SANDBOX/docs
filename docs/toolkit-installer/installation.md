@@ -11,7 +11,7 @@ Toolkit installer requires the **prior** installation of:
 
 - **OpenNebula**: [v6.10](https://github.com/OpenNebula/one/releases/tag/release-6.10.0)
 
-Once you have OpenNebula installed, you can proceed with the following steps.
+Once you have **properly** installed OpenNebula, you can proceed with the following steps.
 
 ## Create site token
 

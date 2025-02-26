@@ -12,9 +12,9 @@ Toolkit installer is a Python script developed for the [6G-SANDBOX](https://6g-s
 ```
 toolkit-installer/           // main directory.
 ├─ .github/                  // directory contains files and templates for GitHub workflow automation.
+├─ docs/                     // directory where documentation is stored.
 ├─ phases/                   // directory that the phases code is stored.
 │  └─ utils/                 // directory that handler data conversions and storage in YAML, Markdown and JSON formats.
-├─ docs/                     // directory where documentation is stored.
 ├─ scripts/                  // directory contains scripts for automated deployments.
 ├─ .env                      // file that contains environment variables for configuring the application.
 ├─ .gitignore                // file specifying intentionally untracked files to ignore.
