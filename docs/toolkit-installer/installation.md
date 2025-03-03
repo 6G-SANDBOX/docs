@@ -9,19 +9,20 @@ draft: false
 
 Toolkit installer requires the **prior** installation of:
 
-- **OpenNebula**: [v6.10](https://github.com/OpenNebula/one/releases/tag/release-6.10.0)
+- **OpenNebula**: [v6.10](https://docs.opennebula.io/6.10/installation_and_configuration/index.html)
 
 Once you have **properly** installed OpenNebula, you can proceed with the following steps.
 
 ## Create site token
 
-If you don't have a token to access the 6G-SANDBOX sites repository, you need to request access. Create an [**issue**](https://github.com/6G-SANDBOX/6G-Sandbox-Sites/issues/new?q=is%3Aissue&template=access_request.md) in the repository 6G-Sandbox-Sites requesting to join to the [**6G-SANDBOX sites contributors**](https://github.com/orgs/6G-SANDBOX/teams/6gsandbox-sites-contributors) group.
+If you don't have a token to access the 6G-SANDBOX sites repository, you need to request access:
 
-Assign the issue to **@CarlosAndreo** or **@alvarocurt**. Additionally, add the `access-request` label.
+1. Create an [**issue**](https://github.com/6G-SANDBOX/6G-Sandbox-Sites/issues/new?q=is%3Aissue&template=access_request.md) in the repository 6G-Sandbox-Sites requesting to join to the [**6G-SANDBOX organization**](https://github.com/6G-SANDBOX).
+2. Assign the issue to **@CarlosAndreo** or **@alvarocurt**. Additionally, add the `request-access` label.
+3. The administrators will review the request and add you to the organization if approved.
+4. Once you have access to 6G-SANDBOX organization, the administrators will add you to the [6G-SANDBOX sites contributors](https://github.com/orgs/6G-SANDBOX/teams/6gsandbox-sites-contributors) group.
 
-The administrators will review the request and add you to the group if approved.
-
-Once you have the necessary permissions, you can generate a token by navigating to:
+Then you can generate a token by navigating to:
 
 1. **Settings**
 2. **Developer settings**
