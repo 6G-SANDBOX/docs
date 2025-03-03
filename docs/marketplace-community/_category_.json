@@ -1,12 +1,12 @@
 {
-  "position": 3,
-  "label": "Toolkit Installer",
+  "position": 6,
+  "label": "Marketplace Community",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "Toolkit Installer Overview"
+    "title": "Marketplace Community Overview"
   },
   "customProps": {
     "description": ""
