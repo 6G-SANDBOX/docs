@@ -49,13 +49,13 @@ Download the installation script using one of the following command.
 - Using `curl`:
 
 ```bash
-curl -O https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scripts/install.sh
+curl -O https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/v0.4.0/scripts/install.sh
 ```
 
 - Using `wget`:
 
 ```bash
-wget https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/main/scripts/install.sh
+wget https://raw.githubusercontent.com/6G-SANDBOX/toolkit-installer/v0.4.0/scripts/install.sh
 ```
 
 ## Execute installation script
