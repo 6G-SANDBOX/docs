@@ -7,6 +7,8 @@ draft: false
 
 ## Requirements
 
+<!-- TODO @alvarocurto: have bridge interface configurated -->
+
 Toolkit installer requires the **prior** installation of:
 
 - **OpenNebula**: [v6.10](https://docs.opennebula.io/6.10/installation_and_configuration/index.html)
@@ -109,4 +111,4 @@ To move the TNLCM virtual machine to a MongoDB-compatible host with the correct 
 In general, these steps will be necessary in all cases where a virtual machine is deployed in OpenNebula that has MongoDB.
 :::
 
-<!-- TODO: add video/demo how to deploy service toolkit using toolkit-installer repository -->
+<!-- TODO @CarlosAndreo: add video/demo how to deploy service toolkit using toolkit-installer repository -->
