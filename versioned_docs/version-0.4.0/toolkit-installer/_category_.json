@@ -1,0 +1,14 @@
+{
+  "position": 3,
+  "label": "Toolkit Installer",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Toolkit Installer Overview"
+  },
+  "customProps": {
+    "description": ""
+  }
+}
