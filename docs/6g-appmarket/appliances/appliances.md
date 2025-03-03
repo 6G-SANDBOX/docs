@@ -1,14 +1,24 @@
 ---
-sidebar_position: 2
-title: "Apps"
-sidebar_label: "Apps"
+sidebar_position: 3
+title: "Appliances"
+sidebar_label: "Appliances"
 draft: false
 ---
 
 ## Prerequisites
 
-In order to build appliances, you first need to have packer installed in your chosen system.
-If you plan to build appliances on a VM make sure to have *nested virtualization* to be able to use kvm inside the VM. To do that, you need to load the option for your hypervisor kernel module.
+In order to create appliances, you must first create an Ubuntu 22.04 virtual machine. It is recommended that you have the following resources:
+
+:::note
+Keep in mind that in this virtual machine you have to virtualize machines that compile inside. So give the resources that you consider appropriate.
+:::
+
+- 4 vCPUs
+- 4 physical CPUs
+- 16 GB RAM
+- 50 GB disk space
+
+Then you need to have packer installed in your Ubuntu. If you plan to build appliances on a VM make sure to have **nested virtualization** to be able to use kvm inside the VM. To do that, you need to load the option for your hypervisor kernel module. (TODO @alvarocurto: The following steps must be done at host level, not sure, ask alvaro):
 
 ```bash
 # Replace kvm_intel with kvm_amd depending on your CPU
@@ -19,7 +29,7 @@ echo "options kvm_intel nested=1" > /etc/modprobe.d/kvm_intel.conf
 echo "options kvm-intel enable_shadow_vmcs=1" >> /etc/modprobe.d/kvm_intel.conf
 update-initramfs -u -k all
 
-### To apply the changes you can either reboot the system, or just reload the module (you still need to have no active VMs in the host)
+# To apply the changes you can either reboot the system, or just reload the module (you still need to have no active VMs in the host)
 modprobe -r kvm_intel
 modprobe kvm_intel nested=1
 ```
@@ -28,9 +38,9 @@ To install Packer, these scripts is what we used:
 
 ```bash
 ###### Ubuntu 22.04 ######
-### Install QEMU/KVM (probably some packages are not needed but better safe than sorry)
-apt install qemu qemu-system-x86 qemu-utils libnbd-bin nbdkit fuse2fs qemu-system ovmf cloud-utils cloud-image-utils parted genisoimage guestfs-tools make nginx dpkg rpm rsync ruby 
-### Install Packer
+# Install QEMU/KVM (probably some packages are not needed but better safe than sorry)
+apt install -y qemu qemu-system-x86 qemu-utils libnbd-bin nbdkit fuse2fs qemu-system ovmf cloud-utils cloud-image-utils parted genisoimage guestfs-tools make nginx dpkg rpm rsync ruby 
+# Install Packer
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/hashicorp.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/hashicorp.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null
 sudo apt update && sudo apt install packer
@@ -48,16 +58,16 @@ Variables `$DIR_APPLIANCES` and `$DIR_METADATA` can be modified from file `commu
 
 1. Go to the `one-apps` directory (the one downloaded as a submodule) and generate the base image for the appliance/s you desire to build. For now, all available appliances use the Ubuntu 22.04 image so this is a braindead step.
 ```bash
-$ cd marketplace-community/one-apps
-$ sudo make ubuntu2204
+cd marketplace-community/one-apps
+sudo make ubuntu2204
 ```
 This will generate the file `one-apps/export/ubuntu2204.qcow2`
 
 2. Go to the `community-apps` directory and generate your desired appliance/s. For example, to generate TNLCM appliance:
 ```bash
-$ cd ../community-apps
-$ sudo make                   # This will show the name of all available appliances to build
-$ sudo make service_TNLCM
+cd ../community-apps
+sudo make                   # This will show the name of all available appliances to build
+sudo make service_TNLCM
 ```
 This will generate the image file `community-apps/export/service_TNLCM.qcow2`, and if you leaved the "update_metadata.sh" reference in the Makefile, it will be moved to `$DIR_APPLIANCES`.
 

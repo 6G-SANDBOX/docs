@@ -1,12 +1,12 @@
 {
   "position": 6,
-  "label": "Marketplace Community",
+  "label": "6G-Marketplace",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "Marketplace Community Overview"
+    "title": "6G-Marketplace Overview"
   },
   "customProps": {
     "description": ""
