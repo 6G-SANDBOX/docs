@@ -7,7 +7,10 @@ draft: false
 
 ## Requirements
 
+<!-- TODO @alvarocurto: https://github.com/6G-SANDBOX/6G-Sandbox-Sites/blob/main/.dummy_site/core.yaml -->
 <!-- TODO @alvarocurto: have bridge interface configurated -->
+<!-- TODO @alvarocurto: have a public ip configurated -->
+<!-- TODO @alvarocurto: have a port forwarding configurated -->
 
 Toolkit installer requires the **prior** installation of:
 
