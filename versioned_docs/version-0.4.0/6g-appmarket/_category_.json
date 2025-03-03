@@ -1,0 +1,14 @@
+{
+  "position": 6,
+  "label": "6G-Marketplace",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "6G-Marketplace Overview"
+  },
+  "customProps": {
+    "description": ""
+  }
+}

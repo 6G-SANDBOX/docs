@@ -55,18 +55,18 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/', // Serve the docs at the site's root
-          lastVersion: 'current',
+          lastVersion: '0.4.0',
           versions: {
+            "0.4.0": {
+              label: '0.4.0',
+              path: '0.4.0',
+              banner: 'none',
+            },
             current: {
               label: '0.4.X',
               path: '',
               banner: 'unreleased',
             },
-            // "0.4.0": {
-            //   label: '0.4.0',
-            //   path: '0.4.0',
-            //   banner: 'none',
-            // },
           },
         },
         // blog: {
@@ -183,10 +183,11 @@ const config = {
       announcementBar: {
         id: 'new_release',
         content:
-          '🚀 New release of toolkit installer is available! Check it out <a target="_blank" rel="noopener noreferrer" href="https://6g-sandbox.github.io/docs/toolkit-installer/installation">here</a>.',
+          '🚀 New release of documentation is available! Check it out <a target="_blank" rel="noopener noreferrer" href="https://6g-sandbox.github.io/docs/0.4.0/introduction">here</a>.',
         backgroundColor: '#fffae6',
         textColor: '#091E42',
         isCloseable: true,
+
       },
     }),
 };
