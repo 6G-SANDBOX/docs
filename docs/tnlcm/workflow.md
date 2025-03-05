@@ -27,6 +27,7 @@ TNLCM is a **state machine** that allows the automation of component deployment.
 - Initial state &rarr; Created: trial network descriptor created
 - Initial state &rarr; Validated: trial network descriptor validated and ready for deploy
 - Created &rarr; Validated: trial network descriptor validated and ready for deploy
+- Created &rarr; Purge: trial network invalid
 - Validated &rarr; Activated: trial network deployed and ready for use
 - Validated &rarr; Failed: trial network deployment failed
 - Validated &rarr; Purge: trial network invalid
