@@ -43,5 +43,7 @@ TNLCM is a **state machine** that allows the automation of component deployment.
 - **destroyed** &rarr; **pending-destruction**: trial network deployment removal failed. It is waiting for the user to try again.
 - **destroyed** &rarr; **pending-activation**: retry the trial network deployment and it fails.
 - **destroyed** &rarr; **activated**: retry the trial network deployment and it is successful.
+- **pending-destruction** &rarr; **destroyed**: retry the trial network deployment removal and it is successful.
+- **pending-destruction** &rarr; **pending-destruction**: retry the trial network deployment removal and it fails again.
 
 ![stateMachine](./images/stateMachine.png)
