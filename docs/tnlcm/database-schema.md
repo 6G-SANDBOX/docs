@@ -5,9 +5,18 @@ sidebar_label: "Database Schema"
 draft: false
 ---
 
-TNLCM database, created with MongoDB, consists of several collections that store important information about `trial network` and `user`. Below is a description of each collection, along with a graphical representation using SQL syntax created with [dbdiagram.io](https://dbdiagram.io/).
+TNLCM database, created with MongoDB, consists of several collections that store important information about `trial network`, `resource_manager` and `user`. Below is a description of each collection, along with a graphical representation using SQL syntax created with [dbdiagram.io](https://dbdiagram.io/).
 
 ## Collections
+
+### Collection `resource_manager`
+
+| Field       | Type    | Description                                       |
+| ----------- | ------- | ------------------------------------------------- |
+| `component` | string  | Component over which resources are controlled     |
+| `tn_id`     | string  | ID of the trial network                           |
+| `quantity`  | integer | Amount of component available                     |
+| `ttl`       | float   | Time the component can be used in a trial network |
 
 ### Collection `trial_network`
 
@@ -44,6 +53,7 @@ TNLCM database, created with MongoDB, consists of several collections that store
 
 ## Relationships
 
+- `resource_manager.tn_id > trial_network.tn_id` // resource_manager references trial_network
 - `trial_network.user_created > user.username` // A user can have multiple trial_networks (one-to-many)
 
 ## Model
