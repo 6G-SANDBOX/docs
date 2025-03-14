@@ -26,13 +26,13 @@ Download the upgrade script using one of the following command.
 - Using `curl`:
 
 ```bash
-curl -O https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/upgrade.sh
+curl -O https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/v0.4.5/scripts/upgrade.sh
 ```
 
 - Using `wget`:
 
 ```bash
-wget https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/scripts/upgrade.sh
+wget https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/v0.4.5/scripts/upgrade.sh
 ```
 
 ## Execute upgrade script

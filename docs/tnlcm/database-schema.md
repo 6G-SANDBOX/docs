@@ -5,18 +5,9 @@ sidebar_label: "Database Schema"
 draft: false
 ---
 
-TNLCM database, created with MongoDB, consists of several collections that store important information about `resource manager`, `trial network`, `user` and `verification token`. Below is a description of each collection, along with a graphical representation using SQL syntax created with [dbdiagram.io](https://dbdiagram.io/).
+TNLCM database, created with MongoDB, consists of several collections that store important information about `trial network` and `user`. Below is a description of each collection, along with a graphical representation using SQL syntax created with [dbdiagram.io](https://dbdiagram.io/).
 
 ## Collections
-
-### Collection `resource_manager`
-
-| Field       | Type    | Description                                       |
-| ----------- | ------- | ------------------------------------------------- |
-| `component` | string  | Component over which resources are controlled     |
-| `tn_id`     | string  | ID of the trial network                           |
-| `quantity`  | integer | Amount of component available                     |
-| `ttl`       | float   | Time the component can be used in a trial network |
 
 ### Collection `trial_network`
 
@@ -51,19 +42,9 @@ TNLCM database, created with MongoDB, consists of several collections that store
 | `role`     | string | User's role                   |
 | `org`      | string | User's organization           |
 
-### Collection `verification_token`
-
-| Field                | Type   | Description                             |
-| -------------------- | ------ | --------------------------------------- |
-| `new_account_email`  | string | Email for the new account (primary key) |
-| `verification_token` | string | Verification token for the account      |
-| `creation_date`      | date   | Creation date of the verification token |
-
 ## Relationships
 
-- `resource_manager.tn_id > trial_network.tn_id` // resource_manager references trial_network
 - `trial_network.user_created > user.username` // A user can have multiple trial_networks (one-to-many)
-- `verification_token.new_account_email - user.email` // One-to-one relationship between verification_token and user
 
 ## Model
 
