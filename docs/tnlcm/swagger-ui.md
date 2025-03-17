@@ -21,7 +21,7 @@ Once the user has been created or if it has been previously created, add the use
 
 Once the user has been added, an access token and its refresh token can be generated. This access token has a duration of one day (can be modified):
 
-![obtainTokens](./images/obtainTokens.png)
+![login](./images/login.png)
 
 The next step is to add the token in the green **Authorize** box. It is required to put the word **Bearer**, a space and then the token. An example is shown:
 
@@ -44,10 +44,12 @@ Once logged into TNLCM, execute the POST request of the `trial-network` namespac
 Fill in the following fields:
 
 - `tn_id`: must start with a character and be at least 4 characters long. This field can be left blank, in which case a random value will be generated.
+- `descriptor`: descriptor file containing the definition of the trial network. To create a descriptor file, refer to the [Trial Network Descriptor Schema](./descriptor-schema.md) section.
 - `library_reference_type`: you can specify a branch, tag, or commit of the 6G-Library repository.
 - `library_reference_value`: value corresponding to the type specified in the `library_reference_type` field.
-- `deployment_site`: must be one of the branches available in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository.
-- `descriptor`: descriptor file containing the definition of the trial network. To create a descriptor file, refer to the [Trial Network Descriptor Schema](./descriptor-schema.md) section.
+- `sites_branch`: must be one of the branches available in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository.
+- `deployment_site`: must be one directory of the `sites_branch` specified.
+- `validate`: if true, the descriptor file will be validated and required all the parameters to be filled in. If false, the descriptor file will not be validated and some parameters can be left blank.
 
 ## Deploy trial network
 
