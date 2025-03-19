@@ -5,6 +5,22 @@ sidebar_label: "Introduction"
 draft: false
 ---
 
+## :calendar: **2025-0X-XX**
+
+### :fire: **What's New?**
+
+#### **Appliances**
+
+The following appliances from [6G-SANDBOX Marketplace](https://marketplace.mobilesandbox.cloud:9443/appliance) have been updated:
+
+- ELCM
+- Jenkins
+- UERANSIM
+
+Please remove the old versions of the appliances and download the new ones.
+
+<!-- TODO: maybe toolkit installer capabilities to update appliances -->
+
 ## :calendar: **2025-02-22**
 
 New toolkit installer version is available! This update brings key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
@@ -17,13 +33,11 @@ New toolkit installer version is available! This update brings key improvements 
 
 :page_facing_up: **Changelog:** [Toolkit Installer v0.4.0 Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.4.0)
 
-### How to install
-
 To install the new version of the toolkit installer, follow the instructions [here](./toolkit-installer/installation.md).
 
 ## :calendar: **2025-02-06**
 
-**New versions of 6G-Library and TNLCM are here!** These updates bring key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
+New versions of 6G-Library and TNLCM are here! These updates bring key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
 
 ### :fire: **What's New?**
 
@@ -33,15 +47,19 @@ To install the new version of the toolkit installer, follow the instructions [he
 
 :page_facing_up: **Changelog:** [TNLCM v0.4.5 Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.4.5)
 
+Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.md)
+
 #### :books: **6G-Library v0.4.0**
 
 :link: **Repository:** [6G-SANDBOX/6G-Library](https://github.com/6G-SANDBOX/6G-Library)
 
 :page_facing_up: **Changelog:** [6G-Library v0.4.0 Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.4.0)
 
-### :arrow_up: **How to Upgrade** 
+#### **6G-Sandbox-Sites**
 
-Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.md).
+Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id. Also new variables from sites are required. Please follow dummy site [here](https://github.com/6G-SANDBOX/6G-Sandbox-Sites/blob/main/.dummy_site/core.yaml)
+
+#### **Appliances**
 
 The following appliances from [6G-SANDBOX Marketplace](https://marketplace.mobilesandbox.cloud:9443/appliance) have been updated:
 
@@ -55,7 +73,5 @@ The following appliances from [6G-SANDBOX Marketplace](https://marketplace.mobil
 - UERANSIM
 
 Please remove the old versions of the appliances and download the new ones.
-
-Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id. Also new variables from sites are required.
 
 :speech_balloon: **We'd love your feedback!** If you encounter any issues or have suggestions, feel free to open an issue in corresponding repositories.
