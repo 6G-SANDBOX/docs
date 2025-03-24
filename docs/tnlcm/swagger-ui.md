@@ -49,6 +49,7 @@ Fill in the following fields:
 - `library_reference_value`: value corresponding to the type specified in the `library_reference_type` field.
 - `sites_branch`: must be one of the branches available in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository.
 - `deployment_site`: must be one directory of the `sites_branch` specified.
+- `deployment_site_token`: token to decrypt the deployment site yaml file.
 - `validate`: if true, the descriptor file will be validated and required all the parameters to be filled in. If false, the descriptor file will not be validated and some parameters can be left blank.
 
 ## Deploy trial network
@@ -82,19 +83,3 @@ Once logged into TNLCM, the trial network has been created, deployed and destroy
 Fill in the following fields:
 
 - `tn_id`: the identifier of the trial network received in the [POST request](#create-trial-network).
-
-## Use Hoppscotch
-
-Hoppscotch is a free API request builder that allows you to make requests to the TNLCM API. To use it:
-
-- Go to the official website [Hoppscotch](https://hoppscotch.io/)
-- Install the [extension](https://chromewebstore.google.com/detail/hoppscotch-browser-extens/amknoiejhlmhancpahfcfcfhllgkpbld) in your browser and enable it
-- Once enabled, access the TNLCM API URL and open the extension. Add a new origin, which is the TNLCM API URL, as shown in the image:
-
-<p align="center">
-    ![hoppscotchOrigin](./images/hoppscotchOrigin.png)
-</p>
-
-- In the [Hoppscotch settings](https://hoppscotch.io/settings), select extensions in the interceptor section
-- Next, import the JSON file located in the [hoppscotch](https://github.com/6G-SANDBOX/TNLCM/tree/main/hoppscotch) directory of the TNLCM repository
-- Finally, proceed to make requests following the order of the HTTP methods

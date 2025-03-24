@@ -26,7 +26,6 @@ TNLCM/                       // main directory.
 │  ├─ sites/                 // directory that handler the connection to the Sites repository.
 │  └─ utils/                 // directory that handler data conversions and storage in YAML, Markdown and JSON formats.
 ├─ docs/                     // directory where documentation is stored.
-├─ hoppscotch/               // directory that contains the Hoppscotch collection for testing the API.
 ├─ scripts/                  // directory contains scripts for automated deployments.
 ├─ tn_template_lib/          // directory that trial network descriptors templates are stored.
 ├─ .env.template             // file that contains placeholder environment variables for configuring the application.

@@ -26,7 +26,7 @@ trial_network: # Mandatory, contains the description of all entities in the Tria
 
 The TNLCM repository contains some advanced descriptors. Access the [documentation](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/README.md) to see what is defined in each of them.
 
-- [elcm](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/elcm.yaml) - **should work on all platforms**. Reference trial network defined for experimentation.
+- [elcm_loadcore_open5gs_vm](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/elcm_loadcore_open5gs_vm.yaml) - **should work on all platforms**. Reference trial network defined for experimentation.
 - [loadcore_open5gs_vm.yaml](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/loadcore_open5gs_vm.yaml) - **should work on all platforms**. Reference trial network defined in WP5.
 - [ueransim_split_open5gs_k8s.yaml](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/ueransim_split_open5gs_k8s.yaml) - **should work on all platforms**. First end-to-end trial network.
 

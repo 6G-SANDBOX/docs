@@ -16,7 +16,6 @@ TNLCM database, created with MongoDB, consists of several collections that store
 | `component` | string  | Component over which resources are controlled     |
 | `tn_id`     | string  | ID of the trial network                           |
 | `quantity`  | integer | Amount of component available                     |
-| `ttl`       | float   | Time the component can be used in a trial network |
 
 ### Collection `trial_network`
 
@@ -26,20 +25,18 @@ TNLCM database, created with MongoDB, consists of several collections that store
 | `tn_id`                             | string   | ID of the trial network (primary key)      |
 | `state`                             | string   | State of the trial network                 |
 | `date_created_utc`                  | date     | Creation date and time in UTC              |
+| `directory_path`                    | string   | Directory where trial network is saved     |
 | `raw_descriptor`                    | dict     | Raw descriptor of the trial network        |
 | `sorted_descriptor`                 | dict     | Sorted descriptor                          |
 | `deployed_descriptor`               | dict     | Current status of descriptor               |
-| `report`                            | markdown | Report related to the trial network        |
-| `directory_path`                    | string   | Directory where trial network is saved     |
-| `jenkins_deploy_pipeline`           | string   | Pipeline for descriptor deployment         |
-| `jenkins_destroy_pipeline`          | string   | Pipeline for destroying trial network      |
-| `deployment_site`                   | string   | Deployment site of trial network           |
-| `input`                             | dict     | YAML files per entity-name sent to Jenkins |
-| `output`                            | dict     | JSON received by Jenkins per entity-name   |
+| `jenkins_deploy`                    | dict     | Information about the deploy pipeline      |
+| `jenkins_destroy`                   | dict     | Information about the destroy pipeline     |
 | `library_https_url`                 | string   | Library github https url                   |
 | `library_commit_id`                 | string   | Library commit ID                          |
 | `sites_https_url`                   | string   | Sites github https url                     |
 | `sites_commit_id`                   | string   | Sites commit ID                            |
+| `deployment_site`                   | string   | Deployment site of trial network           |
+| `report`                            | markdown | Report related to the trial network        |
 
 ### Collection `user`
 
