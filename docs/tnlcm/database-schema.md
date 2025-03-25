@@ -37,6 +37,7 @@ TNLCM database, created with MongoDB, consists of several collections that store
 | `sites_commit_id`                   | string   | Sites commit ID                            |
 | `deployment_site`                   | string   | Deployment site of trial network           |
 | `report`                            | markdown | Report related to the trial network        |
+| `resource_manager`                  | string   | Determines if resource manager is applied  |
 
 ### Collection `user`
 

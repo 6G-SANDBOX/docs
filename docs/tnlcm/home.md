@@ -19,9 +19,9 @@ TNLCM/                       // main directory.
 │  ├─ exceptions/            // directory that handler the creation of custom exceptions.
 │  ├─ jenkins/               // directory that handler the connection with Jenkins for tn deployment.
 │  ├─ library/               // directory that handler the connection to the Library repository.
+│  ├─ libs/                  // directory that handler the connection to the local libraries.
 │  ├─ logs/                  // directory that handler the logs configuration.
 │  ├─ models/                // directory that contains the database models.
-│  ├─ repository/            // directory that handler the connection to any repository.
 │  ├─ routes/                // directory that handler the API that is exposed.
 │  ├─ sites/                 // directory that handler the connection to the Sites repository.
 │  └─ utils/                 // directory that handler data conversions and storage in YAML, Markdown and JSON formats.
