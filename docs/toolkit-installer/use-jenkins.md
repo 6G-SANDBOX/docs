@@ -37,7 +37,7 @@ Once the pipeline has been cloned, you can proceed to deploy components by follo
 | **TN_ID**           | The identifier of the trial network. If your component requires the deployment of different components previously, you must indicate the same tn_id in each deployment. For example: if you want to deploy the ELCM component. The ELCM component of the 6G-Library requires to have previously deployed the tn_init component. Let's imagine that the trial network identifier is test. First you need to deploy the tn_init component with tn_id test and then the ELCM component with tn_id test. |
 | **COMPONENT_TYPE**  | The type of component being deployed. This component must be developed in the [6G-Library](https://github.com/6G-SANDBOX/6G-Library). |
 | **CUSTOM_NAME**     | Custom name for the component inside the trial network. |
-| **DEPLOYMENT_SITE** | The site where the component is to be deployed. It must be a \<branchName\> in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository. |
+| **DEPLOYMENT_SITE** | The site where the component is to be deployed. It must be a directory inside the branch in the [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) repository. |
 | **TNLCM_CALLBACK**  | You can leave the default value. |
 | **LIBRARY_URL**     | 6G-Library repository HTTPS URL. |
 | **LIBRARY_BRANCH**  | You can specify a branch, commit or tag of the 6G-Library in which your component is developed. Valid inputs: `refs/heads/<branchName>`, `refs/tags/<tagName>` or `<commitId>`. |
