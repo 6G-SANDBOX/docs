@@ -5,6 +5,9 @@ sidebar_label: "Home"
 draft: false
 ---
 
+import Link from '@docusaurus/Link';
+import { LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_CAC_LOAD_VARIABLES, SANDBOX_SITES_REPO_URL } from '@site/src/constants/v0.4.1';
+
 The 6G-Library repository the includes all the necessary code and data to deploy and configure each component of a Trial Network. Each component's metadata and code are used by both the TNLCM and the Jenkins of a Site.
 
 Every directory represents an available component in the 6G Sandbox project, except the `.global/`, which includes general information to all components such as:
@@ -24,14 +27,14 @@ Prior to the development of a component, is crucial to understand how the basic 
 ### TNCLM sends request to Jenkins
 
 When a TN descriptor is registered in the TNLCM, it begins making a succession of requests to the Jenkins, to start the deployment of each component one at a time.
-Each request contains the parameters required by the [TN_DEPLOY](https://github.com/6G-SANDBOX/6G-Library/blob/main/.global/pac/TN_DEPLOY.groovy) pipeline, including the corresponding input file. This file includes the input variables listed in the TNLCM's TN descriptor. You can find an example of a usable input file for each component in this repo as `{component_type}/sample_input_file.yaml`.
+Each request contains the parameters required by the <Link to={LIBRARY_GLOBAL_PAC_TN_DEPLOY}>TN_DEPLOY</Link> pipeline, including the corresponding input file. This file includes the input variables listed in the TNLCM's TN descriptor. You can find an example of a usable input file for each component in this repo as `{component_type}/sample_input_file.yaml`.
 
 Most inputs just serve to overwrite a private value, but others (mainly mandatory ones) serve to define dependencies between componentes.
 The available inputs for each component are described at `{component_type}/.tnlcm/public.yaml`
 
 ### Jenkins starts the corresponding Ansible playbook
 
-The TN_DEPLOY pipeline first writes its parameters and the component's inputs as variable files loadable by Ansible, then clones the [6G-Sandbox-Sites repository](https://github.com/6G-SANDBOX/6G-Sandbox-Sites) and finally launches the playbook `{COMPONENT_TYPE}/code/component_playbook.yaml`.
+The TN_DEPLOY pipeline first writes its parameters and the component's inputs as variable files loadable by Ansible, then clones the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites repository</Link> and finally launches the playbook `{COMPONENT_TYPE}/code/component_playbook.yaml`.
 
 ### Ansible playbook
 
@@ -39,7 +42,7 @@ Ansible executes the playbook `{component_type}/code/component_playbook.yaml` wh
 
 A Trial Network uses terraform as a way to achieve Infrastructure as Code (IaC), and as such, component's manifests along with the .tfstate file are uploaded to the chosen S3 storage backend (currently only MinIO).
 
-The steps on how to structure a `component_playbook.yaml` are described in the [Playbook Development Guide](https://github.com/6G-SANDBOX/6G-Library/wiki/Playbook-Development-Guide)
+The steps on how to structure a `component_playbook.yaml` are described in the [Playbook Development Guide](./playbook-deployment-guide.mdx).
 
 ### TNLCM callback
 
@@ -49,15 +52,15 @@ The outputs expected by the TNLCM are described at `{component_type}/.tnlcm/publ
 
 ## Extra
 
-Expanding step 3 and prior to the [Playbook Development Guide](https://github.com/6G-SANDBOX/6G-Library/wiki/Playbook-Development-Guide), it must be noted that there are multiple sources of variables available for a playbook.
+Expanding step 3 and prior to the [Playbook Development Guide](./playbook-deployment-guide.mdx), it must be noted that there are multiple sources of variables available for a playbook.
 
-The first and most important one is the [`.global/cac/load_variables.yaml`](https://github.com/6G-SANDBOX/6G-Library/blob/ansible-vault/.global/cac/load_variables.yaml) task file, which loads the following variable files in order, overwriting the previous ones:
-- **`6G-Sandbox-Sites/{{ deployment_site }}/core.yaml"`**: Variables unique to each site loaded from repository [6G-Sandbox-Sites](https://github.com/6G-SANDBOX/6G-Sandbox-Sites)
+The first and most important one is the <Link to={LIBRARY_GLOBAL_CAC_LOAD_VARIABLES}>`.global/cac/load_variables.yaml`</Link> task file, which loads the following variable files in order, overwriting the previous ones:
+- **`6G-Sandbox-Sites/{{ deployment_site }}/core.yaml"`**: Variables unique to each site loaded from repository <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link>
 - **`{{ component_type }}/variables/{{ site_hypervisor }}/private.yaml`**: Default variables unique to each component.
 - **`{{ component_type }}/variables/input_file.yaml`**: Component inputs. File created during the Jenkins pipeline. Most of them simply overwrite some of the private variables.
 - **`{{ component_type }}/variables/pipeline_parameters.yaml`**: Jenkins parameters. File created during the Jenkins pipeline.
 
-Environment variables aren't a reliable source of information, but some of them can also be used inside pipelines. Useful environment variables include the instanced Jenkins credentials (as seen in the environment field in [TN_DEPLOY](https://github.com/6G-SANDBOX/6G-Library/blob/main/.global/pac/TN_DEPLOY.groovy)). The WORKSPACE does not need to be referenced as an environmental variable, as is passed as an argument when the playbook is launched.
+Environment variables aren't a reliable source of information, but some of them can also be used inside pipelines. Useful environment variables include the instanced Jenkins credentials (as seen in the environment field in <Link to={LIBRARY_GLOBAL_PAC_TN_DEPLOY}>TN_DEPLOY</Link>). The WORKSPACE does not need to be referenced as an environmental variable, as is passed as an argument when the playbook is launched.
 
 However, to address the problem of variable dependencies between components, we can use another source of variables: **terraform outputs**.
 In the same way we generate a list of outputs for the TNLCM callback, we can also write them as as terraform outputs and apply them to be available from any deployment.
