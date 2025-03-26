@@ -62,6 +62,10 @@ export const SANDBOX_SITES_REPO_URL = `${SANDBOX_ORGANIZATION}/6G-Sandbox-Sites`
 export const SANDBOX_SITES_DUMMY = `${SANDBOX_SITES_REPO_URL}/blob/main/.dummy_site/core.yaml`;
 export const SANDBOX_SITES_ACCESS_REQUEST_ISSUE = `${SANDBOX_SITES_REPO_URL}/issues/new?q=is%3Aissue&template=access_request.md`;
 export const SANDBOX_DOCS_REPO_URL = `${SANDBOX_ORGANIZATION}/docs`;
+export const SANDBOX_DOCS_BUG_REPORT = `${SANDBOX_DOCS_REPO_URL}/issues/new?assignees=&labels=&projects=&template=bug_report.md`;
+export const SANDBOX_DOCS_FEATURE_REQUEST = `${SANDBOX_DOCS_REPO_URL}/issues/new?assignees=&labels=&projects=&template=feature_request.md`;
+export const SANDBOX_DOCS = 'https://6g-sandbox.github.io/docs';
+export const SANDBOX_DOCS_CONTRIBUTING = `${SANDBOX_DOCS}/contributing`;
 export const SANDBOX_MARKETPLACE = 'https://marketplace.mobilesandbox.cloud:9443/appliance';
 export const SANDBOX_MARKETPLACE_TOOLKIT_SERVICE = `${SANDBOX_MARKETPLACE}/service_toolkit`;
 export const SANDBOX_MARKETPLACE_JENKINS = `${SANDBOX_MARKETPLACE}/service_jenkins`;

@@ -1,5 +1,6 @@
 import { FilePlus, AlertCircle, Lightbulb } from 'lucide-react';
 import styles from './styles.module.css';
+import { SANDBOX_DOCS_BUG_REPORT, SANDBOX_DOCS_FEATURE_REQUEST, SANDBOX_DOCS_CONTRIBUTING } from '../../constants/v0.4.1';
 
 export default function HomepageFeatures() {
   return (
@@ -12,7 +13,7 @@ export default function HomepageFeatures() {
               <FilePlus size={30} className={styles.icon} />
               <p>
                 Want to help improve the documentation? <br />
-                <a href='https://6g-sandbox.github.io/docs/contributing' target='_blank' rel='noopener noreferrer'>
+                <a href={SANDBOX_DOCS_CONTRIBUTING} target='_blank' rel='noopener noreferrer'>
                   Contribute here
                 </a>
               </p>
@@ -26,7 +27,7 @@ export default function HomepageFeatures() {
               <p>
                 Found a problem with the documentation? <br />
                 <a
-                  href='https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=bug_report.md'
+                  href={SANDBOX_DOCS_BUG_REPORT}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -43,7 +44,7 @@ export default function HomepageFeatures() {
               <p>
                 Got an idea to improve the documentation? <br />
                 <a
-                  href='https://github.com/6G-SANDBOX/docs/issues/new?assignees=&labels=&projects=&template=feature_request.md'
+                  href={SANDBOX_DOCS_FEATURE_REQUEST}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
