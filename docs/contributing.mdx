@@ -4,15 +4,19 @@ sidebar_label: "Contributing"
 draft: false
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import Link from '@docusaurus/Link';
+import { SANDBOX_DOCS_REPO_URL, DOCUSAURUS_PLAYGROUND } from '@site/src/constants/v0.4.1';
+
 ## Set up your environment
 
 ### Fork the repository
 
 Fork the project to your GitHub account to have your own copy. To do this, click the "Fork" button at the top right of the repository page on GitHub. This will create a copy of the repository in your GitHub account.
 
-```bash
-https://github.com/6G-SANDBOX/docs
-```
+<CodeBlock>
+  {`${SANDBOX_DOCS_REPO_URL}`}
+</CodeBlock>
 
 ### Clone your fork
 
@@ -71,7 +75,7 @@ git switch -c feature/<section_name> main
 
 - Add as many markdown files as required for the new documentation section. Each markdown file must begin with the following structure:
 
-```markdown title="<section_name>/<file_name>.md"
+```markdown title="<section_name>/<file_name>.mdx"
 ---
 sidebar_position: 1
 title: "<title>"
@@ -86,7 +90,7 @@ draft: false
 
 ### Test the rendering of your documentation
 
-You can do it locally or by using [tools](https://docusaurus.io/docs/playground) provided by Docusaurus. Refer to the [README](https://github.com/6G-SANDBOX/docs/blob/main/README.md) file for more information.
+You can do it locally or by using <Link to={DOCUSAURUS_PLAYGROUND}>tools</Link> provided by Docusaurus.
 
 ### Commit the changes to your branch
 
@@ -131,7 +135,7 @@ Maintaining the structure.
 
 ### Test the rendering of your documentation
 
-You can do it locally or by using [tools](https://docusaurus.io/docs/playground) provided by Docusaurus. Refer to the [README](https://github.com/6G-SANDBOX/docs/blob/main/README.md) file for more information.
+You can do it locally or by using <Link to={DOCUSAURUS_PLAYGROUND}>tools</Link> provided by Docusaurus.
 
 ### Commit the changes to your branch
 

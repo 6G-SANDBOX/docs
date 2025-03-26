@@ -5,6 +5,9 @@ sidebar_label: "Descriptor Schema"
 draft: false
 ---
 
+import Link from '@docusaurus/Link';
+import { LIBRARY_REPO_URL, TNLCM_BACKEND_TEMPLATE_LIB_README, TNLCM_BACKEND_ELCM_TRIAL_NETWORK, TNLCM_BACKEND_LOADCORE_TRIAL_NETWORK } from '@site/src/constants/v0.4.1';
+
 :::warning
 The format of Trial Network Descriptors has not been finalized and may change in the future.
 :::
@@ -24,12 +27,11 @@ trial_network: # Mandatory, contains the description of all entities in the Tria
       key: value
 ```
 
-The TNLCM repository contains some advanced descriptors. Access the [documentation](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/README.md) to see what is defined in each of them.
+The TNLCM repository contains some advanced descriptors. Access the <Link to={TNLCM_BACKEND_TEMPLATE_LIB_README}>documentation</Link> to see what is defined in each of them.
 
-- [elcm_loadcore_open5gs_vm](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/elcm_loadcore_open5gs_vm.yaml) - **should work on all platforms**. Reference trial network defined for experimentation.
-- [loadcore_open5gs_vm.yaml](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/loadcore_open5gs_vm.yaml) - **should work on all platforms**. Reference trial network defined in WP5.
-- [ueransim_split_open5gs_k8s.yaml](https://github.com/6G-SANDBOX/TNLCM/blob/main/tn_template_lib/ueransim_split_open5gs_k8s.yaml) - **should work on all platforms**. First end-to-end trial network.
+- <Link to={TNLCM_BACKEND_ELCM_TRIAL_NETWORK}>elcm_loadcore_open5gs_vm</Link> - **should work on all platforms**. Reference trial network defined for experimentation.
+- <Link to={TNLCM_BACKEND_LOADCORE_TRIAL_NETWORK}>loadcore_open5gs_vm</Link> - **should work on all platforms**. Reference trial network defined in WP5.
 
 :::note
-Each component in the [6G-Library](https://github.com/6G-SANDBOX/6G-Library) has a descriptor and a readme defined to understand how it works.
+Each component in the <Link to={LIBRARY_REPO_URL}>6G-Library</Link> has a descriptor and a readme defined to understand how it works.
 :::

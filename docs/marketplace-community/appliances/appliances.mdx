@@ -5,6 +5,9 @@ sidebar_label: "Appliances"
 draft: false
 ---
 
+import Link from '@docusaurus/Link';
+import { SANDBOX_MARKETPLACE } from '@site/src/constants/v0.4.1';
+
 ## Prerequisites
 
 In order to create appliances, you must first create an Ubuntu 22.04 virtual machine. It is recommended that you have the following resources:
@@ -18,7 +21,9 @@ Keep in mind that in this virtual machine you have to virtualize machines that c
 - 16 GB RAM
 - 50 GB disk space
 
-Then you need to have packer installed in your Ubuntu. If you plan to build appliances on a VM make sure to have **nested virtualization** to be able to use kvm inside the VM. To do that, you need to load the option for your hypervisor kernel module. (TODO @alvarocurto: The following steps must be done at host level, not sure, ask alvaro):
+Then you need to have packer installed in your Ubuntu. If you plan to build appliances on a VM make sure to have **nested virtualization** to be able to use kvm inside the VM. To do that, you need to load the option for your hypervisor kernel module. 
+
+{/* (TODO @alvarocurto: The following steps must be done at host level, not sure, ask alvaro): */}
 
 ```bash
 # Replace kvm_intel with kvm_amd depending on your CPU
@@ -49,7 +54,7 @@ sudo apt update && sudo apt install packer
 ## How to build existing appliances
 
 :::note
-The custom makefile of this repository assumes you are running a Marketplace Server in the same system. After each appliance is created, the makefile is configured to run a script that moves the resulting qcow to `$DIR_APPLIANCES` and create/update the metadata file in `$DIR_METADATA`. This automation streamlines the Continuous Delivery process of the appliances (we use it in the [6G-SANDBOX Marketplace](https://marketplace.mobilesandbox.cloud:9443/appliance)) but it might be unnecessary if you plan to just generate the qcow.
+The custom makefile of this repository assumes you are running a Marketplace Server in the same system. After each appliance is created, the makefile is configured to run a script that moves the resulting qcow to `$DIR_APPLIANCES` and create/update the metadata file in `$DIR_METADATA`. This automation streamlines the Continuous Delivery process of the appliances (we use it in the <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link>) but it might be unnecessary if you plan to just generate the qcow.
 
 To disable this behaviour, go to file `community-apps/Makefile` and delete line `packer/update_metadata.sh "${DISTRO_NAME}" "${DISTRO_VER}" ${@}` before running any `make` command.
 

@@ -5,29 +5,34 @@ sidebar_label: "TNLCM"
 draft: false
 ---
 
+import Link from '@docusaurus/Link';
+import { TNLCM_BACKEND_REPO_URL, TNLCM_FRONTEND_REPO_URL, TNLCM_BACKEND_LOGO, SANDBOX_MARKETPLACE_TNLCM, TNLCM_REPO_TAG, ONE_REPO_VERSION, OPENNEBULA_MANAGEMENT_OPERATIONS } from '@site/src/constants/v0.4.1';
+
 ## Overview
 
 <p align="center">
-  <a href="https://github.com/6G-SANDBOX/TNLCM"><img src="https://raw.githubusercontent.com/6G-SANDBOX/TNLCM/main/docs/images/logo.png" width="100" title="TNLCM"></img></a>
+  <Link to={TNLCM_BACKEND_REPO_URL}>
+    <img src={TNLCM_BACKEND_LOGO} width="100" title="TNLCM" />
+  </Link>
 </p>
 
-**[TNLCM](https://github.com/6G-SANDBOX/TNLCM)** has been designed as a modular application, with the intention of making certain components easily replaceable or extended, while minimizing the effect of changes in other parts of the application. At the same time, there is an emphasis on re-usability, where several data structures and generic logic can be shared between the different components of the application.
+<Link to={TNLCM_BACKEND_REPO_URL}>**TNLCM**</Link> has been designed as a modular application, with the intention of making certain components easily replaceable or extended, while minimizing the effect of changes in other parts of the application. At the same time, there is an emphasis on re-usability, where several data structures and generic logic can be shared between the different components of the application.
 
 ## Download
 
-The latest version of TNLCM appliance can be downloaded from the OpenNebula public Marketplace. The appliance includes the [backend](https://github.com/6G-SANDBOX/TNLCM) and the [frontend](https://github.com/6G-SANDBOX/TNLCM_FRONTEND) of the TNLCM.
+The latest version of TNLCM appliance can be downloaded from the OpenNebula public Marketplace. The appliance includes the <Link to={TNLCM_BACKEND_REPO_URL}>backend</Link> and the <Link to={TNLCM_FRONTEND_REPO_URL}>frontend</Link> of the TNLCM.
 
-- Backend [v0.4.5](https://marketplace.mobilesandbox.cloud:9443/appliance/service_TNLCM)
-- Frontend [v0.0.0](https://marketplace.mobilesandbox.cloud:9443/appliance/service_TNLCM)
+- Backend <Link to={SANDBOX_MARKETPLACE_TNLCM}>{TNLCM_REPO_TAG}</Link>
+- Frontend <Link to={SANDBOX_MARKETPLACE_TNLCM}>{TNLCM_REPO_TAG}</Link>
 
 ## Components
 
-| Name                      | Version    |
-| ------------------------- | ---------- |
-| Ubuntu                    | 22.04 LTS  |
-| TNLCM backend             | v0.4.5     |
-| TNLCM frontend            | v0.0.0     |
-| Contextualization package | 6.10.0     |
+| Name                      | Version            |
+| ------------------------- | ------------------ |
+| Ubuntu                    | 22.04 LTS          |
+| TNLCM backend             | {TNLCM_REPO_TAG}   |
+| TNLCM frontend            | {TNLCM_REPO_TAG}   |
+| Contextualization package | {ONE_REPO_VERSION} |
 
 ## Requirements
 
@@ -38,14 +43,16 @@ The latest version of TNLCM appliance can be downloaded from the OpenNebula publ
 
 ## Features and usage
 
-This appliance comes with TNLCM backend and frontend installed, following [TNLCM backend official install guide](https://github.com/6G-SANDBOX/TNLCM?tab=readme-ov-file#rocket-getting-started-locally) and [TNLCM frontend official install guide](https://github.com/6G-SANDBOX/TNLCM_FRONTEND?tab=readme-ov-file#rocket-getting-started-locally) including the following features:
+This appliance comes with TNLCM backend and frontend installed, along with:
 
 - Backend configuration file in `/opt/TNLCM_BACKEND/.env`
 - Frontend configuration file in `/opt/TNLCM_FRONTEND/.env`
 
 ## Contextualization
 
-The contextualization parameters ([CONTEXT section](https://docs.opennebula.io/stable/management_and_operations)) in the VM template controls the configuration of the service, see the table below:
+The contextualization parameters (<Link to={OPENNEBULA_MANAGEMENT_OPERATIONS}>CONTEXT section</Link>) in the VM template controls the configuration of the service, see the table below:
+
+{/* TODO: change when tnlcm frontend */}
 
 | Parameter                            | Description                                                                          | Default        |
 | ------------------------------------ | ------------------------------------------------------------------------------------ | -------------- |

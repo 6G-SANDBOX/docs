@@ -5,6 +5,9 @@ sidebar_label: "Home"
 draft: false
 ---
 
+import Link from '@docusaurus/Link';
+import { OPENNEBULA_ORGANIZATION, ONE_DEPLOY_WIKI_ARCH_SINGLE_CEPH } from '@site/src/constants/v0.4.1';
+
 The 6G-SANDBOX project main goal is to develop a comprehensive and modular testbed infrastructure to support the experimentation and validation of emerging 6G technologies and advancements in 5G-Advanced.
 
 From a technical perspective, the testbed should be supported by a physical infrastructure that conforms a micro data center with cloud capabilities such as elasticity, resilience and ease of management.
@@ -82,7 +85,7 @@ A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern comput
 ### Storage
 
 SDS: Software define Storage
-- [Ceph](https://github.com/OpenNebula/one-deploy/wiki/arch_single_ceph) for a shared pool of block storage between all hosts of the Data Center
+- <Link to={ONE_DEPLOY_WIKI_ARCH_SINGLE_CEPH}>Ceph</Link> for a shared pool of block storage between all hosts of the Data Center
 - Each host dedicates 0, 1 or more drives to the storage pool. One Daemon “OSD” per drive for its management
 - Data has x3 replication. Writes and reads are made directly to the OSD with the desired information
 - Efficient resource utilization and almost infinite flexibility
@@ -107,7 +110,7 @@ SDS: Software define Storage
 
 ### Virtualization and cloud
 
-[OpenNebula](https://github.com/OpenNebula/) is an open-source solution for building and managing private clouds.
+<Link to={OPENNEBULA_ORGANIZATION}>OpenNebula</Link> is an open-source solution for building and managing private clouds.
 
 Advantages:
 - VMs, Containers and K8s clusters
