@@ -5,8 +5,8 @@ sidebar_label: "Home"
 draft: false
 ---
 
-import Link from '@docusaurus/Link';
-import { OPENNEBULA_ORGANIZATION, ONE_DEPLOY_WIKI_ARCH_SINGLE_CEPH } from '@site/src/constants/v0.4.1';
+import Link from "@docusaurus/Link";
+import { OPENNEBULA_ORGANIZATION, ONE_DEPLOY_WIKI_ARCH_SINGLE_CEPH } from "@site/src/constants/v0.4.1";
 
 The 6G-SANDBOX project main goal is to develop a comprehensive and modular testbed infrastructure to support the experimentation and validation of emerging 6G technologies and advancements in 5G-Advanced.
 
@@ -14,9 +14,9 @@ From a technical perspective, the testbed should be supported by a physical infr
 
 The reference architecture of this micro data center is a fundamental piece and one of the enablers of the 6G-SANDBOX project.
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![sites](./images/sites.png)
-</p>
+</div>
 
 ## Project structure
 
@@ -35,17 +35,17 @@ The main goal of the 6G-SANDBOX project is to develop a comprehensive and modula
 
 The cloud computing stack used in 6G-SANDBOX is:
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![stack](./images/stack.png)
-</p>
+</div>
 
 ### Datacenter
 
 A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern computing infrastructure that integrates computer, storage and networking components into a single system to streamline deployment and management. Unlike traditional data centers, HCI leverages software-defined technology to create a more scalable, flexible and manageable environment. It consolidates these resources into a unified system that can be easily controlled through a centralized software platform, enabling enhanced efficiency, reduced complexity and improved performance. HCI data centers are designed to support cloud-like capabilities, such as elasticity and resilience, making them ideal for a wide range of enterprise applications and workloads.
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![datacenter](./images/datacenter.png)
-</p>
+</div>
 
 ### Networking
 
@@ -65,22 +65,22 @@ A Hyper-Converged Infrastructure (HCI) data center (Figure 4) is a modern comput
   - VXLAN, creating an overlay network
   - Be careful with MTU on both cases
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![networkingVlan](./images/networkingVlan.png)
-</p>
+</div>
 
 - Multiple virtual interfaces, one per VLAN
 - Multiple bridges bound to one virtual interface VLAN
 - Multiple virtual nets inside OpenNebula, each associated to a bridge
 - When a virtual machine is created, OpenNebula add a new virtual interface to the appropriate bridge
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![networkingComputeHost](./images/networkingComputeHost.png)
-</p>
+</div>
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![networkingNetplan](./images/networkingNetplan.png)
-</p>
+</div>
 
 ### Storage
 
@@ -91,9 +91,9 @@ SDS: Software define Storage
 - Efficient resource utilization and almost infinite flexibility
 - De Facto Standard for shared storage in many platforms like Proxmox, OpenStack and OpenNebula
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![storage](./images/storage.png)
-</p>
+</div>
 
 ### Compute hosts
 
@@ -104,9 +104,9 @@ SDS: Software define Storage
   - Host the OpenNebula Front-end VMs
   - Have spare memory and CPUs to deploy and virtualize new instances 
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![computeHosts](./images/computeHosts.png)
-</p>
+</div>
 
 ### Virtualization and cloud
 
@@ -119,17 +119,17 @@ Advantages:
 - Supports any base hardware
 - Multitenant and federation
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![virtualizationCloud](./images/virtualizationCloud.png)
-</p>
+</div>
 
 ### Application, SaaS
 
 The SaaS is a platform that is being developed within 6G Sandbox Project.
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![overview](../tnlcm/images/overview.png)
-</p>
+</div>
 
 ## Summary
 
@@ -143,6 +143,6 @@ The recommendations are:
 - Use of VLANs and bridges for the testbed networking configuration and VXLAN for overlay networks that will be used in the trial networks
 - This architecture can be extended with many hosts up to a medium size datacenter
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![summary](./images/summary.png)
-</p>
+</div>

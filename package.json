@@ -21,14 +21,20 @@
     "@mdx-js/react": "^3.1.0",
     "clsx": "^2.1.1",
     "docusaurus-lunr-search": "^3.6.0",
-    "lucide-react": "^0.483.0",
+    "lucide-react": "^0.484.0",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@docusaurus/eslint-plugin": "^3.7.0",
     "@docusaurus/module-type-aliases": "3.7.0",
-    "@docusaurus/types": "3.7.0"
+    "@docusaurus/types": "3.7.0",
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-mdx": "^3.3.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0"
   },
   "browserslist": {
     "production": [

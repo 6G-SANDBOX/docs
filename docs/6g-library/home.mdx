@@ -5,8 +5,8 @@ sidebar_label: "Home"
 draft: false
 ---
 
-import Link from '@docusaurus/Link';
-import { LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_CAC_LOAD_VARIABLES, SANDBOX_SITES_REPO_URL } from '@site/src/constants/v0.4.1';
+import Link from "@docusaurus/Link";
+import { LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_CAC_LOAD_VARIABLES, SANDBOX_SITES_REPO_URL } from "@site/src/constants/v0.4.1";
 
 The 6G-Library repository the includes all the necessary code and data to deploy and configure each component of a Trial Network. Each component's metadata and code are used by both the TNLCM and the Jenkins of a Site.
 
@@ -20,9 +20,9 @@ Every directory represents an available component in the 6G Sandbox project, exc
 
 Prior to the development of a component, is crucial to understand how the basic workflow of a Trial Network deployment works:
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
   ![workflow](./images/workflow.png)
-</p>
+</div>
 
 ### TNCLM sends request to Jenkins
 
@@ -34,7 +34,7 @@ The available inputs for each component are described at `{component_type}/.tnlc
 
 ### Jenkins starts the corresponding Ansible playbook
 
-The TN_DEPLOY pipeline first writes its parameters and the component's inputs as variable files loadable by Ansible, then clones the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites repository</Link> and finally launches the playbook `{COMPONENT_TYPE}/code/component_playbook.yaml`.
+The TN_DEPLOY pipeline first writes its parameters and the component's inputs as variable files loadable by Ansible, then clones the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository and finally launches the playbook `{COMPONENT_TYPE}/code/component_playbook.yaml`.
 
 ### Ansible playbook
 

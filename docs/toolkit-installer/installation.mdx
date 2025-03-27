@@ -5,9 +5,9 @@ sidebar_label: "Installation"
 draft: false
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import Link from '@docusaurus/Link';
-import { ONE_REPO_RELEASE, ONE_REPO_VERSION, SANDBOX_SITES_ACCESS_REQUEST_ISSUE, SANDBOX_ORGANIZATION, SANDBOX_SITES_TEAM, TOOLKIT_INSTALLER_INSTALL_SCRIPT } from '@site/src/constants/v0.4.1';
+import CodeBlock from "@theme/CodeBlock";
+import Link from "@docusaurus/Link";
+import { ONE_REPO_RELEASE, ONE_REPO_VERSION, SANDBOX_SITES_ACCESS_REQUEST_ISSUE, SANDBOX_ORGANIZATION, SANDBOX_SITES_TEAM, TOOLKIT_INSTALLER_INSTALL_SCRIPT } from "@site/src/constants/v0.4.1";
 
 ## Requirements
 
@@ -108,9 +108,9 @@ To move the TNLCM virtual machine to a MongoDB-compatible host with the correct 
 4. Select Update Configuration.
 5. In the OS & CPU section, under CPU Model, select the CPU model of the new host where the TNLCM virtual machine will be moved.
 
-<p align="center">
+<div style={{ textAlign: "center" }}>
     ![cpuModel](./images/cpuModel.png)
-</p>
+</div>
 
 6. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host. Choose the same host where you updated the CPU model.
 

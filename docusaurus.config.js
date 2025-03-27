@@ -4,37 +4,37 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import {themes as prismThemes} from "prism-react-renderer";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '6G-SANDBOX',
-  tagline: 'A Horizon-JU Funded Research Project',
-  favicon: 'img/favicon.ico',
+  title: "6G-SANDBOX",
+  tagline: "A Horizon-JU Funded Research Project",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://6G-SANDBOX.github.io',
+  url: "https://6G-SANDBOX.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs',
+  baseUrl: "/docs",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: '6G-SANDBOX', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: "6G-SANDBOX", // Usually your GitHub org/user name.
+  projectName: "docs", // Usually your repo name.
 
   trailingSlash: false,
   
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
 
   plugins: [
     [
-      'docusaurus-lunr-search',
+      "docusaurus-lunr-search",
       {
-        languages: ['en'],
+        languages: ["en"],
       },
     ],
   ],
@@ -43,29 +43,29 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          routeBasePath: '/', // Serve the docs at the site's root
-          lastVersion: '0.4.0',
+          sidebarPath: "./sidebars.js",
+          routeBasePath: "/", // Serve the docs at the site's root
+          lastVersion: "0.4.0",
           versions: {
             "0.4.0": {
-              label: '0.4.0',
-              path: '0.4.0',
-              banner: 'none',
+              label: "0.4.0",
+              path: "0.4.0",
+              banner: "none",
             },
             current: {
-              label: '0.4.X',
-              path: '',
-              banner: 'unreleased',
+              label: "0.4.X",
+              path: "",
+              banner: "unreleased",
             },
           },
         },
@@ -82,7 +82,7 @@ const config = {
         //   onUntruncatedBlogPosts: 'warn',
         // },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -92,40 +92,40 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/logo.svg',
+      image: "img/logo.svg",
       navbar: {
-        title: '6G-SANDBOX',
+        title: "6G-SANDBOX",
         logo: {
-          alt: 'logo',
-          src: 'img/logo.svg',
-          srcDark: 'img/logo_dark.svg',
-          href: 'https://6g-sandbox.github.io/docs/',
-          target: '_self'
+          alt: "logo",
+          src: "img/logo.svg",
+          srcDark: "img/logo_dark.svg",
+          href: "https://6g-sandbox.github.io/docs/",
+          target: "_self"
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'documentationSidebar',
-            position: 'left',
-            label: 'DOCS',
+            type: "docSidebar",
+            sidebarId: "documentationSidebar",
+            position: "left",
+            label: "DOCS",
           },
           // {to: '/blog', label: 'BLOG', position: 'left'},
           {
-            type: 'docsVersionDropdown',
-            position: 'right',
+            type: "docsVersionDropdown",
+            position: "right",
             dropdownActiveClassDisabled: true,
           },
           {
-            href: 'https://github.com/6G-SANDBOX',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository'
+            href: "https://github.com/6G-SANDBOX",
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository"
           },
           {
-            href: 'https://marketplace.mobilesandbox.cloud:9443/appliance',
-            position: 'right',
-            className: 'header-marketplace-link',
-            'aria-label': 'Marketplace',
+            href: "https://marketplace.mobilesandbox.cloud:9443/appliance",
+            position: "right",
+            className: "header-marketplace-link",
+            "aria-label": "Marketplace",
             html: `
               <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
                 <svg class="marketplace-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -140,44 +140,44 @@ const config = {
         hideOnScroll: true,
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Documentation',
-                to: '/docs/introduction',
+                label: "Documentation",
+                to: "/docs/introduction",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'LinkedIn',
-                href: 'https://be.linkedin.com/in/6g-sandbox-project',
+                label: "LinkedIn",
+                href: "https://be.linkedin.com/in/6g-sandbox-project",
               },
               {
-                label: 'Website',
-                href: 'https://6g-sandbox.eu/',
+                label: "Website",
+                href: "https://6g-sandbox.eu/",
               },
               {
-                label: 'X',
-                href: 'https://x.com/6GSANDBOX',
+                label: "X",
+                href: "https://x.com/6GSANDBOX",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               // {
               //   label: 'Blog',
               //   to: '/blog',
               // },
               {
-                label: 'GitHub',
-                href: 'https://github.com/6G-SANDBOX',
+                label: "GitHub",
+                href: "https://github.com/6G-SANDBOX",
               },
             ],
           },
@@ -189,18 +189,18 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
       docs: {
-        versionPersistence: 'localStorage',
+        versionPersistence: "localStorage",
         sidebar: {
           hideable: true,
           autoCollapseCategories: true,
         },
       },
       announcementBar: {
-        id: 'new_release',
+        id: "new_release",
         content:
-          '🚀 New release of documentation is available! Check it out <a target="_blank" rel="noopener noreferrer" href="https://6g-sandbox.github.io/docs/0.4.0/introduction">here</a>.',
-        backgroundColor: '#fffae6',
-        textColor: '#091E42',
+          "🚀 New release of documentation is available! Check it out <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://6g-sandbox.github.io/docs/0.4.0/introduction\">here</a>.",
+        backgroundColor: "#fffae6",
+        textColor: "#091E42",
         isCloseable: true,
       },
     }),

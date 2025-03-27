@@ -5,8 +5,8 @@ sidebar_label: "JENKINS"
 draft: false
 ---
 
-import Link from '@docusaurus/Link';
-import { JENKINS_URL, JENKINS_LOGO, JENKINS_INSTALLATION, SANDBOX_MARKETPLACE_JENKINS, SANDBOX_SITES_REPO_URL, LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_PAC_TN_DESTROY, OPENNEBULA_MANAGEMENT_OPERATIONS_CONTEXT_SECTION, OPENNEBULA_MANAGEMENT_OPERATIONS, ONE_APPS_WIKI_MINIO } from '@site/src/constants/v0.4.1';
+import Link from "@docusaurus/Link";
+import { JENKINS_URL, JENKINS_LOGO, JENKINS_INSTALLATION, SANDBOX_MARKETPLACE_JENKINS, SANDBOX_SITES_REPO_URL, LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_PAC_TN_DESTROY, OPENNEBULA_MANAGEMENT_OPERATIONS_CONTEXT_SECTION, OPENNEBULA_MANAGEMENT_OPERATIONS, ONE_APPS_WIKI_MINIO } from "@site/src/constants/v0.4.1";
 
 ## Overview
 
@@ -59,7 +59,7 @@ The parameters should be provided in the CONTEXT section of the Virtual Machine 
 |----------------------------|-----------------------------------------------------------------------|---------------|
 | `JENKINS_USERNAME`         | The username for the Jenkins admin user                               | `admin`       |
 | `JENKINS_PASSWORD`         | The password for the Jenkins admin user                               | `admin`       |
-| `ANSIBLE_VAULT_PASSWORD`   | Password to encrypt and decrypt the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites repository</Link> files for your site using Ansible Vault | \<undefined\> |
+| `ANSIBLE_VAULT_PASSWORD`   | Password to encrypt and decrypt the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository files for your site using Ansible Vault | \<undefined\> |
 | `OPENNEBULA_ENDPOINT`      | The URL of your OpenNebula XML-RPC Endpoint API (for example, 'http://example.com:2633/RPC2') | \<undefined\> |
 | `OPENNEBULA_FLOW_ENDPOINT` | The URL of your OneFlow HTTP Endpoint API (for example, 'http://example.com:2474')            | \<undefined\> |
 | `OPENNEBULA_USERNAME`      | The OpenNebula username used to deploy each component                 | \<undefined\> |
