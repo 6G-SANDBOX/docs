@@ -1,4 +1,4 @@
-import { defineConfig } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import js from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
@@ -6,6 +6,22 @@ import * as mdx from "eslint-plugin-mdx";
 
 
 export default defineConfig([
+  globalIgnores([
+    "node_modules/",
+    "dist/",
+    "build/",
+    "scripts/",
+    "temp/",
+    ".docusaurus/",
+    ".next/",
+    ".nuxt/",
+    ".storybook/",
+    ".vscode/",
+    ".github/",
+    ".gitignore",
+    "versioned_docs/",
+    "versioned_sidebars/",
+  ]),
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
     languageOptions: {
