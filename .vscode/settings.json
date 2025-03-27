@@ -1,0 +1,8 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.options": {
+        "overrideConfigFile": "./eslint.config.mjs"
+    }
+}
