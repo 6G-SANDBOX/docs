@@ -1,8 +1,6 @@
 {
     "recommendations": [
         "dbaeumer.vscode-eslint",
-        "unifiedjs.vscode-mdx",
-        "yzhang.markdown-all-in-one",
-        "bierner.markdown-emoji"
+        "unifiedjs.vscode-mdx"
     ]
 }
