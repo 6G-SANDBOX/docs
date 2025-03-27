@@ -4,5 +4,8 @@
     },
     "eslint.options": {
         "overrideConfigFile": "./eslint.config.mjs"
-    }
+    },
+    "files.associations": {
+        "*.mdx": "markdown"
+    },
 }
