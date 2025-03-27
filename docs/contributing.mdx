@@ -38,13 +38,13 @@ git remote add upstream <URL of the original repository>
 
 To add a new section to the documentation, follow these steps:
 
-### Create a branch from `main`
+### Create a branch from `develop`
 
 - The branch name should follow the format `feature/<section_name>`.
 - The `<section_name>` should be meaningful.
 
 ```bash
-git switch -c feature/<section_name> main
+git switch -c feature/<section_name> develop
 ```
 
 ### Create a directory inside the [`docs`](./docs/) directory
@@ -107,26 +107,26 @@ git push origin feature/<section_name>
 
 ### Create a pull request on GitHub
 
-Go to your docs fork and click "Pull request" to start one. The pull request should be from your branch to the `main` branch of the original repository.
+Go to your docs fork and click "Pull request" to start one. The pull request should be from your branch to the `develop` branch of the original repository.
 
 - Include **@CarlosAndreo** or **@alvarocurt** as a reviewer.
 - The pull request must include:
   - The **new section directory** inside docs directory.
   - The **images of the new section** inside `<section_name>` directory (if required).
 
-Once the pull request has been reviewed, the changes will be merged into the `main` branch of the original repository.
+Once the pull request has been reviewed, the changes will be merged into the `develop` branch of the original repository.
 
 ## Update documentation section
 
 To update a documentation section, follow these steps:
 
-### Create a branch from `main`
+### Create a branch from `develop`
 
 - The branch name should follow the format `fix/<section_name>`.
 - The `<section_name>` must be a directory that must exist in the documentation.
 
 ```bash
-git switch -c fix/<section_name> main
+git switch -c fix/<section_name> develop
 ```
 
 ### Update the directory created inside the [`docs`](./docs/) directory
@@ -152,11 +152,11 @@ git push origin fix/<section_name>
 
 ### Create a pull request on GitHub
 
-Go to your docs fork and click "Pull request" to start one. The pull request should be from your branch to the `main` branch of the original repository.
+Go to your docs fork and click "Pull request" to start one. The pull request should be from your branch to the `develop` branch of the original repository.
 
 - Include **@CarlosAndreo** or **@alvarocurt** as a reviewer.
 - The pull request must include:
   - The **section directory** updated inside docs directory.
   - The **images of the section** inside `<section_name>` directory (if required).
 
-Once the pull request has been reviewed, the changes will be merged into the `main` branch of the original repository.
+Once the pull request has been reviewed, the changes will be merged into the `develop` branch of the original repository.
