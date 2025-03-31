@@ -1,0 +1,92 @@
+---
+sidebar_position: 3
+title: "Upgrade"
+sidebar_label: "Upgrade"
+draft: false
+---
+
+import CodeBlock from "@theme/CodeBlock";
+// eslint-disable-next-line no-unused-vars
+import { TNLCM_BACKEND_UPGRADE_SCRIPT, TNLCM_FRONTEND_UPGRADE_SCRIPT } from "@site/src/constants/v0.5.0";
+
+:::important
+The upgrade script starts to take effect from version 0.4.4. That is, you can use it if your current TNLCM version is 0.4.4 or higher. If you have a version lower than 0.4.4, please starts from the beginning. 
+:::
+
+## Access to TNLCM virtual machine
+
+Access via SSH to OpenNebula frontend.
+
+Access via SSH to the TNLCM virtual machine that is running in OpenNebula frontend. You can use the following command:
+
+```bash
+onevm ssh <VM_ID-OR-VM_NAME>
+```
+
+## Download upgrade scripts
+
+### Backend
+
+Download the backend upgrade script using one of the following command.
+
+- Using `curl`:
+
+<CodeBlock language="bash">
+    {`curl -O ${TNLCM_BACKEND_UPGRADE_SCRIPT}`}
+</CodeBlock>
+
+- Using `wget`:
+
+<CodeBlock language="bash">
+    {`wget ${TNLCM_BACKEND_UPGRADE_SCRIPT}`}
+</CodeBlock>
+
+{/* ### Frontend
+
+Download the frontend upgrade script using one of the following command.
+
+- Using `curl`:
+
+<CodeBlock language="bash">
+    {`curl -O ${TNLCM_FRONTEND_UPGRADE_SCRIPT}`}
+</CodeBlock>
+
+- Using `wget`:
+
+<CodeBlock language="bash">
+    {`wget ${TNLCM_FRONTEND_UPGRADE_SCRIPT}`}
+</CodeBlock> */}
+
+## Execute upgrade script
+
+Start with the backend upgrade script.
+
+Give execution permissions to backend upgrade script:
+
+```bash
+chmod +x upgrade.sh
+```
+
+Run the script:
+
+```bash
+./upgrade.sh
+```
+
+Select the version you want to upgrade.
+
+{/* After the backend upgrade, proceed with the frontend upgrade script.
+
+Give execution permissions to backend upgrade script:
+
+```bash
+chmod +x upgrade.sh
+```
+
+Run the script:
+
+```bash
+./upgrade.sh
+```
+
+Select the version you want to upgrade. */}

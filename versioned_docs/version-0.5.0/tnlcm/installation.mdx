@@ -1,0 +1,89 @@
+---
+sidebar_position: 2
+title: "Installation"
+sidebar_label: "Installation"
+draft: false
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import Link from "@docusaurus/Link";
+// eslint-disable-next-line no-unused-vars
+import { ONE_REPO_RELEASE, ONE_REPO_VERSION, MINIO_REPO_RELEASE, MINIO_REPO_VERSION, JENKINS_REPO_RELEASE, JENKINS_REPO_VERSION, TNLCM_BACKEND_INSTALL_SCRIPT, TNLCM_FRONTEND_INSTALL_SCRIPT } from "@site/src/constants/v0.5.0";
+
+## Requirements
+
+- **OpenNebula**: <Link to={ONE_REPO_RELEASE}>{ONE_REPO_VERSION}</Link>
+- **MinIO**: <Link to={MINIO_REPO_RELEASE}>{MINIO_REPO_VERSION}</Link>
+- **Jenkins**: <Link to={JENKINS_REPO_RELEASE}>{JENKINS_REPO_VERSION}</Link>
+
+:::tip
+You can install the full stack MinIO, Jenkins and TNLCM in OpenNebula by following the toolkit installer guide [here](../toolkit-installer/installation.mdx).
+:::
+
+## Download installations scripts
+
+### Backend
+
+Download the backend installation script using one of the following command.
+
+- Using `curl`:
+
+<CodeBlock language="bash">
+    {`curl -O ${TNLCM_BACKEND_INSTALL_SCRIPT}`}
+</CodeBlock>
+
+- Using `wget`:
+
+<CodeBlock language="bash">
+    {`wget ${TNLCM_BACKEND_INSTALL_SCRIPT}`}
+</CodeBlock>
+
+{/* ### Frontend
+
+Download the frontend installation script using one of the following command.
+
+- Using `curl`:
+
+<CodeBlock language="bash">
+    {`curl -O ${TNLCM_FRONTEND_INSTALL_SCRIPT}`}
+</CodeBlock>
+
+- Using `wget`:
+
+<CodeBlock language="bash">
+    {`wget ${TNLCM_FRONTEND_INSTALL_SCRIPT}`}
+</CodeBlock> */}
+
+## Execute installations scripts
+
+Start with the backend installation script.
+
+Give execution permissions to backend installation script:
+
+```bash
+chmod +x install.sh
+```
+
+Run the script and follow the instructions:
+
+```bash
+./install.sh
+```
+
+A [Swagger UI](./swagger-ui.mdx) will be available at the url http://tnlcm-backend-ip:5000 where the API with the endpoints are exposed.
+
+{/* After the backend installation, proceed with the frontend installation script.
+
+Give execution permissions to frontend installation script:
+
+```bash
+chmod +x install.sh
+```
+
+Run the script and follow the instructions:
+
+```bash
+./install.sh
+```
+
+A interface will be available at the url http://tnlcm-frontend-ip:3000 where the frontend is exposed. */}

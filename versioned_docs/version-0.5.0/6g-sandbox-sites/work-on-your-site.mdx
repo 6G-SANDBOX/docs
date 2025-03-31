@@ -1,0 +1,58 @@
+---
+sidebar_position: 2
+title: "Work On Your Site"
+sidebar_label: "Work On Your Site"
+draft: false
+---
+
+import Link from "@docusaurus/Link";
+import { ANSIBLE_INSTALLATION } from "@site/src/constants/v0.5.0";
+
+## Requirements
+
+To use the `ansible-vault` tool, the full *ansible* libraries and binaries are not needed. You can <Link to={ANSIBLE_INSTALLATION}>install ansible</Link> in your prefered way, but package `ansible-core` is enough.
+If you do not wish to install *ansible* anywhere, remember it is already installed on the Jenkins VM so you can use it from there.
+
+```bash
+apt install ansible-core
+```
+
+## Work on your changes
+
+Before you start working on your changes, switch to your branch using `git switch <site_name>`. 
+
+Edit the `core.yaml` file using the password you created in the toolkit installer step using the following command:
+
+```sh
+ansible-vault edit <site_name>/core.yaml --vault-password-file=path/to/password.txt
+```
+
+where:
+    - `<site_name>/core.yaml` is the path to the file you want to encrypt.
+    - `--vault-password-file=path/to/password.txt` is the path containing the password.
+
+Edit the contents of the `core.yaml` file.
+
+Save the changes.
+
+## Submit your changes
+
+Once you're happy with your changes, stage them using:
+
+```bash
+git add .
+```
+
+Commit your changes using:
+
+```bash
+git commit -m "Your commit message"
+```
+
+Push your changes to the repository using:
+
+```bash
+git push
+```
+
+The branch must include the **directory** with the same branch name and with the **core.yaml** file.
