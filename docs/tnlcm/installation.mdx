@@ -7,7 +7,8 @@ draft: false
 
 import CodeBlock from "@theme/CodeBlock";
 import Link from "@docusaurus/Link";
-import { ONE_REPO_RELEASE, ONE_REPO_VERSION, MINIO_REPO_RELEASE, MINIO_REPO_VERSION, JENKINS_REPO_RELEASE, JENKINS_REPO_VERSION, TNLCM_BACKEND_INSTALL_SCRIPT, TNLCM_FRONTEND_INSTALL_SCRIPT } from "@site/src/constants/v0.4.1";
+// eslint-disable-next-line no-unused-vars
+import { ONE_REPO_RELEASE, ONE_REPO_VERSION, MINIO_REPO_RELEASE, MINIO_REPO_VERSION, JENKINS_REPO_RELEASE, JENKINS_REPO_VERSION, TNLCM_BACKEND_INSTALL_SCRIPT, TNLCM_FRONTEND_INSTALL_SCRIPT } from "@site/src/constants/v0.5.0";
 
 ## Requirements
 
@@ -37,7 +38,7 @@ Download the backend installation script using one of the following command.
     {`wget ${TNLCM_BACKEND_INSTALL_SCRIPT}`}
 </CodeBlock>
 
-### Frontend
+{/* ### Frontend
 
 Download the frontend installation script using one of the following command.
 
@@ -51,7 +52,7 @@ Download the frontend installation script using one of the following command.
 
 <CodeBlock language="bash">
     {`wget ${TNLCM_FRONTEND_INSTALL_SCRIPT}`}
-</CodeBlock>
+</CodeBlock> */}
 
 ## Execute installations scripts
 
@@ -71,7 +72,7 @@ Run the script and follow the instructions:
 
 A [Swagger UI](./swagger-ui.mdx) will be available at the url http://tnlcm-backend-ip:5000 where the API with the endpoints are exposed.
 
-After the backend installation, proceed with the frontend installation script.
+{/* After the backend installation, proceed with the frontend installation script.
 
 Give execution permissions to frontend installation script:
 
@@ -85,4 +86,4 @@ Run the script and follow the instructions:
 ./install.sh
 ```
 
-A interface will be available at the url http://tnlcm-frontend-ip:3000 where the frontend is exposed.
+A interface will be available at the url http://tnlcm-frontend-ip:3000 where the frontend is exposed. */}

@@ -6,7 +6,8 @@ draft: false
 ---
 
 import CodeBlock from "@theme/CodeBlock";
-import { TNLCM_BACKEND_UPGRADE_SCRIPT, TNLCM_FRONTEND_UPGRADE_SCRIPT } from "@site/src/constants/v0.4.1";
+// eslint-disable-next-line no-unused-vars
+import { TNLCM_BACKEND_UPGRADE_SCRIPT, TNLCM_FRONTEND_UPGRADE_SCRIPT } from "@site/src/constants/v0.5.0";
 
 :::important
 The upgrade script starts to take effect from version 0.4.4. That is, you can use it if your current TNLCM version is 0.4.4 or higher. If you have a version lower than 0.4.4, please starts from the beginning. 
@@ -40,7 +41,7 @@ Download the backend upgrade script using one of the following command.
     {`wget ${TNLCM_BACKEND_UPGRADE_SCRIPT}`}
 </CodeBlock>
 
-### Frontend
+{/* ### Frontend
 
 Download the frontend upgrade script using one of the following command.
 
@@ -54,7 +55,7 @@ Download the frontend upgrade script using one of the following command.
 
 <CodeBlock language="bash">
     {`wget ${TNLCM_FRONTEND_UPGRADE_SCRIPT}`}
-</CodeBlock>
+</CodeBlock> */}
 
 ## Execute upgrade script
 
@@ -74,7 +75,7 @@ Run the script:
 
 Select the version you want to upgrade.
 
-After the backend upgrade, proceed with the frontend upgrade script.
+{/* After the backend upgrade, proceed with the frontend upgrade script.
 
 Give execution permissions to backend upgrade script:
 
@@ -88,4 +89,4 @@ Run the script:
 ./upgrade.sh
 ```
 
-Select the version you want to upgrade.
+Select the version you want to upgrade. */}
