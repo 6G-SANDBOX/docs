@@ -63,7 +63,7 @@ const config = {
               banner: "none",
             },
             current: {
-              label: "0.4.X",
+              label: "Canary 🚧",
               path: "",
               banner: "unreleased",
             },
@@ -198,7 +198,7 @@ const config = {
       announcementBar: {
         id: "new_release",
         content:
-          "🚀 New release of documentation is available! Check it out <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://6g-sandbox.github.io/docs/0.4.0/introduction\">here</a>.",
+          "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.0\">TNLCM v0.5.0</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.0\">toolkit-installer v0.5.0</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.0\">6G-Library v0.5.0</a> are out. 🎉️",
         backgroundColor: "#fffae6",
         textColor: "#091E42",
         isCloseable: true,
