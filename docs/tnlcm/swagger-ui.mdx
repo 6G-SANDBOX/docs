@@ -6,7 +6,7 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { SANDBOX_SITES_REPO_URL } from "@site/src/constants/v0.5.0";
+import { LIBRARY_REPO_URL } from "@site/src/constants/v0.5.1";
 
 
 ## Login
@@ -49,7 +49,7 @@ Fill in the following fields:
 
 - `tn_id`: must start with a character and be at least 4 characters long. This field can be left blank, in which case a random value will be generated.
 - `descriptor`: descriptor file containing the definition of the trial network. To create a descriptor file, refer to the [Trial Network Descriptor Schema](./descriptor-schema.mdx) section.
-- `library_reference_type`: you can specify a branch, tag, or commit of the 6G-Library repository.
+- `library_reference_type`: you can specify a branch, tag, or commit of the <Link to={LIBRARY_REPO_URL}>6G-Library</Link> repository.
 - `library_reference_value`: value corresponding to the type specified in the `library_reference_type` field.
 
 ## Deploy trial network

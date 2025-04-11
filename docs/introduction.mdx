@@ -6,35 +6,71 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { SANDBOX_MARKETPLACE, TOOLKIT_INSTALLER_REPO_URL, TOOLKIT_INSTALLER_REPO_RELEASE, TOOLKIT_INSTALLER_REPO_VERSION, TNLCM_BACKEND_REPO_URL, TNLCM_BACKEND_REPO_RELEASE, TNLCM_REPO_VERSION, LIBRARY_REPO_URL, LIBRARY_REPO_RELEASE, LIBRARY_REPO_VERSION, SANDBOX_SITES_DUMMY, SANDBOX_SITES_REPO_URL } from "@site/src/constants/v0.5.0";
+import { SANDBOX_MARKETPLACE, TOOLKIT_INSTALLER_REPO_URL, TNLCM_BACKEND_REPO_URL, LIBRARY_REPO_URL, SANDBOX_SITES_DUMMY, SANDBOX_SITES_REPO_URL } from "@site/src/constants/v0.5.1";
+
+## :calendar: **2025-04-10**
+
+### :fire: **What's New?**
+
+#### :brain: **TNLCM backend v0.5.1**
+
+:link: **Repository:** <Link to={TNLCM_BACKEND_REPO_URL}>6G-SANDBOX/TNLCM</Link>
+
+:page_facing_up: **Changelog:** [TNLCM Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.1)
+
+Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.mdx).
+
+#### :wrench: **Toolkit Installer v0.5.1**
+
+:link: **Repository:** <Link to={TOOLKIT_INSTALLER_REPO_URL}>6G-SANDBOX/toolkit-installer</Link>
+
+:page_facing_up: **Changelog:** [Toolkit Installer Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.1)
+
+To install the new version of the toolkit installer, follow the instructions [here](./toolkit-installer/installation.mdx).
+
+#### :books: **6G-Library v0.5.1**
+
+:link: **Repository:** <Link to={LIBRARY_REPO_URL}>6G-SANDBOX/6G-Library</Link>
+
+:page_facing_up: **Changelog:** [6G-Library Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.1)
+
+#### **Appliances**
+
+The following appliance from <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link> has been updated:
+
+| Software             | New Version                      |
+|----------------------|----------------------------------|
+| 6G-Sandbox Toolkit   | v0.5.1-20250411-1309             |
+
+You can download or upgrade the appliance using the <Link to={TOOLKIT_INSTALLER_REPO_URL}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained.
 
 ## :calendar: **2025-03-31**
 
 ### :fire: **What's New?**
 
-#### :brain: **TNLCM backend <a>v{TNLCM_REPO_VERSION}</a>**
+#### :brain: **TNLCM backend v0.5.0**
 
 :link: **Repository:** <Link to={TNLCM_BACKEND_REPO_URL}>6G-SANDBOX/TNLCM</Link>
 
-:page_facing_up: **Changelog:** <Link to={TNLCM_BACKEND_REPO_RELEASE}>TNLCM Release Notes</Link>
+:page_facing_up: **Changelog:** [TNLCM Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.0)
 
 Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.mdx).
 
-#### :wrench: **Toolkit Installer <a>v{TOOLKIT_INSTALLER_REPO_VERSION}</a>**
+#### :wrench: **Toolkit Installer v0.5.0**
 
 :link: **Repository:** <Link to={TOOLKIT_INSTALLER_REPO_URL}>6G-SANDBOX/toolkit-installer</Link>
 
-:page_facing_up: **Changelog:** <Link to={TOOLKIT_INSTALLER_REPO_RELEASE}>Toolkit Installer Release Notes</Link>
+:page_facing_up: **Changelog:** [Toolkit Installer Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.0)
 
 For the toolkit installer to work perfectly, a modification is required in the `/usr/lib/one/ruby/cli/one_helper.rb` file on the OpenNebula frontend, following the instructions from this [commit](https://github.com/OpenNebula/one/commit/73447d69021db71c2202dc78a0098d1563bf258f). This change will take effect in OpenNebula version 7.0.
 
 To install the new version of the toolkit installer, follow the instructions [here](./toolkit-installer/installation.mdx).
 
-#### :books: **6G-Library <a>v{LIBRARY_REPO_VERSION}</a>**
+#### :books: **6G-Library v0.5.0**
 
 :link: **Repository:** <Link to={LIBRARY_REPO_URL}>6G-SANDBOX/6G-Library</Link>
 
-:page_facing_up: **Changelog:** <Link to={LIBRARY_REPO_RELEASE}>6G-Library Release Notes</Link>
+:page_facing_up: **Changelog:** [6G-Library Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.0)
 
 #### **Appliances**
 
@@ -182,7 +218,7 @@ Once the previous steps are completed, proceed with the update. The following ap
 | UERANSIM             | v3.2.6-20250206-1135    | v3.2.7-20250331-1350             |
 | oneKE                | v1.29                   | 1.31.3-6.10.0-2-20250220-0051    |
 
-You can download or upgrade the appliances using the <Link to={TOOLKIT_INSTALLER_REPO_RELEASE}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained above and update the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository.
+You can download or upgrade the appliances using the <Link to={TOOLKIT_INSTALLER_REPO_URL}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained above and update the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository.
 
 ## :calendar: **2025-02-22**
 
@@ -194,7 +230,7 @@ New toolkit installer version is available! This update brings key improvements 
 
 :link: **Repository:** <Link to={TOOLKIT_INSTALLER_REPO_URL}>6G-SANDBOX/toolkit-installer</Link>
 
-:page_facing_up: **Changelog:** <Link to={TOOLKIT_INSTALLER_REPO_RELEASE}>Toolkit Installer Release Notes</Link>
+:page_facing_up: **Changelog:** [Toolkit Installer Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.4.0)
 
 To install the new version of the toolkit installer, follow the instructions [here](./toolkit-installer/installation.mdx).
 
@@ -208,7 +244,7 @@ New versions of 6G-Library and TNLCM are here! These updates bring key improveme
 
 :link: **Repository:** <Link to={TNLCM_BACKEND_REPO_URL}>6G-SANDBOX/TNLCM</Link>
 
-:page_facing_up: **Changelog:** <Link to={TNLCM_BACKEND_REPO_RELEASE}>TNLCM Release Notes</Link>
+:page_facing_up: **Changelog:** [TNLCM Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.4.5)
 
 Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.mdx)
 
@@ -216,7 +252,7 @@ Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.mdx)
 
 :link: **Repository:** <Link to={LIBRARY_REPO_URL}>6G-SANDBOX/6G-Library</Link>
 
-:page_facing_up: **Changelog:** <Link to={LIBRARY_REPO_RELEASE}>6G-Library Release Notes</Link>
+:page_facing_up: **Changelog:** [6G-Library Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.4.0)
 
 #### **6G-Sandbox-Sites**
 

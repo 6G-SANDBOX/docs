@@ -1,6 +1,6 @@
 import { FilePlus, AlertCircle, Lightbulb } from "lucide-react";
 import styles from "./styles.module.css";
-import { SANDBOX_DOCS_BUG_REPORT, SANDBOX_DOCS_FEATURE_REQUEST, SANDBOX_DOCS_CONTRIBUTING } from "../../constants/v0.5.0";
+import { SANDBOX_DOCS_BUG_REPORT, SANDBOX_DOCS_FEATURE_REQUEST, SANDBOX_DOCS_CONTRIBUTING } from "../../constants/v0.5.1";
 
 export default function HomepageFeatures() {
   return (
