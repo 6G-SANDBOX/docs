@@ -1,0 +1,63 @@
+---
+sidebar_position: 5
+title: "Database Schema"
+sidebar_label: "Database Schema"
+draft: false
+---
+
+import Link from "@docusaurus/Link";
+import { DBDIAGRAM } from "@site/src/constants/v0.5.1";
+
+
+TNLCM database, created with MongoDB, consists of several collections that store important information about `trial network`, `resource_manager` and `user`. Below is a description of each collection, along with a graphical representation using SQL syntax created with <Link to={DBDIAGRAM}>dbdiagram.io</Link>.
+
+## Collections
+
+### Collection `resource_manager`
+
+| Field       | Type    | Description                                       |
+| ----------- | ------- | ------------------------------------------------- |
+| `component` | string  | Component over which resources are controlled     |
+| `tn_id`     | string  | ID of the trial network                           |
+| `quantity`  | integer | Amount of component available                     |
+
+### Collection `trial_network`
+
+| Field                               | Type     | Description                                |
+| ----------------------------------- | -------- | ------------------------------------------ |
+| `user_created`                      | string   | User that created the trial network        |
+| `tn_id`                             | string   | ID of the trial network (primary key)      |
+| `state`                             | string   | State of the trial network                 |
+| `date_created_utc`                  | date     | Creation date and time in UTC              |
+| `directory_path`                    | string   | Directory where trial network is saved     |
+| `raw_descriptor`                    | dict     | Raw descriptor of the trial network        |
+| `sorted_descriptor`                 | dict     | Sorted descriptor                          |
+| `deployed_descriptor`               | dict     | Current status of descriptor               |
+| `jenkins_deploy`                    | dict     | Information about the deploy pipeline      |
+| `jenkins_destroy`                   | dict     | Information about the destroy pipeline     |
+| `library_https_url`                 | string   | Library github https url                   |
+| `library_commit_id`                 | string   | Library commit ID                          |
+| `sites_https_url`                   | string   | Sites github https url                     |
+| `sites_commit_id`                   | string   | Sites commit ID                            |
+| `deployment_site`                   | string   | Deployment site of trial network           |
+| `report`                            | markdown | Report related to the trial network        |
+| `resource_manager`                  | string   | Determines if resource manager is applied  |
+
+### Collection `user`
+
+| Field      | Type   | Description                   |
+| ---------- | ------ | ----------------------------- |
+| `email`    | string | User's email address          |
+| `username` | string | User's username (primary key) |
+| `password` | string | User's hashed password        |
+| `role`     | string | User's role                   |
+| `org`      | string | User's organization           |
+
+## Relationships
+
+- `resource_manager.tn_id > trial_network.tn_id` // resource_manager references trial_network
+- `trial_network.user_created > user.username` // A user can have multiple trial_networks (one-to-many)
+
+## Model
+
+![model](./images/model.png)

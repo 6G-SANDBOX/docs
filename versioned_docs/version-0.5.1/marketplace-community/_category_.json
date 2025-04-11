@@ -1,0 +1,14 @@
+{
+  "position": 6,
+  "label": "Marketplace Community",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Marketplace Community Overview"
+  },
+  "customProps": {
+    "description": ""
+  }
+}
