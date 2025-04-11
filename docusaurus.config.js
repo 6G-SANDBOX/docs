@@ -55,16 +55,21 @@ const config = {
         docs: {
           sidebarPath: "./sidebars.js",
           routeBasePath: "/", // Serve the docs at the site's root
-          lastVersion: "0.5.0",
+          lastVersion: "0.5.1",
           versions: {
             current: {
               label: "Canary 🚧",
               path: "next",
               banner: "unreleased",
             },
+            "0.5.1": {
+              label: "0.5.1",
+              path: "",
+              banner: "none",
+            },
             "0.5.0": {
               label: "0.5.0",
-              path: "",
+              path: "0.5.0",
               banner: "none",
             },
             "0.4.0": {
@@ -205,7 +210,7 @@ const config = {
       announcementBar: {
         id: "new_release",
         content:
-          "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.0\">TNLCM v0.5.0</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.0\">toolkit-installer v0.5.0</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.0\">6G-Library v0.5.0</a> are out. 🎉️",
+          "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.1\">TNLCM v0.5.1</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.1\">toolkit-installer v0.5.1</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.1\">6G-Library v0.5.1</a> are out. 🎉️",
         backgroundColor: "#fffae6",
         textColor: "#091E42",
         isCloseable: true,
