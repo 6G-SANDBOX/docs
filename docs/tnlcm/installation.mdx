@@ -87,3 +87,37 @@ Run the script and follow the instructions:
 ```
 
 A interface will be available at the url http://tnlcm-frontend-ip:3000 where the frontend is exposed. */}
+
+## About the backend installation script
+
+The `install.sh` script is designed to automate the installation and configuration of the Trial Network Lifecycle Manager (TNLCM) backend and its dependencies on **Ubuntu 22.04 or 24.04** systems.
+
+It will perform the following actions:
+
+1. Validate that the script is run as **root** and the OS version is supported.
+2. Install required packages and dependencies including:
+   - **Git**
+   - **Python 3.13** (via deadsnakes PPA)
+   - **uv** (Python dependency manager)
+   - **MongoDB 8.0**
+   - **Yarn**
+   - **Node.js**
+   - **Mongo-Express**
+3. Clone the TNLCM backend repository from GitHub.
+4. Copy the `.env.template` file and prompt you to fill in necessary configuration values such as:
+   - TNLCM admin user and password
+   - TNLCM host IP
+   - Jenkins credentials and token
+   - Sites token
+5. Update the `.env` file automatically with the provided values.
+6. Initialize the **MongoDB database** with the required structure.
+7. Build and configure **Mongo-Express** as a systemd service for MongoDB web UI access.
+8. Install backend Python dependencies using `uv`.
+9. Start the **TNLCM backend API server** using **Gunicorn**.
+
+⚠️ **Important:**
+- This script must be executed on **Ubuntu 22.04 or 24.04**.
+- It requires **root privileges**.
+- Make sure the server has internet access to download packages and repositories.
+
+Once completed, the backend API (including a Swagger UI) will be available at `http://<tnlcm-backend-ip>:5000`.

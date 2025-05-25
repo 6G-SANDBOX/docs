@@ -1,0 +1,130 @@
+---
+sidebar_position: 7
+title: "Access Trial Network"
+sidebar_label: "Access Trial Network"
+draft: false
+---
+
+## :wave: Welcome, Trial Network User
+
+As a user, you’ve been granted access to a **Trial Network (TN)** that has already been deployed by an experimenter. This guide explains how to connect to and use the TN for your testing or research.
+
+You should have received a **report file** (typically in Markdown) from the experimenter. This file includes everything you need to access the network: VPN configuration, SSH credentials, IP addresses, and service info.
+
+---
+
+## 🔐 Connect to the VPN
+
+To access the Trial Network, you need to establish a VPN tunnel using **WireGuard**.
+
+You should have received a config file named something like `wg_client0.conf` or similar, containing a section like this:
+
+```toml
+[Interface]
+Address = 10.7.0.2/24
+DNS = 192.168.199.1
+PrivateKey = <your-private-key>
+
+[Peer]
+PublicKey = <server-public-key>
+PresharedKey = <psk>
+AllowedIPs = 192.168.199.0/24
+Endpoint = <server-ip>:<port>
+PersistentKeepalive = 25
+```
+
+### ▶️ Steps to connect
+
+1. Install [WireGuard](https://www.wireguard.com/install/) on your machine.
+2. Save the provided configuration to a file (e.g. `wg_client0.conf`).
+3. Run the following command:
+
+```bash
+sudo wg-quick up wg_client0
+```
+
+> ⚠️ **Note:** Only one person can use a given VPN client at a time. If you're sharing this with others, coordinate with your team.
+
+---
+
+## 🖥 Accessing Virtual Machines (VMs)
+
+Once connected via VPN, you can access the virtual machines in the Trial Network using **SSH**.
+
+You should have received a **private SSH key** (typically in OpenSSH format), along with a suggested file name and permissions:
+
+```bash
+chmod 600 ~/.ssh/misc-<tn_name>-id_ed25519
+```
+
+Use the following command to connect:
+
+```bash
+ssh -i ~/.ssh/misc-<tn_name>-id_ed25519 tnuser@<vm_ip>
+```
+
+You’ll find the list of available VM IPs in the report file, under a section like:
+
+```json
+{
+  "1271": "192.168.199.2"
+}
+```
+
+---
+
+## 🧭 DNS and Services
+
+Some Trial Networks include an internal DNS server (e.g., **Technitium**) to resolve component names or access portals.
+
+You may find in your report a link like:
+
+```
+http://bastion.<tn_name>.6gsandbox.uma.internal:5380
+```
+
+and credentials like:
+
+- **user**: `admin`  
+- **password**: `...`
+
+You can use this DNS interface to inspect name resolutions within the network.
+
+---
+
+## 📦 What you typically receive
+
+A Trial Network user will usually receive:
+
+| Item                       | Purpose                                      |
+|----------------------------|----------------------------------------------|
+| `wg_client0.conf`          | VPN config to access the TN                  |
+| Private SSH key            | Connect securely to VMs inside the TN        |
+| VM IPs & component list    | To know what’s running and where             |
+| DNS portal URL & creds     | Optional, for internal name resolution       |
+| Markdown report            | Full overview of the Trial Network           |
+
+---
+
+## 🛠 Troubleshooting
+
+- ❌ **Can’t connect via VPN?**  
+  Make sure no one else is using your config at the same time.
+
+- ❌ **Permission denied (SSH)?**  
+  Double-check key permissions and SSH user (`tnuser`).
+
+- ❌ **DNS names not resolving?**  
+  You may need to configure your system to use the internal DNS via the WireGuard config.
+
+---
+
+## 📬 Need help?
+
+Contact the **experimenter** who shared the Trial Network with you. They can clarify details or regenerate access credentials if needed.
+
+---
+
+Happy experimenting 🚀
+
+
