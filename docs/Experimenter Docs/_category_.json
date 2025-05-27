@@ -1,12 +1,12 @@
 {
-  "position": 5,
-  "label": "6G-Sandbox-Sites",
+  "position": 2,
+  "label": "Experimenter Docs",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "6G-Sandbox-Sites Overview"
+    "title": "Experimenter Docs Overview"
   },
   "customProps": {
     "description": ""

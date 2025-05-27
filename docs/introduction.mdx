@@ -37,51 +37,37 @@ The **Trial Network Lifecycle Manager (TNLCM)** is the central backend system re
 - Managing configuration, lifecycle and logs
 - Coordinating with other modules like the 6G Library and Sandbox Sites
 
-> All interactions with TNLCM are performed through its REST API or via CLI tools built on top of it.
+> Basic interactions with the TNLCM can be performed from its Frontend, but more experienced users might want to delve into its REST API or CLI tools.
 
 
-## :hammer_and_wrench: **Core components**
+## :hammer_and_wrench: **Main Repositories**
 
-The platform is composed of modular systems:
-
-- **TNLCM** (Trial Network Lifecycle Manager): Manages the complete lifecycle of a Trial Network.
-- **6G Library**: Repository of deployable 6G components and blueprints.
-- **6G Library**: A catalog of available resources, components and blueprints.
-- **6G-Sandbox-Sites**: Holds site-specific configuration variables for deployments.
+The 6G Sandbox project can be separated in multiple Main repositories:
+{/* TODO: Add the links to each repo using constant vars*/}
+- **6G Library**: The main repository of the available Trial Network components.
+- **6G-Sandbox-Sites**: Encrypted storage of site-specific configuration variables for deployments.
+- **TNLCM** (*Trial Network Lifecycle Manager*): Manages the complete lifecycle of the Trial Network.
+- **TNLCM-FRONTEND** (*Trial Network Lifecycle Manager*): Manages the complete lifecycle of the Trial Network.
 - **Toolkit Installer**: Automates the setup of TNLCM, Jenkins, and MinIO in new sites.
-- **Marketplace Community**: Public catalog of reusable experimental assets.
+- **Marketplace Community**: Code used to build and publish the preconfigured VM images available in the 6G-Sandbox Marketplace.
 
 Each module plays a role in enabling scalable, flexible, and repeatable 5G/6G experimentation.
 
 ## :busts_in_silhouette: **User profiles and usage paths**
 
-Depending on your role, you might interact with different parts of the system:
-
-- **Component Developer**:  
-  Define or update components in the 6G Library  
-  → Start with: [6G-Library](./6g-library/home)
+According to your role and needs, you can interact with 6G-Sandbox in different ways. Here are the main user profiles and their typical usage paths:
 
 - **Experimenter**:  
-  Use TNLCM to create, deploy, and manage trial networks  
-  → Start with: [TNLCM](./tnlcm/home)
+  Uses 6G-Sandbox to deploy Trial Networks and perform experiments.
 
-- **User**:  
-  Consume a deployed trial network for testing or research  
-  → Start with: [Accessing Trial Networks](./tnlcm/access-tn)
+- **Site Administrator**:  
+  Manages the underlying infrastructure and ensures the availability of resources for trial networks. Handles the list of components that can be used in trial networks in its site. 
 
-- **Site Admin**:  
-  Configure infrastructure and maintain site environments  
-  → Start with: [6G-Sandbox-Sites](./6g-sandbox-sites/home)
+- **Component Developer**:
+  Develops new 6G Library components or updates existing ones, ensuring they are compatible with the TNLCM and can be used in trial networks.
 
 
 ## :rocket: **Get started**
-
-You can begin exploring:
-
-- The [TNLCM backend](./tnlcm/home)
-- The [6G Library](./6g-library/home)
-- The [Toolkit Installer](./toolkit-installer/home)
-- The [Marketplace Community](./marketplace-community/home)
 
 Check the [Release Notes](./release-notes) for the latest updates.
 
