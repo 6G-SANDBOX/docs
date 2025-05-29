@@ -1,12 +1,12 @@
 {
   "position": 5,
-  "label": "Toolkit Installer",
+  "label": "Component Developer Docs",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "Toolkit Installer Overview"
+    "title": "Component Developer Docs Overview"
   },
   "customProps": {
     "description": ""

@@ -1,13 +1,22 @@
 ---
-sidebar_position: 2
-title: "Installation"
-sidebar_label: "Installation"
+sidebar_position: 3
+title: "Toolkit Installer"
+sidebar_label: "Toolkit Installer"
 draft: false
 ---
 
 import CodeBlock from "@theme/CodeBlock";
 import Link from "@docusaurus/Link";
-import { ONE_REPO_RELEASE, ONE_REPO_VERSION, SITES_ACCESS_REQUEST_ISSUE, SANDBOX_REPO_ORG, SANDBOX_REPO_TEAMS_SITES, TOOLKIT_INSTALLER_INSTALL_SCRIPT } from "@site/src/constants/v0.5.1";
+import { SANDBOX_URL, MARKETPLACE_SERVICE_TOOLKIT, ONE_REPO_RELEASE, ONE_REPO_VERSION, SITES_ACCESS_REQUEST_ISSUE, SANDBOX_REPO_ORG, SANDBOX_REPO_TEAMS_SITES, TOOLKIT_INSTALLER_INSTALL_SCRIPT } from "@site/src/constants/v0.5.1";
+
+Toolkit installer is a Python script developed for the <Link to={SANDBOX_URL}>6G-SANDBOX</Link> project, designed to facilitate the creation of new 6G-SANDBOX [sites](../6g-sandbox-sites/home.mdx).
+This script automates the installation of the basic elements of any 6G-Sandbox site as a single stack (<Link to={MARKETPLACE_SERVICE_TOOLKIT}>Toolkit Service</Link>) in OpenNebula. It includes:
+- **MinIO**: An open-source object storage system compatible with Amazon S3, designed for large-scale data infrastructure and supporting hybrid and cloud-native environments.
+- **Jenkins**: An open-source automation server used to build, test, and deploy software projects, enabling continuous integration and delivery (CI/CD).
+- **TNLCM**: A tool for managing trial networks in the 6G-SANDBOX project, allowing users to create, deploy, and manage trial networks efficiently.
+
+The Toolkit installer ensures consistency and reduces the complexity of initializing new 6G-SANDBOX sites, providing an efficient and user-friendly approach to managing site creation within the project's ecosystem.
+
 
 ## Requirements
 
@@ -41,7 +50,7 @@ Then you can generate a token by navigating to:
 
 The configuration should look like this:
 
-![fineGrainedToken](./images/fineGrainedToken.png)
+![fineGrainedToken](./images/gh_token.png)
 
 The repository required permission to enable is:
 
@@ -92,7 +101,7 @@ Therefore, it is recommended to move the TNLCM virtual machine to an OpenNebula 
 
 To check the CPU models of the hosts, you can access the Infrastructure tab from the left sidebar of OpenNebula's Sunstone, go to Host and select the host. Once a host is selected, in the Info section, scroll down to the Attributes section, where the **KVM_CPU_MODEL** field shows the host's CPU model.
 
-![host](./images/host.png)
+![Hosts in OpenNebula](./images/one_hosts.png)
 
 Some of the CPU models compatible with MongoDB based on our tests are:
 
@@ -109,7 +118,8 @@ To move the TNLCM virtual machine to a MongoDB-compatible host with the correct 
 5. In the OS & CPU section, under CPU Model, select the CPU model of the new host where the TNLCM virtual machine will be moved.
 
 <div style={{ textAlign: "center" }}>
-    ![cpuModel](./images/cpuModel.png)
+
+![CPU Model in OpenNebula](./images/one_cpu_model.png)
 </div>
 
 6. Finally, Deploy the TNLCM virtual machine on the new host. When deploying, you will have the option to select the host. Choose the same host where you updated the CPU model.

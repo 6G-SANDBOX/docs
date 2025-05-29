@@ -5,9 +5,15 @@ sidebar_label: "Workflow"
 draft: false
 ---
 
+Trial Network Lifecycle Manager (TNLCM) is a tool designed to manage the lifecycle of trial networks. Developed in Python, it automates the creation, deployment and management of temporary or test networks, streamlining the process of experimentation and validation in network development projects.
+
+> ⚠️ **Currently, TNLCM is mainly operated through its Swagger UI**  
+> You can explore all available functionalities and understand how it works in the [Swagger UI documentation](./swagger-ui.mdx).  
+> A dedicated frontend interface is under development to enable managing trial networks directly from a user-friendly web dashboard.
+
 ## Overview of TNLCM and 6G-Library implementation
 
-![overview](./images/overview.png)
+![overview](./images/tnlcm_overview.png)
 
 ## State Machine
 
@@ -46,4 +52,4 @@ TNLCM is a **state machine** that allows the automation of component deployment.
 - **failed-destruction** &rarr; **destroyed**: retry the trial network deployment removal and it is successful.
 - **failed-destruction** &rarr; **failed-destruction**: retry the trial network deployment removal and it fails again.
 
-![stateMachine](./images/stateMachine.png)
+![stateMachine](./images/tnlcm_state_machine.png)

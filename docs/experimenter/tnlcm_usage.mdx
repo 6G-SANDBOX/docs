@@ -1,49 +1,51 @@
 ---
-sidebar_position: 6
-title: "Swagger UI"
-sidebar_label: "Swagger UI"
+sidebar_position: 3
+title: "Using TNLCM"
+sidebar_label: "Using TNLCM"
 draft: false
 ---
 
 import Link from "@docusaurus/Link";
 import { LIBRARY_REPO_URL } from "@site/src/constants/v0.5.1";
 
+# Swagger UI
 
 ## Login
 
 The API set forth in the TNLCM is as follows:
 
-![api](./images/api.png)
+![Swagger API](./images/tnlcm_swagger.png)
 
 If it is the first time using the API it is necessary to create a user:
 
-![register](./images/register.png)
+![Register Endpoint](./images/tnlcm_register.png)
 
 Once the user has been created or if it has been previously created, add the user and its password in the Basic Authorization section of the **Authorize** box:
 
-![basicAuthorizarion](./images/basicAuthorizarion.png)
+![Basic Authorizarion](./images/tnlcm_basic_auth.png)
 
 Once the user has been added, an access token and its refresh token can be generated. This access token has a duration of one day (can be modified):
 
-![login](./images/login.png)
+![Login Endpoint](./images/tnlcm_login.png)
 
 The next step is to add the token in the green **Authorize** box. It is required to put the word **Bearer**, a space and then the token. An example is shown:
 
-![accessToken](./images/accessToken.png)
+![Token Authentication](./images/tnlcm_token_auth.png)
 
 Now, requests that involve having an access token can be made.
 
 If the access token expires, it can be refreshed by using the refresh token. The token in the green **Authorize** box must be updated with the refresh token and the post request must be made:
 
-![refreshToken](./images/refreshToken.png)
+![Refresh Token Endpoint](./images/tnlcm_refresh_token.png)
 
 When the request is made, it will return another access token that will need to be put back into the green **Authorize** box.
 
-## Create trial network
+
+## Create a Trial Network inside TNLCM
 
 Once logged into TNLCM, execute the POST request of the `trial-network` namespace:
 
-![createTN](./images/createTN.png)
+![TNs POST Endpoint](./images/tnlcm_tn_create.png)
 
 Fill in the following fields:
 
@@ -75,11 +77,12 @@ Example response:
 }
 ```
 
-## Deploy trial network
+## Deploy a Trial Network to your site
 
-Once logged into TNLCM and the trial network has been created, execute the PUT request of the `trial-network` namespace:
+Once logged into TNLCM and the trial network has been created, execute the PUT request of the `trial-network` namespace, to start the deployment of the Trial Network.
+This will trigger serveral Jenkins pipelines secuentally, one per component in your descriptor.
 
-![deployTN](./images/deployTN.png)
+![TN PUT Endpint by ID](./images/tnlcm_tn_deploy.png)
 
 Fill in the following fields:
 
@@ -96,7 +99,7 @@ Fill in the following fields:
 
 You can retrieve the list of all available trial networks by executing the GET request to the trial-networks namespace:
 
-![retrieveTN](./images/retrieveTNs.png)
+![TNs GET Endpoint](./images/tnlcm_tn_list.png)
 
 This request does not require any parameters.
 
@@ -110,7 +113,7 @@ This request does not require any parameters.
 
 You can retrieve detailed information about a specific trial network by executing the GET request to the trial-networks namespace with the trial network identifier:
 
-![retrieveTNbyID](./images/retrieveTNbyID.png)
+![TN GET Endpoint by ID](./images/tnlcm_tn_get.png)
 
 Fill in the following field:
 
@@ -126,7 +129,7 @@ Fill in the following field:
 
 You can retrieve the content of the log file for a specific trial network by executing the GET request to the trial-networks namespace:
 
-![retrieveLogContent](./images/retrieveLogContent.png)
+![TN log GET Endpoint](./images/tnlcm_tn_log_get.png)
 
 Fill in the following field:
 
@@ -142,7 +145,7 @@ Fill in the following field:
 
 You can download the log file for a specific trial network by executing the GET request to the trial-networks namespace:
 
-![downloadLog](./images/downloadLog.png)
+![TN log Download Endpoint](./images/tnlcm_tn_log_download.png)
 
 Fill in the following field:
 
@@ -160,7 +163,7 @@ The downloaded file will be named as `tn_name.log`, where `tn_name` corresponds 
 
 You can retrieve the content of the report file for a specific trial network by executing the GET request to the trial-networks namespace:
 
-![retrieveReportContent](./images/retrieveReportContent.png)
+![TN report GET Endpoint](./images/tnlcm_tn_report_get.png)
 
 Fill in the following field:
 
@@ -199,7 +202,7 @@ The `report_content` contains a full Markdown-formatted deployment report. This 
 
 You can download the Markdown report file generated after the deployment of a specific trial network by executing the GET request to the trial-networks namespace:
 
-![downloadReport](./images/downloadReport.png)
+![TN report Download Endpoint](./images/tnlcm_tn_report_download.png)
 
 Fill in the following field:
 
@@ -219,7 +222,7 @@ The file is typically named `tn_name.md`, where `tn_name` corresponds to the nam
 
 Once logged into TNLCM, the trial network has been created and the trial network has been deployed, execute the DELETE request to destroy a trial network:
 
-![destroyTN](./images/destroyTN.png)
+![destroyTN](./images/tnlcm_tn_destroy.png)
 
 Fill in the following fields:
 
@@ -236,7 +239,7 @@ Fill in the following fields:
 
 Once logged into TNLCM, the trial network has been created, deployed and destroyed, execute the DELETE request to purge a trial network:
 
-![purgeTN](./images/purgeTN.png)
+![purgeTN](./images/tnlcm_tn_purge.png)
 
 Fill in the following fields:
 

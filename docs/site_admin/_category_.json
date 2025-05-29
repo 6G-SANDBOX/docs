@@ -1,12 +1,12 @@
 {
-  "position": 3,
-  "label": "TNLCM",
+  "position": 4,
+  "label": "Site Administrator Docs",
   "collapsible": true,
   "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "TNLCM Overview"
+    "title": "Site Administrator Docs Overview"
   },
   "customProps": {
     "description": ""
