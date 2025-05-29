@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: "Playbook Deployment Guide"
 sidebar_label: "Playbook Deployment Guide"
 draft: false
@@ -132,3 +132,10 @@ After successfully applying the chart, perform tasks to publish what has been do
   - Complete the JSON template at `.global/json_templates/ok_result.json.j2` with component information and the previous markdown content, and send it in a POST request back to the TNLCM.
 
 With a few exceptions, facts `custom_outputs` and `output` include the same variables. Just remember `custom_outputs` is the information available in other deployments and `output` the information available to the experimenter in the TNLCM. Variables in `output` need to be the ones described in `{{ component_type }}/.tnlcm/public.yaml`
+
+
+## Final notes
+To troubleshoot deployments, you might want to check the Jenkins pipeline to see where it went wrong.
+TNs pursue idempotency, so retrying to deploy the TN should continue just where it left off.
+However, when TNs are created in the TNLCM, it is registered with the latest commit of your selected branch.
+This means, that if you want to retry a deployment after a change in your code, you should change the commit from the TNLCM mongodb database itself.

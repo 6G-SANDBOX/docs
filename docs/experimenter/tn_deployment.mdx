@@ -1,14 +1,21 @@
 ---
-sidebar_position: 8
-title: "Workflow"
-sidebar_label: "Workflow"
+sidebar_position: 3
+title: "How to deploy Trial Networks"
+sidebar_label: "Trial Network Deployment"
 draft: false
 ---
+
+You first create a descriptor, and then publish it to the TNLCM
+The descriptor is a YAML file that describes the components, their configurations, and the relationships between them.
+
+Then you use the TNLCM to deploy the Trial Network based on that descriptor.
+
+## TNLCM Overview
 
 Trial Network Lifecycle Manager (TNLCM) is a tool designed to manage the lifecycle of trial networks. Developed in Python, it automates the creation, deployment and management of temporary or test networks, streamlining the process of experimentation and validation in network development projects.
 
 > ⚠️ **Currently, TNLCM is mainly operated through its Swagger UI**  
-> You can explore all available functionalities and understand how it works in the [Swagger UI documentation](./swagger-ui.mdx).  
+> You can explore all available functionalities and understand how it works in the [TNLCM usage page](./tnlcm_usage.mdx).  
 > A dedicated frontend interface is under development to enable managing trial networks directly from a user-friendly web dashboard.
 
 ## Overview of TNLCM and 6G-Library implementation

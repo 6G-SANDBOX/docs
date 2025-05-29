@@ -5,20 +5,33 @@ sidebar_label: "Introduction"
 draft: false
 ---
 
+import Link from "@docusaurus/Link";
+import { LIBRARY_REPO_URL } from "@site/src/constants/v0.5.1";
+
+{/* TODO: Add links to other notes */}
+
 ## :satellite: **What is 6G-SANDBOX?**
 
-6G-SANDBOX is a Horizon Europe funded research project that aims to support for the next decade technology and research validation processes needed in the pathway towards 6G.
+6G-SANDBOX is a Horizon Europe funded research project that aims to support technology and research validation processes as needed in the pathway towards 6G, 
+while following the principles of Infrastructure as Code (IaC) and DevOps.
 
-It offers distributed testbeds, tools, and services to support researchers, developers, and industry players in building and evaluating new 6G components and use cases.
-
-One of the core capabilities of 6G-SANDBOX is the ability to design, deploy, and manage trial networks—temporary, isolated network environments used to validate and test new 6G technologies,
-architectures, and services in controlled conditions. These trial networks provide a flexible, reproducible, and safe experimentation space, enabling stakeholders to evaluate innovations before
-integrating them into production or larger-scale deployments.
+It offers distributed testbeds, tools, and services to support researchers, developers, and industry players in building and evaluating new 6G components and
+use cases, thanks to the introduction of Trial Networks and the Trial Network Lifecycle Manager (TNLCM).
 
 
 ## :building_construction: **What is a Trial Network (TN)?**
 
-A **Trial Network** (TN) is a temporary, isolated 5G and 6G infrastructure built for experimentation purposes. It consists of interconnected components deployed across one or more physical sites.
+A **Trial Network** (TN) is a temporary, isolated virtual environment built for experimentation purposes in 5G and 6G infrastructure.
+It provides a flexible, reproducible, and safe experimentation space, enabling stakeholders to evaluate innovations before integrating them
+into production or larger-scale deployments.
+It consists of multiple interconnected components (defined in the <Link to={LIBRARY_REPO_URL}>6G Library</Link>), that can be selected following a modular aproach.
+
+Components can by anything from VMs, containers, configurations, capabilities... if if can be described as Code, it can be a component.
+
+Trial Networks are deployed in one or more **6G Sandbox Sites**, which are physical locations that host the necessary hardware and software resources.
+
+A Trial Network is fully defined by its **descriptor**, which is a YAML file that describes the components, their configurations, and the relationships between them.
+Descriptors are generic and can be reused across different 6G-Sandbox sites, allowing for easy customization and adaptation to specific use cases.
 
 Trial Networks enable:
 
@@ -57,7 +70,7 @@ Each module plays a role in enabling scalable, flexible, and repeatable 5G/6G ex
 
 According to your role and needs, you can interact with 6G-Sandbox in different ways. Here are the main user profiles and their typical usage paths:
 
-- **Experimenter**:  
+- **[Experimenter](./experimenter/experimenter.mdx)**:  
   Uses 6G-Sandbox to deploy Trial Networks and perform experiments.
 
 - **Site Administrator**:  
@@ -69,7 +82,6 @@ According to your role and needs, you can interact with 6G-Sandbox in different 
 
 ## :rocket: **Get started**
 
-Check the [Release Notes](./release-notes) for the latest updates.
+:new:  Check the [Release Notes](./release-notes.mdx) for the latest updates.
 
-
-:speech_balloon: **Want to contribute?** Read the [Contributing Guide](./contributing) to learn how to add or improve documentation.
+:speech_balloon: **Want to contribute?** Read the [Contributing Guide](./contributing.mdx) to learn how to add or improve documentation.
