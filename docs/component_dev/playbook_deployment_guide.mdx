@@ -28,7 +28,7 @@ You can complete any STAGE with your own task files. Just drop them at `{{ compo
 ### STAGE 1: Apply IaC to deploy the component
 
 These stage includes all pre-deployment tasks as well as the actual deployment. Usual steps include
-- Importing task file `.global/cac/load_variables.yaml`: Import variables as hostvars into the playbook. Previously mentioned in the landing page [EXTRA section](./home.mdx#extra)
+- Importing task file `.global/cac/load_variables.yaml`: Import variables as hostvars into the playbook. Previously mentioned in the landing page [EXTRA section](./6g_library.mdx#extra)
 - Importing task file `.global/cac/terraform_workdir.yaml`: Prepares directory `.terraform` in the Jenkins workspace, which will serve as the Terraform workspace. Sets the <Link to={HASHICORP_TERRAFORM_BACKENDS_S3}>.tfstate backend as S3</Link> (MinIO) and downloads the manifests of previous components.
 - Importing task file `.global/cac/terraform_apply.yaml`: Prepares the corresponding <Link to={OPENNEBULA_TERRAFORM_PROVIDER}>terraform manifests</Link>, applies the `terraform apply` command and stops execution in case something went wrong.
 
@@ -94,7 +94,7 @@ You can complete any STAGE with your own task files. Just drop them at `{{ compo
 ### STAGE 1: Apply IaC to deploy the component
 
 These stage includes all pre-deployment tasks as well as the actual deployment. Usual steps include:
-- Importing task file `.global/cac/load_variables.yaml`: Import variables as hostvars into the playbook. Previously mentioned in the landing page [EXTRA section](./home.mdx#extra)
+- Importing task file `.global/cac/load_variables.yaml`: Import variables as hostvars into the playbook. Previously mentioned in the landing page [EXTRA section](./6g_library.mdx#extra)
 - Importing task file `.global/cac/terraform_workdir.yaml`: Prepares directory `.terraform` in the Jenkins workspace, which will serve as the Terraform workspace. Sets the <Link to={HASHICORP_TERRAFORM_BACKENDS_S3}>.tfstate backend as S3</Link>(MinIO) and downloads the manifests of previous components.
 - Retrieve terraform outputs with:
 ```yaml

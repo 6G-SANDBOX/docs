@@ -102,3 +102,10 @@ export const ONE_DOCS_MANAGEMENT_OPERATIONS_CONTEXT_SECTION = `${ONE_DOCS_MANAGE
 export const UERANSIM_REPO_URL = "https://github.com/aligungr/UERANSIM";
 export const UERANSIM_LOGO = "https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png";
 export const UERANSIM_WIKI = `${UERANSIM_REPO_URL}/wiki`;
+// Main Repositories
+export const MAIN_REPO_6G_LIBRARY = `${SANDBOX_REPO_ORG}/6G-Library`;
+export const MAIN_REPO_SANDBOX_SITES = `${SANDBOX_REPO_ORG}/6G-Sandbox-Sites`;
+export const MAIN_REPO_TNLCM = `${SANDBOX_REPO_ORG}/TNLCM`;
+export const MAIN_REPO_TNLCM_FRONTEND = `${SANDBOX_REPO_ORG}/TNLCM_FRONTEND`;
+export const MAIN_REPO_TOOLKIT_INSTALLER = `${SANDBOX_REPO_ORG}/toolkit-installer`;
+export const MAIN_REPO_MARKETPLACE = `${SANDBOX_REPO_ORG}/marketplace-community`;
