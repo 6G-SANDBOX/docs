@@ -49,7 +49,7 @@ Start server
 bun dev
 ```
 
-You can also avoid installing dependencis locally using a docker container:
+You can also avoid installing dependencies locally using a docker container:
 ```bash
 docker run --rm -it -v "$PWD:/app" -w /app oven/bun -- install
 docker run --rm -it -v "$PWD:/app" -w /app -p 3000:3000 oven/bun -- dev
