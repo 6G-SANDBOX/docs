@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+title: "6G-Sandbox Component Developers"
+sidebar_label: "6G-Sandbox Component Developers"
+draft: false
+---
+
+import Link from "@docusaurus/Link";
+import { LIBRARY_REPO_URL } from "@site/src/constants/v0.5.1";
+
+## Introduction
+
+Welcome to the **6G-Sandbox Component Developers** section. This documentation is intended for developers who want to contribute reusable infrastructure or service components to be deployed within Trial Networks (TNs) in the 6G-SANDBOX project.
+
+As a Component Developer, your role is to design, implement, and integrate components that will be deployed automatically by the 6G-Sandbox orchestration stack, using **TNLCM**, **Jenkins**, **Ansible**, and **Terraform**.
+
+Your work feeds directly into the <Link to={LIBRARY_REPO_URL}>GitHub repository</Link>, where all component definitions, inputs, playbooks, and templates are maintained.
+
+
+## What You’ll Do
+
+Component Developers are responsible for:
+
+- 📦 **Creating new components** inside the <Link to={LIBRARY_REPO_URL}>GitHub repository</Link>. You can use `.dummy_component/` as a base.
+- 🛠️ **Defining Ansible playbooks** that implement the provisioning and configuration logic for your component.
+- ⚙️ **Leveraging Terraform and Helm** to ensure reproducible deployments.
+- 📤 **Publishing results and outputs** to MinIO.
+- 🔁 **Handling dependencies** between components through shared variable files and terraform outputs.
+
+## What's in This Section
+
+This section walks you through everything you need to build and deliver a component:
+
+- 📚 [6G-Library Structure](./6g_library.mdx): Understand how components are defined and how TNLCM and Jenkins interact with the repository.
+- 🧩 [Playbook Development Guide](./playbook_deployment_guide.mdx): Learn how to build robust, idempotent, multi-stage Ansible playbooks.
+- 🖥️ [Appliances](./appliances.mdx): Build preconfigured VM images to be used in your components.
+- 🛒 [Marketplace](./6gsandbox_marketplace.mdx): Learn how appliances are shared across sites via a distributed appliance marketplace.
+- 🧪 [Deploy your own AppMarket](./deploy_appmarket.mdx): Spin up your own appliance marketplace instance for local testing.
+
+
+> Ready to start?  
+> 👉 Head to the [6G-Library page](./6g_library.mdx) to explore the structure and lifecycle of a deployable component.

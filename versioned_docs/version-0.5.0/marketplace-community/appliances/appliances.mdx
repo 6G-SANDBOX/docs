@@ -6,7 +6,7 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { SANDBOX_MARKETPLACE } from "@site/src/constants/v0.5.0";
+import { MARKETPLACE_URL } from "@site/src/constants/v0.5.0";
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ sudo apt update && sudo apt install packer
 ## How to build existing appliances
 
 :::note
-The custom makefile of this repository assumes you are running a Marketplace Server in the same system. After each appliance is created, the makefile is configured to run a script that moves the resulting qcow to `$DIR_APPLIANCES` and create/update the metadata file in `$DIR_METADATA`. This automation streamlines the Continuous Delivery process of the appliances (we use it in the <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link>) but it might be unnecessary if you plan to just generate the qcow.
+The custom makefile of this repository assumes you are running a Marketplace Server in the same system. After each appliance is created, the makefile is configured to run a script that moves the resulting qcow to `$DIR_APPLIANCES` and create/update the metadata file in `$DIR_METADATA`. This automation streamlines the Continuous Delivery process of the appliances (we use it in the <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link>) but it might be unnecessary if you plan to just generate the qcow.
 
 To disable this behaviour, go to file `community-apps/Makefile` and delete line `packer/update_metadata.sh "${DISTRO_NAME}" "${DISTRO_VER}" ${@}` before running any `make` command.
 

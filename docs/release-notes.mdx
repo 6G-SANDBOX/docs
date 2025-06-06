@@ -1,0 +1,276 @@
+---
+sidebar_position: 2
+title: "Release Notes"
+sidebar_label: "Release Notes"
+draft: false
+---
+
+import Link from "@docusaurus/Link";
+import { MARKETPLACE_URL, TOOLKIT_INSTALLER_REPO_URL, TNLCM_BACKEND_REPO_URL, LIBRARY_REPO_URL, SITES_DUMMY_SITE, SITES_REPO_URL } from "@site/src/constants/v0.5.1";
+
+## :calendar: **2025-04-10**
+
+### :fire: **What's New?**
+
+#### :brain: **TNLCM backend v0.5.1**
+
+:link: **Repository:** <Link to={TNLCM_BACKEND_REPO_URL}>6G-SANDBOX/TNLCM</Link>
+
+:page_facing_up: **Changelog:** [TNLCM Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.1)
+
+Upgrade TNLCM following the instructions [here](./site_admin/TNLCM/tnlcm_upgrade.mdx).
+
+#### :wrench: **Toolkit Installer v0.5.1**
+
+:link: **Repository:** <Link to={TOOLKIT_INSTALLER_REPO_URL}>6G-SANDBOX/toolkit-installer</Link>
+
+:page_facing_up: **Changelog:** [Toolkit Installer Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.1)
+
+To install the new version of the toolkit installer, follow the instructions [here](./site_admin/toolkit.mdx).
+
+#### :books: **6G-Library v0.5.1**
+
+:link: **Repository:** <Link to={LIBRARY_REPO_URL}>6G-SANDBOX/6G-Library</Link>
+
+:page_facing_up: **Changelog:** [6G-Library Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.1)
+
+#### **Appliances**
+
+The following appliance from <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link> has been updated:
+
+| Software             | New Version                      |
+|----------------------|----------------------------------|
+| 6G-Sandbox Toolkit   | v0.5.1-20250411-1309             |
+
+You can download or upgrade the appliance using the <Link to={TOOLKIT_INSTALLER_REPO_URL}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained.
+
+## :calendar: **2025-03-31**
+
+### :fire: **What's New?**
+
+#### :brain: **TNLCM backend v0.5.0**
+
+:link: **Repository:** <Link to={TNLCM_BACKEND_REPO_URL}>6G-SANDBOX/TNLCM</Link>
+
+:page_facing_up: **Changelog:** [TNLCM Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.0)
+
+Upgrade TNLCM following the instructions [here](./site_admin/TNLCM/tnlcm_upgrade.mdx).
+
+#### :wrench: **Toolkit Installer v0.5.0**
+
+:link: **Repository:** <Link to={TOOLKIT_INSTALLER_REPO_URL}>6G-SANDBOX/toolkit-installer</Link>
+
+:page_facing_up: **Changelog:** [Toolkit Installer Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.0)
+
+For the toolkit installer to work perfectly, a modification is required in the `/usr/lib/one/ruby/cli/one_helper.rb` file on the OpenNebula frontend, following the instructions from this [commit](https://github.com/OpenNebula/one/commit/73447d69021db71c2202dc78a0098d1563bf258f). This change will take effect in OpenNebula version 7.0.
+
+To install the new version of the toolkit installer, follow the instructions [here](./site_admin/toolkit.mdx).
+
+#### :books: **6G-Library v0.5.0**
+
+:link: **Repository:** <Link to={LIBRARY_REPO_URL}>6G-SANDBOX/6G-Library</Link>
+
+:page_facing_up: **Changelog:** [6G-Library Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.0)
+
+#### **Appliances**
+
+If you have an appliance that belongs to the <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link>, you need to add attributes to its images.
+
+**If the appliance is an image type**
+
+1. Access the OpenNebula frontend.
+2. Create a file without an extension with the following content:
+
+```text
+ONE_6GSB_MARKETPLACE_APPLIANCE_NAME="<appliance_name>"
+ONE_6GSB_MARKETPLACE_APPLIANCE_VERSION="<XXXXXXXX-XXXX>"
+ONE_6GSB_MARKETPLACE_APPLIANCE_SOFTWARE_VERSION="<vX.X.X>"
+```
+
+The field values can be obtained either from the marketplace or by using the following curl command:
+
+```bash
+curl https://marketplace.mobilesandbox.cloud:9443/appliance/<name> -H "Accept: application/json"
+```
+
+For example, for the `ELCM` appliance, the command would be:
+
+```bash
+curl https://marketplace.mobilesandbox.cloud:9443/appliance/service_ELCM -H "Accept: application/json"
+```
+
+After executing the curl command, you will receive a JSON response with the following information:
+
+```json
+{
+    "_id":{"$oid":"service_ELCM"},
+    "links":{"download":{"href":"https://marketplace.mobilesandbox.cloud:9443/appliance/service_ELCM/download"}},
+    "name":"ELCM",
+    "version":"v3.7.1-20250303-1420",
+    "publisher":"University of Malaga",
+    ...
+}
+```
+
+Next, the values you need to add to the file are:
+
+- `<appliance_name>` is the value of the `name` field from the curl response (e.g., `ELCM` has name `ELCM`).
+- `<XXXXXXXX-XXXX>` is the second part of the `version` field. The `version` field follows the format `vX.X.X-YYYYMMDD-HHMM` and you should add the second part (e.g., `ELCM` has version `v3.7.1-20250303-1420`, so you should add `20250303-1420`).
+- `<vX.X.X>` is the first part of the `version` field. The `version` field follows the format `vX.X.X-YYYYMMDD-HHMM` and you should add the first part (e.g., `ELCM` has version `v3.7.1-20250303-1420`, so you should add `v3.7.1`).
+
+So the file for the `ELCM` appliance would look like this:
+
+```text
+ONE_6GSB_MARKETPLACE_APPLIANCE_NAME="ELCM"
+ONE_6GSB_MARKETPLACE_APPLIANCE_VERSION="20250303-1420"
+ONE_6GSB_MARKETPLACE_APPLIANCE_SOFTWARE_VERSION="v3.7.1"
+```
+
+3. Execute the following command to add the attributes to an image:
+
+```bash
+oneimage update <image_id> --append <path_to_file>
+```
+
+Where:
+
+- `<image_id>` is the ID of the image in OpenNebula to which you want to add the attributes.
+- `<path_to_file>` is the path to the file you created in step 2.
+
+For the `ELCM` appliance, the command would be:
+
+```bash
+oneimage update <image_elcm_id> --append <path_to_file>
+```
+
+**If the appliance is a service type**
+
+This applies to appliances such as `6G-Sandbox Toolkit` or `oneKE`. The steps are as follows:
+
+1. Access the OpenNebula frontend.
+2. Create a file without an extension with the following content:
+
+```text
+ONE_6GSB_MARKETPLACE_APPLIANCE_NAME="<appliance_name>"
+ONE_6GSB_MARKETPLACE_APPLIANCE_VERSION="<XXXXXXXX-XXXX>"
+ONE_6GSB_MARKETPLACE_APPLIANCE_SOFTWARE_VERSION="<vX.X.X>"
+```
+
+The field values can be obtained either from the marketplace or using curl. For example, for `6G-Sandbox Toolkit`, the command would be:
+
+```bash
+curl https://marketplace.mobilesandbox.cloud:9443/appliance/service_toolkit -H "Accept: application/json"
+```
+
+After executing the curl command, you will receive a JSON response with the following information:
+
+```json
+{
+    "_id":{"$oid":"service_toolkit"},
+    "links":{"download":{"href":"https://marketplace.mobilesandbox.cloud:9443/appliance/service_toolkit/download"}},
+    "name":"6G-Sandbox Toolkit",
+    "version":"v0.4.0-20250219-2235",
+    "publisher":"Telefonica Innovacion Digital",
+    ...
+}
+```
+
+Next, the values you need to add to the file are:
+
+- `<appliance_name>` is the value of the `name` field from the curl response (e.g., `6G-Sandbox Toolkit` has name `6G-Sandbox Toolkit`).
+- `<XXXXXXXX-XXXX>` is the second part of the `version` field. The `version` field follows the format `vX.X.X-YYYYMMDD-HHMM` and you should add the second part (e.g., `6G-Sandbox Toolkit` has version `v0.4.0-20250219-2235`, so you should add `20250219-2235`).
+- `<vX.X.X>` is the first part of the `version` field. The `version` field follows the format `vX.X.X-YYYYMMDD-HHMM` and you should add the first part (e.g., `6G-Sandbox Toolkit` has version `v0.4.0-20250219-2235`, so you should add `v0.4.0`).
+
+So the file for the `6G-Sandbox Toolkit` appliance would look like this:
+
+```text
+ONE_6GSB_MARKETPLACE_APPLIANCE_NAME="6G-Sandbox Toolkit"
+ONE_6GSB_MARKETPLACE_APPLIANCE_VERSION="20250219-2235"
+ONE_6GSB_MARKETPLACE_APPLIANCE_SOFTWARE_VERSION="v0.4.0"
+```
+
+3. Execute the following command to add the attributes. For each image in the service, execute the following command:
+
+```bash
+oneimage update <image_id> --append <path_to_file>
+```
+
+Where:
+
+- `<image_id>` is the ID of the image in OpenNebula to which you want to add the attributes.
+- `<path_to_file>` is the path to the file you created in step 2.
+
+For the `6G-Sandbox Toolkit` appliance, the command would be:
+
+```bash
+oneimage update <image_jenkins_id> --append <path_to_file>
+oneimage update <image_tnlcm_id> --append <path_to_file>
+oneimage update <image_minio_disk0_id> --append <path_to_file>
+oneimage update <image_minio_disk1_id> --append <path_to_file>
+```
+
+Once the previous steps are completed, proceed with the update. The following appliances from <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link> have been updated:
+
+| Software             | Previous Version        | New Version                      |
+|----------------------|-------------------------|----------------------------------|
+| 6G-Sandbox Toolkit   | v0.4.0-20250219-2235    | v0.5.0-20250403-1109             |
+| ELCM                 | v3.7.1-20250303-1420    | v3.7.1-20250331-1449             |
+| UERANSIM             | v3.2.6-20250206-1135    | v3.2.7-20250331-1350             |
+| oneKE                | v1.29                   | 1.31.3-6.10.0-2-20250220-0051    |
+
+You can download or upgrade the appliances using the <Link to={TOOLKIT_INSTALLER_REPO_URL}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained above and update the <Link to={SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository.
+
+## :calendar: **2025-02-22**
+
+New toolkit installer version is available! This update brings key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
+
+### :fire: **What's New?**
+
+#### :wrench: **Toolkit Installer v0.4.0**
+
+:link: **Repository:** <Link to={TOOLKIT_INSTALLER_REPO_URL}>6G-SANDBOX/toolkit-installer</Link>
+
+:page_facing_up: **Changelog:** [Toolkit Installer Release Notes](https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.4.0)
+
+To install the new version of the toolkit installer, follow the instructions [here](./site_admin/toolkit.mdx).
+
+## :calendar: **2025-02-06**
+
+New versions of 6G-Library and TNLCM are here! These updates bring key improvements and optimizations to enhance the 6G-SANDBOX ecosystem.
+
+### :fire: **What's New?**
+
+#### :brain: **TNLCM backend v0.4.5**
+
+:link: **Repository:** <Link to={TNLCM_BACKEND_REPO_URL}>6G-SANDBOX/TNLCM</Link>
+
+:page_facing_up: **Changelog:** [TNLCM Release Notes](https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.4.5)
+
+Upgrade TNLCM following the instructions [here](./site_admin/TNLCM/tnlcm_upgrade.mdx).
+
+#### :books: **6G-Library v0.4.0**
+
+:link: **Repository:** <Link to={LIBRARY_REPO_URL}>6G-SANDBOX/6G-Library</Link>
+
+:page_facing_up: **Changelog:** [6G-Library Release Notes](https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.4.0)
+
+#### **6G-Sandbox-Sites**
+
+Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id. Also new variables from sites are required. Please follow dummy site <Link to={SITES_DUMMY_SITE}>here</Link>.
+
+#### **Appliances**
+
+The following appliances from <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link> have been updated:
+
+- 6G-Sandbox bastion
+- IxChariot endpoint
+- Loadcore Agent Test Tool
+- Loadcore Agent Test Tool + hugepages
+- Open5GS VM
+- route-manger-api
+- Technitium DNS
+- UERANSIM
+
+Please remove the old versions of the appliances and download the new ones.
+
+:speech_balloon: **We'd love your feedback!** If you encounter any issues or have suggestions, feel free to open an issue in corresponding repositories.

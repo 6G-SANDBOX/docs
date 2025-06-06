@@ -55,12 +55,17 @@ const config = {
         docs: {
           sidebarPath: "./sidebars.js",
           routeBasePath: "/", // Serve the docs at the site's root
-          lastVersion: "0.5.1",
+          lastVersion: "1.0.0",
           versions: {
             current: {
               label: "Canary 🚧",
               path: "next",
               banner: "unreleased",
+            },
+            "1.0.0": {
+              label: "1.0.0",
+              path: "",
+              banner: "none",
             },
             "0.5.1": {
               label: "0.5.1",

@@ -6,7 +6,7 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_CAC_LOAD_VARIABLES, SANDBOX_SITES_REPO_URL } from "@site/src/constants/v0.5.0";
+import { LIBRARY_GLOBAL_PAC_TN_DEPLOY, LIBRARY_GLOBAL_CAC_LOAD_VARIABLES, SITES_REPO_URL } from "@site/src/constants/v0.5.0";
 
 The 6G-Library repository the includes all the necessary code and data to deploy and configure each component of a Trial Network. Each component's metadata and code are used by both the TNLCM and the Jenkins of a Site.
 
@@ -34,7 +34,7 @@ The available inputs for each component are described at `{component_type}/.tnlc
 
 ### Jenkins starts the corresponding Ansible playbook
 
-The TN_DEPLOY pipeline first writes its parameters and the component's inputs as variable files loadable by Ansible, then clones the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository and finally launches the playbook `{COMPONENT_TYPE}/code/component_playbook.yaml`.
+The TN_DEPLOY pipeline first writes its parameters and the component's inputs as variable files loadable by Ansible, then clones the <Link to={SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository and finally launches the playbook `{COMPONENT_TYPE}/code/component_playbook.yaml`.
 
 ### Ansible playbook
 
@@ -55,7 +55,7 @@ The outputs expected by the TNLCM are described at `{component_type}/.tnlcm/publ
 Expanding step 3 and prior to the [Playbook Development Guide](./playbook-deployment-guide.mdx), it must be noted that there are multiple sources of variables available for a playbook.
 
 The first and most important one is the <Link to={LIBRARY_GLOBAL_CAC_LOAD_VARIABLES}>`.global/cac/load_variables.yaml`</Link> task file, which loads the following variable files in order, overwriting the previous ones:
-- **`6G-Sandbox-Sites/{{ deployment_site }}/core.yaml"`**: Variables unique to each site loaded from repository <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link>
+- **`6G-Sandbox-Sites/{{ deployment_site }}/core.yaml"`**: Variables unique to each site loaded from repository <Link to={SITES_REPO_URL}>6G-Sandbox-Sites</Link>
 - **`{{ component_type }}/variables/{{ site_hypervisor }}/private.yaml`**: Default variables unique to each component.
 - **`{{ component_type }}/variables/input_file.yaml`**: Component inputs. File created during the Jenkins pipeline. Most of them simply overwrite some of the private variables.
 - **`{{ component_type }}/variables/pipeline_parameters.yaml`**: Jenkins parameters. File created during the Jenkins pipeline.
