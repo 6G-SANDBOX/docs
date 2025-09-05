@@ -1,0 +1,93 @@
+---
+sidebar_position: 1
+title: "Welcome to 6G-SANDBOX"
+sidebar_label: "Introduction"
+draft: false
+---
+
+import Link from "@docusaurus/Link";
+import { LIBRARY_REPO_URL } from "@site/src/constants/v1.0.0";
+import {
+  MAIN_REPO_6G_LIBRARY,
+  MAIN_REPO_SANDBOX_SITES,
+  MAIN_REPO_TNLCM,
+  MAIN_REPO_TNLCM_FRONTEND,
+  MAIN_REPO_TOOLKIT_INSTALLER,
+  MAIN_REPO_MARKETPLACE
+} from "@site/src/constants/v1.0.0";
+
+## :satellite: **What is 6G-SANDBOX?**
+
+6G-SANDBOX is a Horizon Europe funded research project that aims to support technology and research validation processes as needed in the pathway towards 6G, 
+while following the principles of Infrastructure as Code (IaC) and DevOps.
+
+It offers distributed testbeds, tools, and services to support researchers, developers, and industry players in building and evaluating new 6G components and
+use cases, thanks to the introduction of Trial Networks and the Trial Network Lifecycle Manager (TNLCM).
+
+
+## :building_construction: **What is a Trial Network (TN)?**
+
+A **Trial Network** (TN) is a temporary, isolated virtual environment built for experimentation purposes in 5G and 6G infrastructure.
+It provides a flexible, reproducible, and safe experimentation space, enabling stakeholders to evaluate innovations before integrating them
+into production or larger-scale deployments.
+It consists of multiple interconnected components (defined in the <Link to={LIBRARY_REPO_URL}>6G Library</Link>), that can be selected following a modular aproach.
+
+Components can by anything from VMs, containers, configurations, capabilities... if can be described as Code, it can be a component.
+
+Trial Networks are deployed in one or more **6G Sandbox Sites**, which are physical locations that host the necessary hardware and software resources.
+
+A Trial Network is fully defined by its **descriptor**, which is a YAML file that describes the components, their configurations, and the relationships between them.
+Descriptors are generic and can be reused across different 6G-Sandbox sites, allowing for easy customization and adaptation to specific use cases.
+
+Trial Networks enable:
+
+- Realistic experimentation in distributed testbeds
+- Safe testing of early-stage 5G and 6G technologies
+- Custom environments per use case or experiment
+
+They are fully managed through TNLCM.
+
+
+## :gear: **What is TNLCM?**
+
+The **Trial Network Lifecycle Manager (TNLCM)** is the central backend system responsible for:
+
+- Creating, validating, and deploying trial networks
+- Managing configuration, lifecycle and logs
+- Coordinating with other modules like the 6G Library and Sandbox Sites
+
+> Basic interactions with the TNLCM can be performed from its Frontend, but more experienced users might want to delve into its REST API or CLI tools.
+
+
+## :hammer_and_wrench: **Main Repositories**
+
+The 6G Sandbox project can be separated in multiple Main repositories:
+
+- <Link to={MAIN_REPO_6G_LIBRARY} target="_blank"><strong>6G Library</strong></Link>: The main repository of the available Trial Network components.
+- <Link to={MAIN_REPO_SANDBOX_SITES} target="_blank"><strong>6G-Sandbox-Sites</strong></Link>: Encrypted storage of site-specific configuration variables for deployments.
+- <Link to={MAIN_REPO_TNLCM} target="_blank"><strong>TNLCM</strong> (*Trial Network Lifecycle Manager*)</Link>: Manages the complete lifecycle of the Trial Network.
+- <Link to={MAIN_REPO_TNLCM_FRONTEND} target="_blank"><strong>TNLCM-FRONTEND</strong> (*Trial Network Lifecycle Manager UI*)</Link>: UI for managing the Trial Network lifecycle.
+- <Link to={MAIN_REPO_TOOLKIT_INSTALLER} target="_blank"><strong>Toolkit Installer</strong></Link>: Automates the setup of TNLCM, Jenkins, and MinIO in new sites.
+- <Link to={MAIN_REPO_MARKETPLACE} target="_blank"><strong>Marketplace Community</strong></Link>: Code used to build and publish the preconfigured VM images available in the 6G-Sandbox Marketplace.
+
+Each module plays a role in enabling scalable, flexible, and repeatable 5G/6G experimentation.
+
+## :busts_in_silhouette: **User profiles and usage paths**
+
+According to your role and needs, you can interact with 6G-Sandbox in different ways. Here are the main user profiles and their typical usage paths:
+
+- **[Experimenter](./experimenter/experimenter.mdx)**:
+  Uses 6G-Sandbox to deploy Trial Networks and perform experiments.
+
+- **[Site Administrator](./site_admin/site_admin.mdx)**:
+  Manages the underlying infrastructure and ensures the availability of resources for trial networks. Handles the list of components that can be used in trial networks in its site. 
+
+- **[Component Developer](./component_dev/component_dev.mdx)**:
+  Develops new 6G Library components or updates existing ones, ensuring they are compatible with the TNLCM and can be used in trial networks.
+
+
+## :rocket: **Get started**
+
+:new:  Check the [Release Notes](./release-notes.mdx) for the latest updates.
+
+:speech_balloon: **Want to contribute?** Read the [Contributing Guide](./contributing.mdx) to learn how to add or improve documentation.

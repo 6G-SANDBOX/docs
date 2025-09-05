@@ -69,7 +69,7 @@ const config = {
             },
             "0.5.1": {
               label: "0.5.1",
-              path: "",
+              path: "0.5.1",
               banner: "none",
             },
             "0.5.0": {
