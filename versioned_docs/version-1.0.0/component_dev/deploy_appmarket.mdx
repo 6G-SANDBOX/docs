@@ -7,11 +7,17 @@ draft: true # change to false when ready to publish
 
 import CodeBlock from "@theme/CodeBlock";
 import Link from "@docusaurus/Link";
-import { APPMARKET_REPO_URL } from "@site/src/constants/v0.5.1";
+import { APPMARKET_REPO_URL } from "@site/src/constants/v1.0.0";
 
 ## How to build your own marketplace
 
 To create your own marketplace, you need to follow these steps:
+
+### Install the appmarket-simple
+Content server provided by OpenNebula. Instructions may have changed
+https://github.com/OpenNebula/appmarket-simple
+
+Change logos and external URL
 
 1. Install yarn
 
@@ -41,3 +47,35 @@ yarn --cwd /opt/appmarket-simple/src/public/react/ install
 ```bash
 yarn --cwd /opt/appmarket-simple/src/public/react/ build
 ```
+
+
+### Install the appliance build chain
+
+```bash
+git clone --recurse-submodules https://github.com/6G-SANDBOX/marketplace-community.git
+
+mkdir -p /srv/6gsandbox /srv/6gsandbox/metadata  /srv/6gsandbox/appliances
+ln -sf /srv/6gsandbox/metadata/ /opt/appmarket-simple/src/data
+ln -sf /opt/6gsandbox/marketplace-community/logos/ /opt/appmarket-simple/src/public/logos
+ln -sf /opt/6gsandbox/marketplace-community/appliances/.other-appliances/ /srv/6gsandbox/metadata/
+```
+
+Now, set up a simple nginx server to expose the appliances built
+```nginx
+# /etc/nginx/sites-enabled/6gsandbox-marketplace
+...
+server {
+...
+    root /srv/6gsandbox/appliances;
+...
+```
+
+And finally edit `apps-code/community-apps/Makefile.local` to set a custom prefix for the appliance names, to modify the external URL for the exposed nginx server, or to modify the paths where appliances and metadata will be placed.
+
+Refresh everything to see if everything worked
+```bash
+systemctl restart nginx
+systemctl restart appmarket-simple
+```
+
+You can start building appliances now.

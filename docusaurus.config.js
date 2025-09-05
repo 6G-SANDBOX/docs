@@ -69,7 +69,7 @@ const config = {
             },
             "0.5.1": {
               label: "0.5.1",
-              path: "",
+              path: "0.5.1",
               banner: "none",
             },
             "0.5.0": {
@@ -215,7 +215,7 @@ const config = {
       announcementBar: {
         id: "new_release",
         content:
-          "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v0.5.1\">TNLCM v0.5.1</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v0.5.1\">toolkit-installer v0.5.1</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v0.5.1\">6G-Library v0.5.1</a> are out. 🎉️",
+          "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v1.0.0\">TNLCM v1.0.0</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v1.0.0\">toolkit-installer v1.0.0</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v1.0.0\">6G-Library v1.0.0</a> are out. 🎉️",
         backgroundColor: "#fffae6",
         textColor: "#091E42",
         isCloseable: true,
