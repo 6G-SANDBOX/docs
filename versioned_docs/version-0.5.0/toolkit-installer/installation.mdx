@@ -7,14 +7,9 @@ draft: false
 
 import CodeBlock from "@theme/CodeBlock";
 import Link from "@docusaurus/Link";
-import { ONE_REPO_RELEASE, ONE_REPO_VERSION, SANDBOX_SITES_ACCESS_REQUEST_ISSUE, SANDBOX_ORGANIZATION, SANDBOX_SITES_TEAM, TOOLKIT_INSTALLER_INSTALL_SCRIPT } from "@site/src/constants/v0.5.0";
+import { ONE_REPO_RELEASE, ONE_REPO_VERSION, SITES_ACCESS_REQUEST_ISSUE, SANDBOX_REPO_ORG, SANDBOX_REPO_TEAMS_SITES, TOOLKIT_INSTALLER_INSTALL_SCRIPT } from "@site/src/constants/v0.5.0";
 
 ## Requirements
-
-{/* TODO @alvarocurto: https://github.com/6G-SANDBOX/6G-Sandbox-Sites/blob/main/.dummy_site/core.yaml */}
-{/* TODO @alvarocurto: have bridge interface configurated */}
-{/* TODO @alvarocurto: have a public ip configurated */}
-{/* TODO @alvarocurto: have a port forwarding configurated */}
 
 Toolkit installer requires the **prior** installation of:
 
@@ -26,10 +21,10 @@ Once you have **properly** installed OpenNebula, you can proceed with the follow
 
 If you don't have a token to access the 6G-Sandbox-Sites repository, you need to request access:
 
-1. Create an <Link to={SANDBOX_SITES_ACCESS_REQUEST_ISSUE}>**issue**</Link> in the repository 6G-Sandbox-Sites requesting to join to the <Link to={SANDBOX_ORGANIZATION}>**6G-SANDBOX organization**</Link>.
+1. Create an <Link to={SITES_ACCESS_REQUEST_ISSUE}>**issue**</Link> in the repository 6G-Sandbox-Sites requesting to join to the <Link to={SANDBOX_REPO_ORG}>**6G-SANDBOX organization**</Link>.
 2. Assign the issue to **@CarlosAndreo** or **@alvarocurt**. Additionally, add the `request-access` label.
 3. The administrators will review the request and add you to the organization if approved.
-4. Once you have access to 6G-SANDBOX organization, the administrators will add you to the <Link to={SANDBOX_SITES_TEAM}>6G-SANDBOX sites contributors</Link> group.
+4. Once you have access to 6G-SANDBOX organization, the administrators will add you to the <Link to={SANDBOX_REPO_TEAMS_SITES}>6G-SANDBOX sites contributors</Link> group.
 
 Then you can generate a token by navigating to:
 
@@ -118,4 +113,3 @@ To move the TNLCM virtual machine to a MongoDB-compatible host with the correct 
 In general, these steps will be necessary in all cases where a virtual machine is deployed in OpenNebula that has MongoDB.
 :::
 
-{/* TODO @CarlosAndreo: add video/demo how to deploy service toolkit using toolkit-installer repository */}

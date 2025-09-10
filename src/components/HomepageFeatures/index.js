@@ -1,6 +1,6 @@
 import { FilePlus, AlertCircle, Lightbulb } from "lucide-react";
 import styles from "./styles.module.css";
-import { SANDBOX_DOCS_BUG_REPORT, SANDBOX_DOCS_FEATURE_REQUEST, SANDBOX_DOCS_CONTRIBUTING } from "../../constants/v0.5.1";
+import { DOCS_REPO_BUG_REPORT, DOCS_REPO_FEATURE_REQUEST, DOCS_CONTRIBUTING } from "../../constants/v0.5.1";
 
 export default function HomepageFeatures() {
   return (
@@ -13,7 +13,7 @@ export default function HomepageFeatures() {
               <FilePlus size={30} className={styles.icon} />
               <p>
                 Want to help improve the documentation? <br />
-                <a href={SANDBOX_DOCS_CONTRIBUTING} target='_blank' rel='noopener noreferrer'>
+                <a href={DOCS_CONTRIBUTING} target='_blank' rel='noopener noreferrer'>
                   Contribute here
                 </a>
               </p>
@@ -27,7 +27,7 @@ export default function HomepageFeatures() {
               <p>
                 Found a problem with the documentation? <br />
                 <a
-                  href={SANDBOX_DOCS_BUG_REPORT}
+                  href={DOCS_REPO_BUG_REPORT}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -44,7 +44,7 @@ export default function HomepageFeatures() {
               <p>
                 Got an idea to improve the documentation? <br />
                 <a
-                  href={SANDBOX_DOCS_FEATURE_REQUEST}
+                  href={DOCS_REPO_FEATURE_REQUEST}
                   target='_blank'
                   rel='noopener noreferrer'
                 >

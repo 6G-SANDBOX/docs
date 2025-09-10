@@ -6,7 +6,7 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { SANDBOX_MARKETPLACE, TOOLKIT_INSTALLER_REPO_URL, TNLCM_BACKEND_REPO_URL, LIBRARY_REPO_URL, SANDBOX_SITES_DUMMY, SANDBOX_SITES_REPO_URL } from "@site/src/constants/v0.5.1";
+import { MARKETPLACE_URL, TOOLKIT_INSTALLER_REPO_URL, TNLCM_BACKEND_REPO_URL, LIBRARY_REPO_URL, SITES_DUMMY_SITE, SITES_REPO_URL } from "@site/src/constants/v0.5.1";
 
 ## :calendar: **2025-04-10**
 
@@ -36,7 +36,7 @@ To install the new version of the toolkit installer, follow the instructions [he
 
 #### **Appliances**
 
-The following appliance from <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link> has been updated:
+The following appliance from <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link> has been updated:
 
 | Software             | New Version                      |
 |----------------------|----------------------------------|
@@ -74,7 +74,7 @@ To install the new version of the toolkit installer, follow the instructions [he
 
 #### **Appliances**
 
-If you have an appliance that belongs to the <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link>, you need to add attributes to its images.
+If you have an appliance that belongs to the <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link>, you need to add attributes to its images.
 
 **If the appliance is an image type**
 
@@ -209,7 +209,7 @@ oneimage update <image_minio_disk0_id> --append <path_to_file>
 oneimage update <image_minio_disk1_id> --append <path_to_file>
 ```
 
-Once the previous steps are completed, proceed with the update. The following appliances from <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link> have been updated:
+Once the previous steps are completed, proceed with the update. The following appliances from <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link> have been updated:
 
 | Software             | Previous Version        | New Version                      |
 |----------------------|-------------------------|----------------------------------|
@@ -218,7 +218,7 @@ Once the previous steps are completed, proceed with the update. The following ap
 | UERANSIM             | v3.2.6-20250206-1135    | v3.2.7-20250331-1350             |
 | oneKE                | v1.29                   | 1.31.3-6.10.0-2-20250220-0051    |
 
-You can download or upgrade the appliances using the <Link to={TOOLKIT_INSTALLER_REPO_URL}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained above and update the <Link to={SANDBOX_SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository.
+You can download or upgrade the appliances using the <Link to={TOOLKIT_INSTALLER_REPO_URL}>toolkit installer</Link> or doing it manually. If you want to do it manually, remember to add the attributes to the images as explained above and update the <Link to={SITES_REPO_URL}>6G-Sandbox-Sites</Link> repository.
 
 ## :calendar: **2025-02-22**
 
@@ -256,11 +256,11 @@ Upgrade TNLCM following the instructions [here](./tnlcm/upgrade.mdx)
 
 #### **6G-Sandbox-Sites**
 
-Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id. Also new variables from sites are required. Please follow dummy site <Link to={SANDBOX_SITES_DUMMY}>here</Link>.
+Update core yaml in 6G-Sandbox-Sites pointing to the new images and templates id. Also new variables from sites are required. Please follow dummy site <Link to={SITES_DUMMY_SITE}>here</Link>.
 
 #### **Appliances**
 
-The following appliances from <Link to={SANDBOX_MARKETPLACE}>6G-SANDBOX Marketplace</Link> have been updated:
+The following appliances from <Link to={MARKETPLACE_URL}>6G-SANDBOX Marketplace</Link> have been updated:
 
 - 6G-Sandbox bastion
 - IxChariot endpoint

@@ -1,0 +1,14 @@
+{
+  "position": 3,
+  "label": "Experimenter",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Experimenter Docs Overview"
+  },
+  "customProps": {
+    "description": ""
+  }
+}

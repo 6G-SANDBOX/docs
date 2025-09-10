@@ -6,7 +6,7 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { ANSIBLE_PLAYBOOKS, MARKETPLACE_COMMUNITY_REPO_URL, SANDBOX_MARKETPLACE, OPENNEBULA_TERRAFORM_PROVIDER, HASHICORP_TERRAFORM_BACKENDS_S3 } from "@site/src/constants/v0.5.1";
+import { ANSIBLE_PLAYBOOKS, MARKETPLACE_REPO_URL, MARKETPLACE_URL, OPENNEBULA_TERRAFORM_PROVIDER, HASHICORP_TERRAFORM_BACKENDS_S3 } from "@site/src/constants/v0.5.1";
 
 We strongly advise to start development from a copy of `.dummy_component/`, reading the insightful comments and modifying the playbook as you desire. We also suggest leaving the `.tnlcm/` files to the end, as you will discover during development if you need more or less variables from the experimenter.
 
@@ -37,7 +37,7 @@ The terraform manifest template/s is/are taken from `{{ component_type }}/code/{
 
 You will mostly only need to modify the `template_id` parameter of the dummy_component sample terraform template (as well as other variable names). Note that the privileged starting user default to all components is 'jenkins'.
 
-The template has to be specified in the sites repository, and point to an existing template in your OpenNebula. The template can use the image you want, ranging from a base Ubuntu image (where all configuration is to be done), or a preconfigured custom image. These custom images are called appliances and you design your own ones following the documentation found in <Link to={MARKETPLACE_COMMUNITY_REPO_URL}>this repository</Link>. All custom appliances created by the project collaborators will be published in the official <Link to={SANDBOX_MARKETPLACE}>marketplace</Link>.
+The template has to be specified in the sites repository, and point to an existing template in your OpenNebula. The template can use the image you want, ranging from a base Ubuntu image (where all configuration is to be done), or a preconfigured custom image. These custom images are called appliances and you design your own ones following the documentation found in <Link to={MARKETPLACE_REPO_URL}>this repository</Link>. All custom appliances created by the project collaborators will be published in the official <Link to={MARKETPLACE_URL}>marketplace</Link>.
 :::
 
 Components that use variables inherited from other component outputs require extra complexity. The intended way to import outputs (e.g. the IP in the default network of component `vm_kvm-ubuntu`) is as follows:

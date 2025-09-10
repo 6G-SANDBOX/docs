@@ -6,7 +6,7 @@ draft: false
 ---
 
 import Link from "@docusaurus/Link";
-import { UERANSIM_REPO_URL, UERANSIM_LOGO, UERANSIM_WIKI, SANDBOX_MARKETPLACE_UERANSIM, OPENNEBULA_MANAGEMENT_OPERATIONS_CONTEXT_SECTION, OPENNEBULA_MANAGEMENT_OPERATIONS } from "@site/src/constants/v0.5.0";
+import { UERANSIM_REPO_URL, UERANSIM_LOGO, UERANSIM_WIKI, MARKETPLACE_APPLIANCE_UERANSIM, ONE_DOCS_MANAGEMENT_OPERATIONS_CONTEXT_SECTION, ONE_DOCS_MANAGEMENT_OPERATIONS } from "@site/src/constants/v0.5.0";
 
 ## Overview
 
@@ -29,7 +29,7 @@ This appliance is meant to be used together with a 5G core, not part of this app
 ## Download
 
 The latest version of the UERANSIM appliance can be downloaded from the 6G-SANDBOX official Marketplace
-- <Link to={SANDBOX_MARKETPLACE_UERANSIM}>UERANSIM</Link>
+- <Link to={MARKETPLACE_APPLIANCE_UERANSIM}>UERANSIM</Link>
 
 ## Components
 
@@ -68,11 +68,11 @@ This appliance is meant to be used together with a 5G core, not part of this app
 
 ## Contextualization
 
-Contextualization parameters provided in the Virtual Machine template (<Link to={OPENNEBULA_MANAGEMENT_OPERATIONS_CONTEXT_SECTION}>CONTEXT section</Link>) control the initial VM configuration. Except for the common set of parameters supported by every appliance on the OpenNebula Marketplace, there are few specific to this particular UERANSIM appliance.
+Contextualization parameters provided in the Virtual Machine template (<Link to={ONE_DOCS_MANAGEMENT_OPERATIONS_CONTEXT_SECTION}>CONTEXT section</Link>) control the initial VM configuration. Except for the common set of parameters supported by every appliance on the OpenNebula Marketplace, there are few specific to this particular UERANSIM appliance.
 * `GNB_*` and `UE_*` parameters replace the variables of their respective config file at `/etc/ueransim/`.
 * `RUN_GNB` and `RUN_UE` determine if their respective service should be started at boot time.
 
-The parameters should be provided in the CONTEXT section of the Virtual Machine template, read the <Link to={OPENNEBULA_MANAGEMENT_OPERATIONS}>OpenNebula Management and Operations Guide</Link> for more details.
+The parameters should be provided in the CONTEXT section of the Virtual Machine template, read the <Link to={ONE_DOCS_MANAGEMENT_OPERATIONS}>OpenNebula Management and Operations Guide</Link> for more details.
 
 | Parameter                 | Description                                                           | Default Value |
 |---------------------------|-----------------------------------------------------------------------|---------------|
