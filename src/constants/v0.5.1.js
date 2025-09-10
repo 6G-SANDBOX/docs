@@ -98,7 +98,6 @@ export const ONE_DOCS = "https://docs.opennebula.io/stable";
 export const ONE_DOCS_MANAGEMENT_OPERATIONS = `${ONE_DOCS}/management_and_operations`;
 export const ONE_DOCS_MANAGEMENT_OPERATIONS_CONTEXT_SECTION = `${ONE_DOCS_MANAGEMENT_OPERATIONS}/references/template.html?highlight=context#context-section`;
 // UERANSIM
-// TODO: Remove for v0.6.0
 export const UERANSIM_REPO_URL = "https://github.com/aligungr/UERANSIM";
 export const UERANSIM_LOGO = "https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png";
 export const UERANSIM_WIKI = `${UERANSIM_REPO_URL}/wiki`;
