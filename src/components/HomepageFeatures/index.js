@@ -1,6 +1,6 @@
 import { FilePlus, AlertCircle, Lightbulb } from "lucide-react";
 import styles from "./styles.module.css";
-import { DOCS_REPO_BUG_REPORT, DOCS_REPO_FEATURE_REQUEST, DOCS_CONTRIBUTING } from "../../constants/v0.5.1";
+import { DOCS_REPO_BUG_REPORT, DOCS_REPO_FEATURE_REQUEST, DOCS_CONTRIBUTING } from "../../constants/v1.0.0";
 
 export default function HomepageFeatures() {
   return (
