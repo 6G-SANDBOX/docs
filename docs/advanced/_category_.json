@@ -1,0 +1,14 @@
+{
+  "position": 6,
+  "label": "Advanced",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Advanced Workflows or Experimentation Results"
+  },
+  "customProps": {
+    "description": ""
+  }
+}

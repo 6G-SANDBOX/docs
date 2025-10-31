@@ -28,9 +28,6 @@ export const SITES_ACCESS_REQUEST_ISSUE = `${SITES_REPO_URL}/issues/new?q=is%3Ai
 // 6G Sandbox Marketplace
 export const MARKETPLACE_URL = "https://marketplace.mobilesandbox.cloud:9443/appliance";
 export const MARKETPLACE_SERVICE_TOOLKIT = `${MARKETPLACE_URL}/service_toolkit`;
-export const MARKETPLACE_APPLIANCE_JENKINS = `${MARKETPLACE_URL}/service_jenkins`;
-export const MARKETPLACE_APPLIANCE_TNLCM = `${MARKETPLACE_URL}/service_TNLCM`;
-export const MARKETPLACE_APPLIANCE_UERANSIM = `${MARKETPLACE_URL}/service_UERANSIM`;
 export const MARKETPLACE_REPO_URL = `${SANDBOX_REPO_ORG}/marketplace-community`;
 export const APPMARKET_REPO_URL = `${SANDBOX_REPO_ORG}/appmarket-simple`;
 // 6G Sandbox Documentation and Resources
@@ -82,10 +79,6 @@ export const TNLCM_BACKEND_UPGRADE_SCRIPT = `https://raw.githubusercontent.com/6
 export const TNLCM_FRONTEND_REPO_URL = `${SANDBOX_REPO_ORG}/TNLCM_FRONTEND`;
 export const TNLCM_FRONTEND_INSTALL_SCRIPT = `https://raw.githubusercontent.com/6G-SANDBOX/TNLCM_FRONTEND/${TNLCM_REPO_TAG}/scripts/install.sh`;
 export const TNLCM_FRONTEND_UPGRADE_SCRIPT = `https://raw.githubusercontent.com/6G-SANDBOX/TNLCM_FRONTEND/${TNLCM_REPO_TAG}/scripts/upgrade.sh`;
-// UERANSIM
-export const UERANSIM_REPO_URL = "https://github.com/aligungr/UERANSIM";
-export const UERANSIM_LOGO = "https://raw.githubusercontent.com/aligungr/UERANSIM/master/.github/logo.png";
-export const UERANSIM_WIKI = `${UERANSIM_REPO_URL}/wiki`;
 // OpenNebula
 export const OPENNEBULA_REPO_ORG = "https://github.com/OpenNebula";
 export const ONE_REPO_URL = `${OPENNEBULA_REPO_ORG}/one`;
