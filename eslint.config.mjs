@@ -19,8 +19,8 @@ export default defineConfig([
     ".vscode/",
     ".github/",
     ".gitignore",
-    "versioned_docs/",
-    "versioned_sidebars/",
+    // "versioned_docs/",
+    // "versioned_sidebars/",
   ]),
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],

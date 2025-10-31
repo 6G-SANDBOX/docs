@@ -55,34 +55,34 @@ const config = {
         docs: {
           sidebarPath: "./sidebars.js",
           routeBasePath: "/", // Serve the docs at the site's root
-          lastVersion: "1.0.0",
-          versions: {
-            current: {
-              label: "Canary 🚧",
-              path: "next",
-              banner: "unreleased",
-            },
-            "1.0.0": {
-              label: "1.0.0",
-              path: "",
-              banner: "none",
-            },
-            "0.5.1": {
-              label: "0.5.1",
-              path: "0.5.1",
-              banner: "none",
-            },
-            "0.5.0": {
-              label: "0.5.0",
-              path: "0.5.0",
-              banner: "none",
-            },
-            "0.4.0": {
-              label: "0.4.0",
-              path: "0.4.0",
-              banner: "none",
-            },
-          },
+          // lastVersion: "1.0.0",
+          // versions: {
+          //   current: {
+          //     label: "Canary 🚧",
+          //     path: "next",
+          //     banner: "unreleased",
+          //   },
+          //   "1.0.0": {
+          //     label: "1.0.0",
+          //     path: "",
+          //     banner: "none",
+          //   },
+          //   "0.5.1": {
+          //     label: "0.5.1",
+          //     path: "0.5.1",
+          //     banner: "none",
+          //   },
+          //   "0.5.0": {
+          //     label: "0.5.0",
+          //     path: "0.5.0",
+          //     banner: "none",
+          //   },
+          //   "0.4.0": {
+          //     label: "0.4.0",
+          //     path: "0.4.0",
+          //     banner: "none",
+          //   },
+          // },
         },
         // blog: {
         //   routeBasePath: '/',
@@ -125,11 +125,11 @@ const config = {
             label: "DOCS",
           },
           // {to: '/blog', label: 'BLOG', position: 'left'},
-          {
-            type: "docsVersionDropdown",
-            position: "right",
-            dropdownActiveClassDisabled: true,
-          },
+          // {
+          //   type: "docsVersionDropdown",
+          //   position: "right",
+          //   dropdownActiveClassDisabled: true,
+          // },
           {
             href: "https://github.com/6G-SANDBOX",
             position: "right",
@@ -212,14 +212,14 @@ const config = {
           autoCollapseCategories: true,
         },
       },
-      announcementBar: {
-        id: "new_release",
-        content:
-          "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v1.0.0\">TNLCM v1.0.0</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v1.0.0\">toolkit-installer v1.0.0</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v1.0.0\">6G-Library v1.0.0</a> are out. 🎉️",
-        backgroundColor: "#fffae6",
-        textColor: "#091E42",
-        isCloseable: true,
-      },
+    //   announcementBar: {
+    //     id: "new_release",
+    //     content:
+    //       "🎉️ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/TNLCM/releases/tag/v1.0.0\">TNLCM v1.0.0</a>, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/toolkit-installer/releases/tag/v1.0.0\">toolkit-installer v1.0.0</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/6G-SANDBOX/6G-Library/releases/tag/v1.0.0\">6G-Library v1.0.0</a> are out. 🎉️",
+    //     backgroundColor: "#fffae6",
+    //     textColor: "#091E42",
+    //     isCloseable: true,
+    //   },
     }),
 };
 
