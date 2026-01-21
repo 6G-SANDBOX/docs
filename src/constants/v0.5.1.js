@@ -27,7 +27,7 @@ export const SITES_DUMMY_SITE = `${SITES_REPO_URL}/blob/main/.dummy_site/core.ya
 export const SITES_ACCESS_REQUEST_ISSUE = `${SITES_REPO_URL}/issues/new?q=is%3Aissue&template=access_request.md`;
 // 6G Sandbox Marketplace
 export const MARKETPLACE_URL = "https://marketplace.mobilesandbox.cloud:9443/appliance";
-export const MARKETPLACE_SERVICE_TOOLKIT = `${MARKETPLACE_URL}/service_toolkit`;
+export const MARKETPLACE_SERVICE_TOOLKIT = `${MARKETPLACE_URL}/toolkit_service`;
 export const MARKETPLACE_REPO_URL = `${SANDBOX_REPO_ORG}/marketplace-community`;
 export const APPMARKET_REPO_URL = `${SANDBOX_REPO_ORG}/appmarket-simple`;
 // 6G Sandbox Documentation and Resources

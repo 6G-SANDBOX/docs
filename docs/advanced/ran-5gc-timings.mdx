@@ -22,3 +22,38 @@ The experiments were conducted at the UMA site using component `open5gs_k8s` ove
 
 (DESCRIPTOR FILE USED - PLEGATED)
 (TABLE WITH RESULTS)
+
+
+
+MEDICIONES A TOMAR:
+- Arranque de TN
+- Core YA desplegado
+- Puente habilitado
+    - Ver cuando se habilita conexión gNB-Core (STAGE 3 - Write firewall exception for the route-manager-api of your site):
+        - AMF recibe ngap_initial_message
+        - (cruce de mensajes intermedios)
+        - AMF envía ngap_initial_context_setup (ya registrado)
+
+- TN operativa
+
+
+```mermaid
+sequenceDiagram
+    participant gNB
+    participant router+routemanager+bastion+vnf
+    participant AMF
+
+    gNB->>SCTP: SCTP INIT (t=00:00)
+    Note right of SCTP: fallo transporte
+    activate gNB
+    gNB-->>gNB: backoff T=1s (+jitter)
+    deactivate gNB
+
+    %% siguiente intento
+    gNB->>SCTP: SCTP INIT (t=00:01)
+    Note right of SCTP: fallo otra vez
+    gNB-->>gNB: backoff T=2s
+
+    gNB->>AMF: NG-Setup (t=00:03)
+    AMF-->>gNB: NG-Setup-Response
+```

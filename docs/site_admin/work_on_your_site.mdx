@@ -8,8 +8,10 @@ draft: false
 import Link from "@docusaurus/Link";
 import { ANSIBLE_INSTALLATION } from "@site/src/config/constants";
 
-## Requirements
+The 6G-Sandbox sites repository is where each platform stores its unique configuration and properties, in a publicly avaiable but encrypted way.
 
+## Requirements
+Secret encryption es done using *ansible-vault*, so you need to have it installed in your local machine.
 To use the `ansible-vault` tool, the full *ansible* libraries and binaries are not needed. You can <Link to={ANSIBLE_INSTALLATION}>install ansible</Link> in your prefered way, but package `ansible-core` is enough.
 If you do not wish to install *ansible* anywhere, remember it is already installed on the Jenkins VM so you can use it from there.
 
